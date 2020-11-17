@@ -1,0 +1,65 @@
+.leftside-nav {
+  width: 18em;
+  height: 100vh;
+  margin-top: 4em;
+  background-color: #fff;
+  overflow: auto; 
+}
+
+.leftside-nav a {
+  display: block;
+  text-decoration: none;
+  height: 3em;
+  line-height: 3em;
+  color: #5A5A5A;
+}
+
+.leftside-nav a:hover {
+  background-color: #E5E5E5;
+}
+
+.leftside-nav > div {
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.leftside-nav i {
+  color: #606060;
+  margin: 0 1.5em;
+  vertical-align: sub;
+}
+
+.icon > i {
+  margin: 0 2.5em;
+  vertical-align: middle;
+}
+
+.sub-list img {
+  height: 1.8em;
+  width: 1.8em;
+  vertical-align: middle;
+  margin: 0 2em;
+}
+
+.user-subscription > strong{
+  margin: 0 2em;
+  color: #5A5A5A;
+  line-height: 2em;
+}
+
+.leftside-nav::-webkit-scrollbar {
+  width: 10px;
+}
+
+.leftside-nav::-webkit-scrollbar-track {
+  /* background: #fff; */
+}
+
+.leftside-nav::-webkit-scrollbar-thumb {
+  background: #BCC0C4;
+}
+
+/* .leftside-nav::-webkit-scrollbar-button {
+  height: 0em; 
+  margin: 0;
+} */

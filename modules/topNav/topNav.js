@@ -19,7 +19,7 @@ const topNav = () => {
         <a href="#"><i class="fa fa-bell"></i></a>
         <a href="#">
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-          class="topNav-photo" alt="my profile picture">
+          class="image" alt="my profile picture">
         </a>
       </span>
     </nav>

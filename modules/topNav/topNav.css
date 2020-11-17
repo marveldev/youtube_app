@@ -1,0 +1,86 @@
+body {
+  box-sizing: border-box;
+  font-family: Roboto, Noto, sans-serif;
+  margin: 0;
+}
+
+.top-nav {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 4em;
+  box-shadow: 0px 0px 7px 0px #00000033; 
+}
+
+.top-nav>span {
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.primary-topNav {
+  margin-left: 2em;
+}
+
+.burger-icon {
+  font-size: 1.2em;
+  color: #606060;
+}
+
+.logo {
+  margin-left: 1.5em;
+  color: #000;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.logo>i {
+  color: red;
+  font-size: 1.2em;
+}
+
+.search-form {
+  margin-left: 10em;
+}
+
+.topNav-input {
+  width: 30em;
+  height: 1.5em;
+  border: unset;
+  padding: 0 0.8em;
+  font-size: 1.2em;
+  border: 0.5px solid #CCCCCC;
+  box-shadow: 0px 0px 2px 0px #00000033; 
+}
+
+.button {
+  border: unset;
+  cursor: pointer;
+}
+
+.topNav-button {
+  float: right;
+  width: 5em;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0px 0px 2px 0px #00000033; 
+  height: 2.3em;
+}
+
+.tertiary-topNav {
+  float: right;
+  margin-right: 3em;
+}
+
+.tertiary-topNav>a {
+  margin: 0.8em;
+  color: black;
+  vertical-align: middle;
+}
+
+.topNav-photo {
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #000000d7;
+}

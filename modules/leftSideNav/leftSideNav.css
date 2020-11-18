@@ -1,9 +1,13 @@
 .leftside-nav {
+  position: fixed;
   width: 18em;
+  border-right: 1px solid greenyellow;
   height: 100vh;
-  margin-top: 4em;
   background-color: #fff;
-  overflow: auto; 
+}
+
+.leftside-nav:hover {
+  overflow: auto;
 }
 
 .leftside-nav a {
@@ -51,9 +55,9 @@
   width: 10px;
 }
 
-.leftside-nav::-webkit-scrollbar-track {
-  /* background: #fff; */
-}
+/* .leftside-nav::-webkit-scrollbar-track {
+  background: #fff;
+} */
 
 .leftside-nav::-webkit-scrollbar-thumb {
   background: #BCC0C4;

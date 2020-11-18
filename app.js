@@ -1,11 +1,14 @@
 import topNav from './modules/topNav/topNav.js';
 import leftSideNav from './modules/leftSideNav/leftSideNav.js';
-// import mainContent from './modules/mainContent/mainContent.js';
+import mainContent from './modules/mainContent/mainContent.js';
 
 const app = () => {
   return `
     ${topNav()}
-    ${leftSideNav()}
+    <section class="grid-container">
+      ${leftSideNav()}
+      ${mainContent()}
+    </section>
   `
 }
 

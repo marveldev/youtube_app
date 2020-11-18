@@ -35,4 +35,21 @@
   border-radius: 1.5em;
 }
 
+.video-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1.5em;
+  grid-column-gap: 1.4em;
+}
 
+.video-gallery > div {
+  background-color: turquoise;
+  width: auto;
+  height: 20em;
+}
+
+.video {
+  width: 20em;
+  height: 10em;
+  object-fit: cover;
+}

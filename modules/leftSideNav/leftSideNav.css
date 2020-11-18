@@ -1,6 +1,8 @@
 .leftside-nav {
   position: fixed;
-  width: 18em;
+  left: 0;
+  display: block;
+  width: 15em;
   border-right: 1px solid greenyellow;
   height: 100vh;
   background-color: #fff;
@@ -29,12 +31,12 @@
 
 .leftside-nav i {
   color: #606060;
-  margin: 0 1.5em;
+  margin: 0 1.2em;
   vertical-align: sub;
 }
 
 .icon > i {
-  margin: 0 2.5em;
+  margin: 0 2em;
   vertical-align: middle;
 }
 
@@ -67,3 +69,24 @@
   height: 0em; 
   margin: 0;
 } */
+
+.widescreen-nav {
+  display: none;
+  width: 5em;
+}
+
+.widescreen-nav > a {
+  display: block;
+  text-decoration: none;
+  padding: 1em 0;
+  color: #606060;
+  text-align: center;
+}
+
+.widescreen-nav i {
+  margin: auto 1em;
+}
+
+.widescreen-nav small {
+  font-size: 0.7em;
+}

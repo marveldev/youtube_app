@@ -3,6 +3,7 @@ const topNav = () => {
     <nav class="top-nav">
       <span class="primary-topNav">
         <a href="#" class="burger-icon"><i class='fas fa-bars'></i></a>
+        <a href="#" class="burger-icon-widescreen"><i class='fas fa-bars'></i></a>
         <a href="#" class="logo"><i class='fab fa-youtube'></i>
           <strong>YouTube</strong><small><sup>NG</sup></small>
         </a>

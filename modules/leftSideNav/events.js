@@ -1,27 +1,29 @@
 const leftNavEventListeners = () => {
-  const toggleLeftNav = () => {
-    const icon = document.querySelector('.burger-icon');
-    icon.addEventListener('click', () => {
-      const leftNav = document.querySelector('.leftside-nav');
-      console.log(leftNav.style.display);
-      const widescreen = document.querySelector('.widescreen-nav');
-      if (leftNav.style.display == 'block') {
-        console.log('ok');
-        leftNav.style.display = 'block';
-        // leftNav.style.display = 'none';
-      } else if(widescreen.style.display == 'block'){
-        console.log('no');
-        
-        leftNav.style.display = 'none';
-        document.querySelector('.main-content').style.left = '0';
-        document.querySelector('.video-gallery').classList.add('video-widescreen');
-        widescreen.style.display == 'block';
-      }
-    })
+  const icon = document.querySelector('.burger-icon');
+  const videoGallery = document.querySelector('.video-gallery');
+  const iconWidescreen = document.querySelector('.burger-icon-widescreen');
 
+  const toggleLeftNav = ( firstValue, secondValue, value) => {
+    const leftNav = document.querySelector('.leftside-nav');
+    const widescreen = document.querySelector('.widescreen-nav');
+    leftNav.style.display = firstValue;
+    widescreen.style.display = secondValue;
+    document.querySelector('.main-content').style.left = value;
   }
 
-  toggleLeftNav();
+  icon.addEventListener('click', () => {
+    toggleLeftNav('none','block', '0',);
+    iconWidescreen.style.display = 'inline-block';
+    videoGallery.classList.add('video-widescreen');
+    icon.style.display = 'none';
+  })
+
+  iconWidescreen.addEventListener('click', () => {
+    toggleLeftNav('block','none', '15em',);
+    icon.style.display = 'inline-block';
+    videoGallery.classList.remove('video-widescreen');
+    iconWidescreen.style.display = 'none';
+  })
 }
 
 export default leftNavEventListeners;

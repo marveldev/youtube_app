@@ -1,15 +1,14 @@
 .leftside-nav {
   position: fixed;
   left: 0;
-  display: block;
   width: 15em;
-  border-right: 1px solid greenyellow;
   height: 100vh;
+  overflow:hidden;
   background-color: #fff;
 }
 
 .leftside-nav:hover {
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 .leftside-nav a {
@@ -44,7 +43,12 @@
   height: 1.8em;
   width: 1.8em;
   vertical-align: middle;
-  margin: 0 2em;
+  margin: 0 1em 0 2em;
+}
+
+.leftside-nav > div:last-child {
+  margin-bottom: 5em;
+  border-bottom: none;
 }
 
 .user-subscription > strong{
@@ -57,18 +61,9 @@
   width: 10px;
 }
 
-/* .leftside-nav::-webkit-scrollbar-track {
-  background: #fff;
-} */
-
 .leftside-nav::-webkit-scrollbar-thumb {
   background: #BCC0C4;
 }
-
-/* .leftside-nav::-webkit-scrollbar-button {
-  height: 0em; 
-  margin: 0;
-} */
 
 .widescreen-nav {
   display: none;
@@ -89,4 +84,8 @@
 
 .widescreen-nav small {
   font-size: 0.7em;
+}
+
+.widescreen-nav > a:hover {
+  background-color: #f5f5f5;
 }

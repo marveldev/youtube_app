@@ -3,6 +3,7 @@ import leftSideNav from './modules/leftNav/leftNav.js';
 import mainContent from './modules/mainContent/mainContent.js';
 import { videoEventListeners } from './modules/mainContent/events.js';
 import leftNavEventListeners from './modules/leftNav/events.js';
+import rightNavModal from './modules/rightNav/rightNavModal.js';
 
 
 const app = () => {
@@ -11,6 +12,7 @@ const app = () => {
     <section class="grid-container">
       ${leftSideNav()}
       ${mainContent()}
+      ${rightNavModal()}
     </section>
   `
 }

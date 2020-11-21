@@ -1,9 +1,9 @@
 #rightNav {
   position: absolute;
   top: 1em;
-  right: 6em;
+  right: 7em;
   z-index: 1;
-  background-color: #fff;
+  background-color: #ffffff;
   height: auto;
   box-shadow: 0px 0px 2px 0px #00000033; 
 }

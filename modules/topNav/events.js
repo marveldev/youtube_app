@@ -12,6 +12,7 @@ const topNavEvents = () => {
     overlay.style.display = 'block';
     profilePhoto.style.display =  'none';
     userPhoto.style.display =  'inline';
+    document.body.style.overflow = 'hidden';
   })
 
   theme.addEventListener('click', () => {
@@ -30,15 +31,29 @@ const topNavEvents = () => {
     profilePhoto.style.display =  'inline';
     userPhoto.style.display =  'none';
     themeModal.style.display = 'none';
+    document.body.style.overflow = 'scroll';
   })
 
   overlay.addEventListener('click', () => {
     rightNavModal.style.display = 'none';
     themeModal.style.display = 'none';
     overlay.style.display = 'none';
+    document.body.style.overflow = 'scroll';
   })
-
-  
 }
 
-export default topNavEvents;
+const toggleTheme = () => {
+  const root = document.querySelector('#root');
+  const darkTheme = document.querySelector('#darkTheme');
+  const lightTheme = document.querySelector('#lightTheme');
+
+  darkTheme.addEventListener('click', () => {
+    root.className = 'dark';
+  })
+
+  lightTheme.addEventListener('click', () => {
+    root.className = 'default';
+  })
+}
+
+export { topNavEvents, toggleTheme };

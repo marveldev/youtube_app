@@ -13,7 +13,7 @@ body {
   z-index: 1;
 }
 
-.top-nav>span {
+.top-nav > span {
   display: inline-block;
   margin-top: 1em;
 }
@@ -40,7 +40,7 @@ body {
   text-decoration: none;
 }
 
-.logo>i {
+.logo > i {
   color: red;
   font-size: 1.2em;
 }
@@ -70,11 +70,11 @@ body {
   border: 1px solid #CCCCCC;
   box-shadow: 0px 0px 2px 0px #00000033; 
   height: 2.3em;
+  clear: both;
 }
 
 .tertiary-topNav {
-  float: right;
-  margin-right: 3em;
+  margin-left: 3em;
 }
 
 .tertiary-topNav>a {
@@ -89,4 +89,8 @@ body {
   border-radius: 50%;
   object-fit: cover;
   background-color: #000000d7;
+}
+
+#userPhoto {
+  display: none;
 }

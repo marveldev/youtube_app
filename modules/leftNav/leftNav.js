@@ -13,8 +13,8 @@ const leftSideNav = () => {
         <a href="#" class="icon"><i class='fas fa-clock'></i><strong>Watch later</strong></a>
         <a href="#"><i class="material-icons">&#xe8dc;</i><strong>Liked videos</strong></a>
       </div>
-      <div class="user-subscription">
-        <strong>SUBSCRIPTIONS</strong>
+      <div>
+        <strong class="user-subscription">SUBSCRIPTIONS</strong>
         <div class="sub-list">
           <a href="#">
             <img src="https://images.pexels.com/photos/4724071/pexels-photo-4724071.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 

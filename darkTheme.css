@@ -1,0 +1,146 @@
+.dark .top-nav {
+  background-color: #202020;
+}
+
+.dark .top-nav a {
+  color: #fff;
+}
+
+.dark .topNav-input {
+  background-color: #121212;
+  border: 0.5px solid #383838;
+}
+
+.dark .topNav-button {
+  background-color: #202020;
+  color: #ffffffca;
+  border: 0.5px solid #383838;
+}
+
+.dark .image {
+  background-color: #ffffffc4;
+}
+
+.dark .leftside-nav {
+  background-color: #202020;
+}
+
+.dark .leftside-nav i {
+  color: #909090;
+}
+
+.dark .user-subscription > strong{
+  color: #909090;
+}
+
+.dark .leftside-nav a {
+  color: #fff;
+}
+
+.dark .leftside-nav a:hover {
+  background-color: #383838;
+}
+
+.dark .leftside-nav > div {
+  border-bottom: 1px solid #383838;
+}
+
+.dark .leftside-nav > div:last-child {
+  border-bottom: none;
+}
+
+.dark .leftside-nav::-webkit-scrollbar-thumb {
+  background: #4A4A4A;
+}
+
+.dark .main-content {
+  background-color: #181818;
+}
+
+.dark .button-nav {
+  background-color: #202020;
+  border-top: 1px solid #383838;
+  border-bottom: 1px solid #383838;
+}
+
+.dark .button-nav > button {
+  background-color: #373737;
+  color: #fff;
+  border: 1px solid #ffffff44;
+}
+
+.dark .about-video {
+  color: #fff;
+}
+
+.dark .about-video p {
+  color: #ffffffca;
+}
+
+.dark .about-video span {
+  color: #ffffffca;
+}
+
+.dark #overlay {
+  background-color: #00000046; 
+}
+
+.dark #rightNav {
+  background-color: #212121;
+}
+
+.dark .rightNav-modal {
+  border: 0.5px solid #383838;
+}
+
+.dark .rightNav-modal i {
+  color: #909090;
+}
+
+.dark .rightNav-modal > a:nth-child(2) {
+  border-top: 1px solid #383838;
+}
+
+.dark #rightNav a {
+  color: #ffffffca;
+}
+
+.dark #rightNav a:hover {
+  background-color: #383838;
+}
+
+.dark #userName {
+  color: #ffffffca;
+}
+
+.dark #themeModal {
+  border: 0.5px solid #383838;
+}
+
+.dark #themeModal > p {
+  color: #ffffffca;
+}
+
+.dark #darkTheme {
+  border-top: 1px solid #383838;
+}
+
+.dark #darkTheme > i {
+  opacity: 1;
+}
+
+.dark #lightTheme > i {
+  opacity: 0;
+}
+
+.dark .widescreen-nav {
+  background-color: #202020;
+}
+
+.dark .widescreen-nav > a {
+  color: #ffffffca;
+}
+
+.dark .widescreen-nav > a:hover {
+  background-color: #383838;
+}

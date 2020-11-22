@@ -1,18 +1,21 @@
 const topNavEvents = () => {
   const profilePhoto = document.querySelector('#profilePhoto');
-  const userPhoto = document.querySelector('#userPhoto');
   const overlay = document.querySelector('#overlay');
   const rightNavModal = document.querySelector('.rightNav-modal');
   const theme = document.querySelector('#theme');
   const themeModal = document.querySelector('#themeModal');
   const arrowLeft = document.querySelector('#arrowLeft');
 
+  const displayRightModal = ( overlayValue, themeModalValue, rightNavValue, overflowValue ) => {
+    overlay.style.display = overlayValue;
+    themeModal.style.display = themeModalValue;
+    rightNavModal.style.display = rightNavValue;
+    document.body.style.overflow = overflowValue;
+  }
+
   profilePhoto.addEventListener('click', () => {
-    rightNavModal.style.display = 'block';
-    overlay.style.display = 'block';
-    profilePhoto.style.display =  'none';
-    userPhoto.style.display =  'inline';
-    document.body.style.overflow = 'hidden';
+    rightNavModal.style.display === 'block' ? displayRightModal('none', 'none', 'none', 'auto')
+    : displayRightModal('block', 'none', 'block', 'hidden');
   })
 
   theme.addEventListener('click', () => {
@@ -25,20 +28,8 @@ const topNavEvents = () => {
     themeModal.style.display = 'none';
   })
 
-  userPhoto.addEventListener('click', () => {
-    rightNavModal.style.display = 'none';
-    overlay.style.display = 'none';
-    profilePhoto.style.display =  'inline';
-    userPhoto.style.display =  'none';
-    themeModal.style.display = 'none';
-    document.body.style.overflow = 'scroll';
-  })
-
   overlay.addEventListener('click', () => {
-    rightNavModal.style.display = 'none';
-    themeModal.style.display = 'none';
-    overlay.style.display = 'none';
-    document.body.style.overflow = 'scroll';
+    displayRightModal('none', 'none', 'none', 'scroll');
   })
 }
 
@@ -47,12 +38,21 @@ const toggleTheme = () => {
   const darkTheme = document.querySelector('#darkTheme');
   const lightTheme = document.querySelector('#lightTheme');
 
+  root.className = localStorage.getItem('theme');
+  document.body.style.backgroundColor = localStorage.getItem('backgroundColor');
+
   darkTheme.addEventListener('click', () => {
     root.className = 'dark';
+    document.body.style.backgroundColor = '#181818';
+    localStorage.setItem('theme', 'dark');
+    localStorage.setItem('backgroundColor', '#181818');
   })
 
   lightTheme.addEventListener('click', () => {
     root.className = 'default';
+    document.body.style.backgroundColor = '#fff';
+    localStorage.setItem('theme', 'default');
+    localStorage.setItem('backgroundColor', '#fff');
   })
 }
 

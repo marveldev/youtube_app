@@ -27,12 +27,6 @@ body {
   color: #606060;
 }
 
-.burger-icon-widescreen {
-  display: none;
-  font-size: 1.2em;
-  color: #606060;
-}
-
 .logo {
   margin-left: 1.5em;
   color: #000;
@@ -89,8 +83,4 @@ body {
   border-radius: 50%;
   object-fit: cover;
   background-color: #000000d7;
-}
-
-#userPhoto {
-  display: none;
 }

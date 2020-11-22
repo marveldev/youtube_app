@@ -5,6 +5,12 @@ const topNavEvents = () => {
   const theme = document.querySelector('#theme');
   const themeModal = document.querySelector('#themeModal');
   const arrowLeft = document.querySelector('#arrowLeft');
+  const root = document.querySelector('#root');
+  const darkTheme = document.querySelector('#darkTheme');
+  const lightTheme = document.querySelector('#lightTheme');
+
+  root.className = localStorage.getItem('theme');
+  document.body.style.backgroundColor = localStorage.getItem('backgroundColor');
 
   const displayRightModal = ( overlayValue, themeModalValue, rightNavValue, overflowValue ) => {
     overlay.style.display = overlayValue;
@@ -31,15 +37,6 @@ const topNavEvents = () => {
   overlay.addEventListener('click', () => {
     displayRightModal('none', 'none', 'none', 'scroll');
   })
-}
-
-const toggleTheme = () => {
-  const root = document.querySelector('#root');
-  const darkTheme = document.querySelector('#darkTheme');
-  const lightTheme = document.querySelector('#lightTheme');
-
-  root.className = localStorage.getItem('theme');
-  document.body.style.backgroundColor = localStorage.getItem('backgroundColor');
 
   darkTheme.addEventListener('click', () => {
     root.className = 'dark';
@@ -56,4 +53,4 @@ const toggleTheme = () => {
   })
 }
 
-export { topNavEvents, toggleTheme };
+export { topNavEvents };

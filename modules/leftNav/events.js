@@ -1,28 +1,21 @@
 const leftNavEventListeners = () => {
   const icon = document.querySelector('.burger-icon');
   const videoGallery = document.querySelector('.video-gallery');
-  const iconWidescreen = document.querySelector('.burger-icon-widescreen');
-
-  const toggleLeftNav = ( firstValue, secondValue, value) => {
-    const leftNav = document.querySelector('.leftside-nav');
-    const widescreen = document.querySelector('.widescreen-nav');
-    leftNav.style.display = firstValue;
-    widescreen.style.display = secondValue;
-    document.querySelector('.main-content').style.left = value;
-  }
+  const leftNav = document.querySelector('.leftside-nav');
+  const widescreen = document.querySelector('.widescreen-nav');
 
   icon.addEventListener('click', () => {
-    toggleLeftNav('none','block', '0',);
-    iconWidescreen.style.display = 'inline-block';
-    videoGallery.classList.add('video-widescreen');
-    icon.style.display = 'none';
-  })
-
-  iconWidescreen.addEventListener('click', () => {
-    toggleLeftNav('block','none', '15em',);
-    icon.style.display = 'inline-block';
-    videoGallery.classList.remove('video-widescreen');
-    iconWidescreen.style.display = 'none';
+    if (leftNav.style.display === 'none') {
+      leftNav.style.display = 'block';
+      widescreen.style.display = 'none';
+      document.querySelector('.main-content').style.left = '15em';
+      videoGallery.classList.remove('video-widescreen');
+    } else {
+      leftNav.style.display = 'none';
+      widescreen.style.display = 'block';
+      document.querySelector('.main-content').style.left = '0';
+      videoGallery.classList.add('video-widescreen');
+    }
   })
 }
 

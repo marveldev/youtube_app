@@ -3,7 +3,6 @@ const topNav = () => {
     <nav class="top-nav">
       <span class="primary-topNav">
         <a href="#" class="burger-icon"><i class='fas fa-bars'></i></a>
-        <a href="#" class="burger-icon-widescreen"><i class='fas fa-bars'></i></a>
         <a href="#" class="logo"><i class='fab fa-youtube'></i>
           <strong>YouTube</strong><small><sup>NG</sup></small>
         </a>
@@ -19,10 +18,6 @@ const topNav = () => {
         <a href="#"><i class="material-icons">&#xe5c3;</i></a>
         <a href="#"><i class="fa fa-bell"></i></a>
         <a href="#" id="profilePhoto">
-          <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-          class="image" alt="photo">
-        </a>
-        <a href="#" id="userPhoto">
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
           class="image" alt="photo">
         </a>

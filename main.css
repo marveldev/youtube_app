@@ -4,4 +4,6 @@
 @import "./modules/leftNav/leftNav.css";
 @import "./modules/mainContent/mainContent.css";
 @import "./modules/rightNav/rightNav.css";
+@import "./modules/trendingPage/trending.css";
 @import "./darkTheme.css";
+

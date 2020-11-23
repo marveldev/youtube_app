@@ -6,6 +6,7 @@ import leftNavEventListeners from './modules/leftNav/events.js';
 import rightNavModal from './modules/rightNav/rightNavModal.js';
 import{ topNavEvents } from './modules/topNav/events.js';
 import trendingPage from './modules/trendingPage/trending.js';
+import channelPage from './modules/channelPage/channel.js';
 
 
 const app = () => {
@@ -17,6 +18,7 @@ const app = () => {
     </section>
     ${rightNavModal()}
     ${trendingPage()}
+    ${channelPage()}
   `
 }
 

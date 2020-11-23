@@ -1,9 +1,64 @@
-.hello {
-  /* display: none; */
+.trending-page {
+  display: none;
   position: relative;
   left: 15em;
-  top: 8em;
+  top: 4em;
   width: 80vw;
+  padding-bottom: 5em;
+  height: auto;
   background-color: #F9F9F9;
-  color: red;
+}
+
+.trending-nav {
+  display: grid;
+  grid-template-columns: 10em 10em 10em 10em;
+  padding: 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.trending-nav img {
+  border-radius: 50%;
+}
+
+.trending-nav a {
+  width: 7em;
+  text-decoration: none;
+  margin: 1em;
+}
+
+.trending-nav span {
+  display: block;
+  color: #606060;
+  font-weight: 550;
+  font-size: 0.9em;
+}
+
+#trends {
+  margin: 1em 1.2em;
+}
+
+.trending-video {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  column-gap: 1em;
+  width: 50em;
+  padding: 0.7em 0;
+  cursor: pointer;
+}
+
+.trending-video p {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  color: #606060;
+}
+
+.trending-video span {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  color: #606060;
+}
+
+.trending-video h3 {
+  margin: 0 0 0.3em 0;
 }

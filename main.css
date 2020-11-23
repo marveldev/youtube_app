@@ -5,5 +5,6 @@
 @import "./modules/mainContent/mainContent.css";
 @import "./modules/rightNav/rightNav.css";
 @import "./modules/trendingPage/trending.css";
+@import "./modules/channelPage/channel.css";
 @import "./darkTheme.css";
 

@@ -12,8 +12,8 @@ const rightNavModal = () => {
         <a href="#"><i class='fas fa-dollar-sign'></i>Purchases and memberships</a>
         <a href="#"><i class='fas fa-users-cog'></i>Switch account</a>
         <a href="#"><i class='fas fa-sign-out-alt'></i>Sign out</a>
-        <a href="#" id="theme"><i class="material-icons">&#xe8bd;</i>Appearance: Light
-          <i class="material-icons">&#xe315;</i>
+        <a href="#" id="theme"><i class="material-icons">&#xe8bd;</i>
+          Appearance: Light<i class="material-icons">&#xe315;</i>
         </a>
         <a href="#"><i class="material-icons">&#xe8b8;</i>Settings</a>
         <a href="#"><i class='fas fa-question-circle'></i>Help</a>

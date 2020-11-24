@@ -47,18 +47,18 @@
   cursor: pointer;
 }
 
-.trending-video p {
+.video-info p {
   font-size: 0.8em;
   line-height: 1.5em;
   color: #606060;
 }
 
-.trending-video span {
+.video-info span {
   font-size: 0.8em;
   line-height: 1.5em;
   color: #606060;
 }
 
-.trending-video h3 {
+.video-info h3 {
   margin: 0 0 0.3em 0;
 }

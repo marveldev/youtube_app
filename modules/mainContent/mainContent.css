@@ -9,7 +9,7 @@
 }
 
 .main-content {
-  display: none;
+  /* display: none; */
   position: relative;
   left: 15em;
   width: 100vw;

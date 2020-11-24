@@ -1,5 +1,5 @@
 .watch-history {
-  /* display: none; */
+  display: none;
   position: relative;
   left: 15em;
   top: 4em;
@@ -28,4 +28,53 @@
   column-gap: 1em;
   padding: 0.7em 0;
   cursor: pointer;
+}
+
+.search-history {
+  position: fixed;
+  right: 0;
+  top: 4em;
+  padding: 1em 2em;
+  height: 100%;
+  width: 23em;
+}
+
+.search-history > input {
+  width: 80%;
+  border: none;
+  border-bottom: 1px solid #000;
+  height: 3em;
+  padding: 0 2.5em;
+  background-color: #F1F1F1;
+}
+
+.search-history > i {
+  position: relative;
+  left: 1.3em;
+  float: left;
+  line-height: 2.5em;
+  color: #606060;
+  clear: both;
+}
+
+.search-inputs > p {
+  padding: 1em;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.search-inputs input {
+  float: right;
+  clear: both;
+}
+
+.search-history i {
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+.search-history > p {
+  color: #606060;
+  font-weight: 550;
+  margin: 1.5em 0;
+  font-size: 0.9em;
 }

@@ -52,24 +52,17 @@ const watchHistoryPage = () => {
           </div>
         </div>
         <div class="search-history">
-          <input type="search" name="" id="">
-          <label for="">
-            <div>
-              <span>Watch history</span>
-              <input type="radio" name="" id="">
-            </div>
-            <div>
-              <span>Community</span>
-              <input type="radio" name="" id="">
-            </div>
-            <div>
-              <span>Live chat</span>
-              <input type="radio" name="" id="">
-            </div>
-          </label>
-          <p>CLEAR ALL WATCH HISTORY</p>
-          <p>PAUSE WATCH HISTORY</p>
-          <p>MANAGE ALL HISTORY</p>
+          <input type="search" placeholder="Search watch history">
+          <i class="fa fa-search"></i>
+          <div class="search-inputs">
+            <p>History type</p>
+            <p><span>Watch history</span><input type="radio" name="radio"></p>
+            <p><span>Community</span><input type="radio" name="radio"></p>
+            <p><span>Live chat</span><input type="radio" name="radio"></p>
+          </div>
+          <p><i class="material-icons">&#xe872;</i>CLEAR ALL WATCH HISTORY</p>
+          <p><i class="material-icons">&#xe036;</i>PAUSE WATCH HISTORY</p>
+          <p><i class="material-icons">&#xe8b8;</i>MANAGE ALL HISTORY</p>
           <p>Watch and search history</p>
           <p>Comments</p>
         </div>

@@ -20,7 +20,8 @@ const channelPage = () => {
         </nav>
       </div>
       <div class="homepage">
-        <img src="https://www.gstatic.com/youtube/img/channels/empty_channel_illustration.svg" alt="photo">
+        <img class="default-image" src="https://www.gstatic.com/youtube/img/channels/empty_channel_illustration.svg" alt="photo">
+        <img class="theme-image" src="https://www.gstatic.com/youtube/img/channels/empty_channel_dark_illustration.svg" alt="photo">
         <p>Upload a video to get started</p>
         <span>Start sharing your story and connecting with viewers. Videos you upload will show up here.</span>
         <button>UPLOAD VIDEO</button>

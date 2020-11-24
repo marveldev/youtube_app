@@ -9,8 +9,12 @@ const topNavEvents = () => {
   const darkTheme = document.querySelector('#darkTheme');
   const lightTheme = document.querySelector('#lightTheme');
 
-  root.className = localStorage.getItem('theme');
-  document.body.style.backgroundColor = localStorage.getItem('backgroundColor');
+  const themeProperty = JSON.parse(localStorage.getItem('theme'));
+  console.log(themeProperty);
+
+  // root.className = localStorage.getItem('theme');
+  // document.body.style.backgroundColor = localStorage.getItem('backgroundColor');
+  // document.querySelector('.theme-name').innerText = localStorage.getItem('themeName');
 
   const displayRightModal = ( overlayValue, themeModalValue, rightNavValue, overflowValue ) => {
     overlay.style.display = overlayValue;
@@ -35,21 +39,32 @@ const topNavEvents = () => {
   })
 
   overlay.addEventListener('click', () => {
-    displayRightModal('none', 'none', 'none', 'scroll');
+    displayRightModal('none', 'none', 'none', 'auto');
   })
 
   darkTheme.addEventListener('click', () => {
     root.className = 'dark';
     document.body.style.backgroundColor = '#181818';
-    localStorage.setItem('theme', 'dark');
-    localStorage.setItem('backgroundColor', '#181818');
+    document.querySelector('.theme-name').innerText = 'Dark';
+    displayRightModal('none', 'none', 'none', 'auto');
+
+    const theme = {
+      theme: 'dark',
+      backgroundColor: '#181818',
+      themeName: 'Dark'
+    };
+
+    localStorage.setItem('theme', JSON.stringify(theme));
   })
 
   lightTheme.addEventListener('click', () => {
     root.className = 'default';
     document.body.style.backgroundColor = '#fff';
-    localStorage.setItem('theme', 'default');
-    localStorage.setItem('backgroundColor', '#fff');
+    document.querySelector('.theme-name').innerText = 'Light';
+    displayRightModal('none', 'none', 'none', 'auto');
+    // localStorage.setItem('theme', 'default');
+    // localStorage.setItem('backgroundColor', '#fff');
+    // localStorage.setItem('themeName', 'Light');
   })
 }
 

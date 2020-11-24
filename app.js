@@ -9,7 +9,6 @@ import trendingPage from './modules/trendingPage/trending.js';
 import channelPage from './modules/channelPage/channel.js';
 import watchHistoryPage from './modules/watchHisoryPage/watchHistory.js';
 
-
 const app = () => {
   return `
     ${topNav()}

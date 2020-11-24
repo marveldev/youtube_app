@@ -1,11 +1,10 @@
 .channel-page {
-  /* display: none; */
+  display: none;
   position: relative;
   left: 15em;
   top: 4em;
   width: 80vw;
   height: auto;
-  /* padding-bottom: 5em; */
   background-color: #F9F9F9;
 }
 

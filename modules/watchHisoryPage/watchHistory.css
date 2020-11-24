@@ -1,0 +1,31 @@
+.watch-history {
+  /* display: none; */
+  position: relative;
+  left: 15em;
+  top: 4em;
+  padding-bottom: 2em;
+  height: auto;
+  width: 80vw;
+  background-color: #F9F9F9;
+}
+
+#watchHistory {
+  display: grid;
+  grid-template-columns: 42em 1fr;
+}
+
+#watchHistory > div:nth-child(1) {
+  padding: 0 1em;
+}
+
+#watchHistory > div:nth-child(2) {
+  background-color: #F1F1F1;
+}
+
+.history-video {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  column-gap: 1em;
+  padding: 0.7em 0;
+  cursor: pointer;
+}

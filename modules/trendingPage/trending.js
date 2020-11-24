@@ -24,68 +24,60 @@ const trendingPage = () => {
           <video class="video">
             <source src="https://player.vimeo.com/external/362720873.sd.mp4?s=0bd51a6eac8fbcb012d1a01d78f036d97f68081c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
           </video>
-          <div>
-            <div>
-              <h3>The Chinese Culture</h3>
-              <span>Pexels Video</span>
-              <span>28k views</span>
-              <span><strong>&middot</strong> 8 months ago</span>
-              <p>Ronaldo scores the victory for Juventus with two goals in the first half. 
-                Serie A TIM This is the official channel for the Serie A, providing all the 
-                latest highlights, interviews, news...
-              </p>
-            </div>
+          <div class="video-info">
+            <h3>The Chinese Culture</h3>
+            <span>Pexels Video</span>
+            <span>28k views</span>
+            <span><strong>&middot</strong> 8 months ago</span>
+            <p>Ronaldo scores the victory for Juventus with two goals in the first half. 
+              Serie A TIM This is the official channel for the Serie A, providing all the 
+              latest highlights, interviews, news...
+            </p>
           </div>
         </div>
         <div class="trending-video">
           <video class="video">
             <source src="https://player.vimeo.com/external/362720873.sd.mp4?s=0bd51a6eac8fbcb012d1a01d78f036d97f68081c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
           </video>
-          <div>
-            <div>
-              <h3>The Chinese Culture</h3>
-              <span>Pexels Video</span>
-              <span>28k views</span>
-              <span><strong>&middot</strong> 8 months ago</span>
-              <p>Ronaldo scores the victory for Juventus with two goals in the first half. 
-                Serie A TIM This is the official channel for the Serie A, providing all the 
-                latest highlights, interviews, news...
-              </p>
-            </div>
+          <div class="video-info">
+            <h3>The Chinese Culture</h3>
+            <span>Pexels Video</span>
+            <span>28k views</span>
+            <span><strong>&middot</strong> 8 months ago</span>
+            <p>Ronaldo scores the victory for Juventus with two goals in the first half. 
+              Serie A TIM This is the official channel for the Serie A, providing all the 
+              latest highlights, interviews, news...
+            </p>
           </div>
         </div>
         <div class="trending-video">
           <video class="video">
             <source src="https://player.vimeo.com/external/362720873.sd.mp4?s=0bd51a6eac8fbcb012d1a01d78f036d97f68081c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
           </video>
-          <div>
-            <div>
-              <h3>The Chinese Culture</h3>
-              <span>Pexels Video</span>
-              <span>28k views</span>
-              <span><strong>&middot</strong> 8 months ago</span>
-              <p>Ronaldo scores the victory for Juventus with two goals in the first half. 
-                Serie A TIM This is the official channel for the Serie A, providing all the 
-                latest highlights, interviews, news...
-              </p>
-            </div>
+          <div class="video-info">
+            <h3>The Chinese Culture</h3>
+            <span>Pexels Video</span>
+            <span>28k views</span>
+            <span><strong>&middot</strong> 8 months ago</span>
+            <p>Ronaldo scores the victory for Juventus with two goals in the first half. 
+              Serie A TIM This is the official channel for the Serie A, providing all the 
+              latest highlights, interviews, news...
+            </p>
           </div>
         </div>
         <div class="trending-video">
           <video class="video">
             <source src="https://player.vimeo.com/external/362720873.sd.mp4?s=0bd51a6eac8fbcb012d1a01d78f036d97f68081c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
           </video>
-          <div>
-            <div>
-              <h3>The Chinese Culture</h3>
-              <span>Pexels Video</span>
-              <span>28k views</span>
-              <span><strong>&middot</strong> 8 months ago</span>
-              <p>Ronaldo scores the victory for Juventus with two goals in the first half. 
-                Serie A TIM This is the official channel for the Serie A, providing all the 
-                latest highlights, interviews, news...
-              </p>
-            </div>
+          <div class="video-info">
+            <h3>The Chinese Culture</h3>
+            <span>Pexels Video</span>
+            <span>28k views</span>
+            <span><strong>&middot</strong> 8 months ago</span>
+            <p>Ronaldo scores the victory for Juventus with two goals in the first half. 
+              Serie A TIM This is the official channel for the Serie A, providing all the 
+              latest highlights, interviews, news...
+            </p>
           </div>
         </div>
       </div>

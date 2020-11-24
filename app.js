@@ -7,6 +7,7 @@ import rightNavModal from './modules/rightNav/rightNavModal.js';
 import{ topNavEvents } from './modules/topNav/events.js';
 import trendingPage from './modules/trendingPage/trending.js';
 import channelPage from './modules/channelPage/channel.js';
+import watchHistoryPage from './modules/watchHisoryPage/watchHistory.js';
 
 
 const app = () => {
@@ -19,6 +20,7 @@ const app = () => {
     ${rightNavModal()}
     ${trendingPage()}
     ${channelPage()}
+    ${watchHistoryPage()}
   `
 }
 

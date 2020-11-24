@@ -1,7 +1,7 @@
 const channelPage = () => {
   return `
     <div class="channel-page">
-      <div>
+      <div class="channel-nav">
         <div>
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
           class="image" alt="photo">
@@ -17,10 +17,9 @@ const channelPage = () => {
           <a href="#">DISCUSSION</a>
           <a href="#">ABOUT</a>
           <a href="#"><i class="fa fa-search"></i></a>
-          <a href="#"><i class="material-icons">&#xe315;</i></a>
         </nav>
       </div>
-      <div>
+      <div class="homepage">
         <img src="https://www.gstatic.com/youtube/img/channels/empty_channel_illustration.svg" alt="photo">
         <p>Upload a video to get started</p>
         <span>Start sharing your story and connecting with viewers. Videos you upload will show up here.</span>

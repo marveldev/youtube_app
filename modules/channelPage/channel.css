@@ -44,6 +44,7 @@
   font-weight: 600;
   padding: 1em 1.5em;
   text-decoration: none;
+  color: #000;
 }
 
 .channel-nav > nav > a:hover {
@@ -57,10 +58,14 @@
   text-align: center;
 }
 
-.homepage img {
+.default-image {
   margin-top: 4em;
   width: 12em;
   height: 12em;
+}
+
+.theme-image {
+  display: none;
 }
 
 .homepage button {

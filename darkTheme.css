@@ -144,3 +144,96 @@
 .dark .widescreen-nav > a:hover {
   background-color: #383838;
 }
+
+.dark .watch-history {
+  background-color: #181818;
+  color: #fff;
+}
+
+.dark #watchHistory > div:nth-child(2) {
+  background-color: #0F0F0F;
+}
+
+.dark .search-history > input {
+  background-color: #0F0F0F;
+  border-bottom: 1px solid #ffffffa9;
+}
+
+.dark .search-inputs > p {
+  border-bottom: 1px solid #272727;
+  
+}
+
+.dark .search-history > p {
+  color: #ffffffa8;
+}
+
+.dark .search-history > input::placeholder {
+  color: #ffffffa8;
+}
+
+.dark .video-info p {
+  color: #ffffffa8;
+}
+
+.dark .video-info span {
+  color: #ffffffa8;
+}
+
+.dark .trending-page {
+  background-color: #181818;
+  color: #fff;
+}
+
+.dark .trending-nav {
+  border-bottom: 1px solid #383838;
+}
+
+.dark .trending-nav span {
+  color: #ffffffa8;
+}
+
+.dark .channel-page {
+  background-color: #181818;
+  color: #fff;
+}
+
+.dark .channel-nav button {
+  background-color: #3EA6FF;
+  color: #000;
+}
+
+.dark .channel-nav > nav > a {
+  color: #ffffffa8;
+}
+
+.dark .channel-nav > nav > a:hover {
+  background-color: transparent;
+  border-bottom: 3px solid #aaa;
+  color: #fff;
+}
+
+.dark .homepage {
+  background-color: #0f0f0f;
+}
+
+.dark .homepage span {
+  color: #ffffffa8;
+  font-size: 0.9em;
+}
+
+.dark .homepage button {
+  background-color: #3EA6FF;
+  color: #000;
+}
+
+.dark .theme-image {
+  display: inline;
+  margin-top: 4em;
+  width: 12em;
+  height: 12em;
+}
+
+.dark .default-image {
+  display: none;
+}

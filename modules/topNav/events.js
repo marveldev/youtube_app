@@ -10,11 +10,9 @@ const topNavEvents = () => {
   const lightTheme = document.querySelector('#lightTheme');
 
   const themeProperty = JSON.parse(localStorage.getItem('theme'));
-  console.log(themeProperty);
-
-  // root.className = localStorage.getItem('theme');
-  // document.body.style.backgroundColor = localStorage.getItem('backgroundColor');
-  // document.querySelector('.theme-name').innerText = localStorage.getItem('themeName');
+  root.className = themeProperty.theme;
+  document.body.style.backgroundColor = themeProperty.backgroundColor;
+  document.querySelector('.theme-name').innerText = themeProperty.themeName;
 
   const displayRightModal = ( overlayValue, themeModalValue, rightNavValue, overflowValue ) => {
     overlay.style.display = overlayValue;
@@ -48,23 +46,20 @@ const topNavEvents = () => {
     document.querySelector('.theme-name').innerText = 'Dark';
     displayRightModal('none', 'none', 'none', 'auto');
 
-    const theme = {
-      theme: 'dark',
-      backgroundColor: '#181818',
-      themeName: 'Dark'
-    };
+    const theme = { theme: 'dark', backgroundColor: '#181818', themeName: 'Dark' };
 
     localStorage.setItem('theme', JSON.stringify(theme));
   })
 
   lightTheme.addEventListener('click', () => {
     root.className = 'default';
-    document.body.style.backgroundColor = '#fff';
+    document.body.style.backgroundColor = '#F9F9F9';
     document.querySelector('.theme-name').innerText = 'Light';
     displayRightModal('none', 'none', 'none', 'auto');
-    // localStorage.setItem('theme', 'default');
-    // localStorage.setItem('backgroundColor', '#fff');
-    // localStorage.setItem('themeName', 'Light');
+
+    const theme = { theme: 'default', backgroundColor: '#F9F9F9', themeName: 'Light' };
+
+    localStorage.setItem('theme', JSON.stringify(theme));
   })
 }
 

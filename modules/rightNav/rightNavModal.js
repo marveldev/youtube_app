@@ -8,7 +8,7 @@ const rightNavModal = () => {
           class="image" alt="photo">
           <strong id="userName">Jane Doe</strong>
         </div>
-        <a href="#"><i class="fa fa-user-circle"></i>Your channel</a>
+        <a href="#" id="channel"><i class="fa fa-user-circle"></i>Your channel</a>
         <a href="#"><i class='fas fa-dollar-sign'></i>Purchases and memberships</a>
         <a href="#"><i class='fas fa-users-cog'></i>Switch account</a>
         <a href="#"><i class='fas fa-sign-out-alt'></i>Sign out</a>

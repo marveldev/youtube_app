@@ -1,12 +1,10 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "./modules/topNav/topNav.css";
-@import "./modules/mainContent/mainContent.css";
 @import "./modules/leftNav/leftNav.css";
-@import "./modules/mainContent/mainContent.css";
 @import "./modules/rightNav/rightNav.css";
+@import "./modules/homePage/homePage.css";
 @import "./modules/trendingPage/trending.css";
-@import "./modules/channelPage/channel.css";
 @import "./modules/watchHisoryPage/watchHistory.css";
+@import "./modules/channelPage/channel.css";
 @import "./modules/activePage/activePage.css";
 @import "./darkTheme.css";
-

@@ -1,10 +1,7 @@
 .trending-page {
   position: relative;
   left: 15em;
-  top: 4em;
-  width: 80vw;
-  padding-bottom: 5em;
-  height: auto;
+  width: 100%;
   background-color: #F9F9F9;
 }
 

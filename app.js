@@ -1,7 +1,7 @@
 import topNav from './modules/topNav/topNav.js';
 import leftSideNav from './modules/leftNav/leftNav.js';
-import mainContent from './modules/mainContent/mainContent.js';
-import { videoEventListeners } from './modules/mainContent/events.js';
+import homePage from './modules/homePage/homePage.js';
+import { videoEventListeners } from './modules/homePage/events.js';
 import leftNavEventListeners from './modules/leftNav/events.js';
 import rightNavModal from './modules/rightNav/rightNavModal.js';
 import{ topNavEvents } from './modules/topNav/events.js';
@@ -20,10 +20,10 @@ const app = () => {
     </section>
     ${rightNavModal()}
     <section class="pages">
-      ${mainContent()}
+      ${homePage()}
       ${trendingPage()}
-      ${channelPage()}
       ${watchHistoryPage()}
+      ${channelPage()}
     </section>
   `
 }

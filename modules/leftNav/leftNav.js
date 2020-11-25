@@ -2,7 +2,7 @@ const leftSideNav = () => {
   return `
     <nav class="leftside-nav">
       <div>
-        <a href="#"><i class="material-icons">&#xe88a;</i><strong>Home</strong></a>
+        <a href="#" class="history"><i class="material-icons">&#xe88a;</i><strong>Home</strong></a>
         <a href="#" class="icon" id="trending"><i class='fas fa-fire'></i><strong>Trending</strong></a>
         <a href="#"><i class="material-icons">&#xe064;</i><strong>Subscriptions</strong></a>
       </div>

@@ -1,6 +1,6 @@
 const homePage = () => {
   return `
-    <div class="home-page">
+    <section class="home-page">
       <nav class="button-nav">
         <button>All</button>
         <button>Odulade Adekola</button>
@@ -104,7 +104,7 @@ const homePage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   `
 }
 

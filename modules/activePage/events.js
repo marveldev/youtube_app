@@ -6,25 +6,16 @@ import channelPage from '../channelPage/channel.js';
 const togglePages = () => {
   const activePage = document.querySelector('.active-page');
 
-  const homeButton = document.querySelector('.history');
-  homeButton.addEventListener('click', () => {
-    activePage.innerHTML = `${homePage()}`;
-  })
+  function displayPage(selector, value) {
+    selector.addEventListener('click', () => {
+      activePage.innerHTML = value;
+    })
+  }
 
-  const trendingButton = document.querySelector('#trending');
-  trendingButton.addEventListener('click', () => {
-    activePage.innerHTML = `${trendingPage()}`;
-  })
-  
-  const historyButton = document.querySelector('#history');
-  historyButton.addEventListener('click', () => {
-    activePage.innerHTML = `${watchHistoryPage()}`;
-  })
-
-  const channelButton = document.querySelector('#channel');
-  channelButton.addEventListener('click', () => {
-    activePage.innerHTML = `${channelPage()}`;
-  })
+  displayPage(document.querySelector('.history'), `${homePage()}`)
+  displayPage(document.querySelector('#trending'), `${trendingPage()}`)
+  displayPage(document.querySelector('#history'), `${watchHistoryPage()}`)
+  displayPage(document.querySelector('#channel'), `${channelPage()}`)
 }
 
 export default togglePages;

@@ -1,6 +1,5 @@
 .watch-history {
-  position: relative;
-  left: 15em;
+  width: 100%;
   padding-bottom: 2em;
   background-color: #F9F9F9;
 }
@@ -29,8 +28,8 @@
 .search-history {
   position: fixed;
   right: 0;
-  top: 4em;
-  padding: 1em 2em;
+  top: 3.5em;
+  padding: 1.5em 2em;
   height: 100%;
   width: 23em;
 }
@@ -38,7 +37,7 @@
 .search-history > input {
   width: 80%;
   border: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #D8D8D8;
   height: 3em;
   padding: 0 2.5em;
   background-color: #F1F1F1;

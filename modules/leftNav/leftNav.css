@@ -1,14 +1,17 @@
-.leftside-nav {
-  position: fixed;
-  left: 0;
-  width: 15em;
+#leftNav {
   height: 100vh;
-  overflow:hidden;
   background-color: #fff;
 }
 
 .leftside-nav:hover {
   overflow-y: scroll;
+}
+
+.leftside-nav {
+  position: fixed;
+  width: 15em;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .leftside-nav a {
@@ -65,27 +68,28 @@
   background: #BCC0C4;
 }
 
-.widescreen-nav {
+#leftSideNav {
   display: none;
+  position: fixed;
   width: 5em;
 }
 
-.widescreen-nav > a {
+#leftSideNav > a {
   display: block;
   text-decoration: none;
-  padding: 1em 0;
+  padding: 0.8em 0;
   color: #606060;
   text-align: center;
 }
 
-.widescreen-nav i {
+#leftSideNav i {
   margin: auto 1em;
 }
 
-.widescreen-nav small {
-  font-size: 0.7em;
+#leftSideNav small {
+  font-size: 0.6em;
 }
 
-.widescreen-nav > a:hover {
+#leftSideNav > a:hover {
   background-color: #f5f5f5;
 }

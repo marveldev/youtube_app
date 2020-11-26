@@ -26,4 +26,4 @@ const topNav = () => {
   `
 }
 
-export default topNav
+export default topNav;

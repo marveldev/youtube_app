@@ -1,6 +1,6 @@
 const channelPage = () => {
   return `
-    <div class="channel-page">
+    <section class="channel-page">
       <div class="channel-nav">
         <div>
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
@@ -26,7 +26,8 @@ const channelPage = () => {
         <span>Start sharing your story and connecting with viewers. Videos you upload will show up here.</span>
         <button>UPLOAD VIDEO</button>
       </div>
-    </div>
+    </section>
   `
 }
+
 export default channelPage;

@@ -1,6 +1,8 @@
+import homePage from '../homePage/homePage.js';
+
 const activePage = () => {
   return `
-    <section class="active-page"></section>
+    <section class="active-page">${homePage()}</section>
   `
 }
 

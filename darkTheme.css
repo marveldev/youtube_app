@@ -53,7 +53,7 @@
   background: #4A4A4A;
 }
 
-.dark .main-content {
+.dark .home-page {
   background-color: #181818;
 }
 
@@ -198,7 +198,7 @@
   color: #fff;
 }
 
-.dark .channel-nav button {
+.dark .channel-page button {
   background-color: #3EA6FF;
   color: #000;
 }
@@ -220,11 +220,6 @@
 .dark .homepage span {
   color: #ffffffa8;
   font-size: 0.9em;
-}
-
-.dark .homepage button {
-  background-color: #3EA6FF;
-  color: #000;
 }
 
 .dark .theme-image {

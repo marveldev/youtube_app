@@ -43,7 +43,7 @@ const homePage = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div class="video-content">
           <video class="video">
             <source src="https://player.vimeo.com/external/316817750.sd.mp4?s=cecc367281d676b407a94a1470f5c4e4dd4aa4f1&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
           </video>
@@ -58,7 +58,7 @@ const homePage = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div class="video-content">
           <video class="video">
             <source src="https://player.vimeo.com/external/374119382.sd.mp4?s=2e2cf9aa0bd93c53987df1a2b07240602942ce72&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
           </video>
@@ -73,7 +73,7 @@ const homePage = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div class="video-content">
           <video class="video">
             <source src="https://player.vimeo.com/external/178514767.sd.mp4?s=c9ff180a74d64f3325af2e114be163d1cadb8e85&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
           </video>
@@ -88,7 +88,7 @@ const homePage = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div class="video-content">
           <video class="video">
             <source src="https://player.vimeo.com/external/363169958.sd.mp4?s=2bcfbdfcb641cd1668ea8cee4f038420d8b5cf8c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
           </video>

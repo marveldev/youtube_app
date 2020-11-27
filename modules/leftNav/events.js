@@ -1,6 +1,5 @@
 const leftNavEventListeners = () => {
   const burgerIcon = document.querySelector('.burger-icon');
-  const videoGallery = document.querySelector('.video-gallery');
   const leftNav = document.querySelector('.leftside-nav');
 
   burgerIcon.addEventListener('click', () => {

@@ -4,11 +4,12 @@ import watchHistoryPage from '../watchHisoryPage/watchHistory.js';
 import channelPage from '../channelPage/channel.js';
 
 const togglePages = () => {
-  const activePage = document.querySelector('.active-page');
+  const activePage = document.querySelector('#activePage');
 
   function displayPage(selector, value) {
     selector.addEventListener('click', () => {
       activePage.innerHTML = value;
+      localStorage.setItem('activePage', value)
     })
   }
 

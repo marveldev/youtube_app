@@ -5,26 +5,20 @@ import { videoEventListeners } from './modules/homePage/events.js';
 import leftNavEventListeners from './modules/leftNav/events.js';
 import rightNavModal from './modules/rightNav/rightNavModal.js';
 import{ topNavEvents } from './modules/topNav/events.js';
-import trendingPage from './modules/trendingPage/trending.js';
-import channelPage from './modules/channelPage/channel.js';
-import watchHistoryPage from './modules/watchHisoryPage/watchHistory.js';
-import activePage from './modules/activePage/activePage.js';
 import togglePages from './modules/activePage/events.js';
 
 const app = () => {
+  const currentPage = localStorage.getItem('activePage');
+
   return `
     ${topNav()}
     <section class="grid-container">
       ${leftSideNav()}
-      ${activePage()}
+      <section id="activePage">
+        ${currentPage ? currentPage : homePage()}
+      </section>
     </section>
     ${rightNavModal()}
-    <section class="pages">
-      ${homePage()}
-      ${trendingPage()}
-      ${watchHistoryPage()}
-      ${channelPage()}
-    </section>
   `
 }
 

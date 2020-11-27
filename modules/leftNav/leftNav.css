@@ -72,6 +72,7 @@
   display: none;
   position: fixed;
   width: 5em;
+  height: 100vh;
 }
 
 #leftSideNav > a {

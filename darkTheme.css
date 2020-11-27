@@ -21,7 +21,7 @@
   background-color: #ffffffc4;
 }
 
-.dark .leftside-nav {
+.dark #leftNav {
   background-color: #202020;
 }
 
@@ -133,15 +133,15 @@
   opacity: 0;
 }
 
-.dark .widescreen-nav {
+.dark #leftSideNav {
   background-color: #202020;
 }
 
-.dark .widescreen-nav > a {
+.dark #leftSideNav > a {
   color: #ffffffca;
 }
 
-.dark .widescreen-nav > a:hover {
+.dark #leftSideNav > a:hover {
   background-color: #383838;
 }
 

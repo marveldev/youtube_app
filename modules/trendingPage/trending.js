@@ -1,6 +1,6 @@
 const trendingPage = () => {
   return `
-    <div class="trending-page">
+    <section class="trending-page">
       <div class="trending-nav">
         <a href="#">
           <img src="https://youtube.com/img/trending/chips/music_80x80.png" alt="">
@@ -81,7 +81,7 @@ const trendingPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   `
 }
 

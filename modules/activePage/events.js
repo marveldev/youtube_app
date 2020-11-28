@@ -6,15 +6,25 @@ import channelPage from '../channelPage/channel.js';
 const togglePages = () => {
   const activePage = document.querySelector('#activePage');
 
-  function displayPage(selector, value) {
-    selector.addEventListener('click', () => {
-      activePage.innerHTML = value;
-      localStorage.setItem('activePage', value)
-    })
+  function displayPage(selectors, value) {
+    if (selectors.length > 1) {
+      for (let index = 0; index < selectors.length; index++) {
+        const selector = selectors[index];
+        selector.addEventListener('click', () => {
+          activePage.innerHTML = value;
+          localStorage.setItem('activePage', value) 
+        })
+      }
+    } else {
+      selectors.addEventListener('click', () => {
+        activePage.innerHTML = value;
+        localStorage.setItem('activePage', value) 
+      })
+    }
   }
 
-  displayPage(document.querySelector('.history'), `${homePage()}`)
-  displayPage(document.querySelector('#trending'), `${trendingPage()}`)
+  displayPage(document.querySelectorAll('.home'), `${homePage()}`)
+  displayPage(document.querySelectorAll('.trending'), `${trendingPage()}`)
   displayPage(document.querySelector('#history'), `${watchHistoryPage()}`)
   displayPage(document.querySelector('#channel'), `${channelPage()}`)
 }

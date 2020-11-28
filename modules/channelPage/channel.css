@@ -78,3 +78,7 @@
   color: #606060;
   font-size: 0.9em;
 }
+
+#showMore {
+  display: none;
+}

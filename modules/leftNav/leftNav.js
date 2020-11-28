@@ -3,8 +3,8 @@ const leftSideNav = () => {
     <div id="leftNav">
       <nav class="leftside-nav">
         <div>
-          <a href="#" class="history"><i class="material-icons">&#xe88a;</i><strong>Home</strong></a>
-          <a href="#" class="icon" id="trending"><i class='fas fa-fire'></i><strong>Trending</strong></a>
+          <a href="#" class="home"><i class="material-icons">&#xe88a;</i><strong>Home</strong></a>
+          <a href="#" class="icon trending"><i class='fas fa-fire'></i><strong>Trending</strong></a>
           <a href="#"><i class="material-icons">&#xe064;</i><strong>Subscriptions</strong></a>
         </div>
         <div>
@@ -56,8 +56,8 @@ const leftSideNav = () => {
         </div>
       </nav>
       <nav id="leftSideNav">
-        <a href="#"><i class="material-icons">&#xe88a;</i><small>Home</small></a>
-        <a href="#"><i class='fas fa-fire'></i><small>Trending</small></a>
+        <a href="#" class="home"><i class="material-icons">&#xe88a;</i><small>Home</small></a>
+        <a href="#" class="trending"><i class='fas fa-fire'></i><small>Trending</small></a>
         <a href="#"><i class="material-icons">&#xe064;</i><small>Subscriptions</small></a>
         <a href="#"><i class="material-icons">&#xe04a;</i><small>Library</small></a>
       </nav>

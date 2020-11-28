@@ -13,10 +13,13 @@ const channelPage = () => {
           <a href="#">HOME</a>
           <a href="#">VIDEOS</a>
           <a href="#">PLAYLISTS</a>
-          <a href="#">CHANNEL</a>
-          <a href="#">DISCUSSION</a>
-          <a href="#">ABOUT</a>
-          <a href="#"><i class="fa fa-search"></i></a>
+          <a href="#"><i class="material-icons" id="showMore">&#xe313;</i></a>
+          <nav>
+            <a href="#">CHANNEL</a>
+            <a href="#">DISCUSSION</a>
+            <a href="#">ABOUT</a>
+            <a href="#"><i class="fa fa-search"></i></a>
+          </nav>
         </nav>
       </div>
       <div class="homepage">

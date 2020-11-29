@@ -5,12 +5,14 @@ const homePage = () => {
         <button>All</button>
         <button>Odulade Adekola</button>
         <button>Shepard Bushiri</button>
-        <button>JavaScript</button>
-        <button>Css</button>
-        <button>React</button>
-        <button>Python</button>
-        <button>Computer</button>
-        <button>Music</button>
+        <nav>
+          <button>JavaScript</button>
+          <button>Css</button>
+          <button>React</button>
+          <button>Python</button>
+          <button>Computer</button>
+          <button>Music</button>
+        </nav>
       </nav>
       <div class="video-gallery">
         <div class="video-content">
@@ -45,13 +47,13 @@ const homePage = () => {
         </div>
         <div class="video-content">
           <video class="video">
-            <source src="https://player.vimeo.com/external/316817750.sd.mp4?s=cecc367281d676b407a94a1470f5c4e4dd4aa4f1&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            <source src="https://player.vimeo.com/external/350245348.sd.mp4?s=5a4dafd828188844cef2274dd0bc8babb7d06687&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
           </video>
           <div class="about-video">
             <img src="https://images.pexels.com/photos/4724071/pexels-photo-4724071.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             class="image" alt="photo">
             <div>
-              <strong>Man Sipping Wine</strong>
+              <strong>A Moving Truck</strong>
               <p>Pexels Video</p>
               <span>28k views</span>
               <span><strong>&middot</strong> 8 months ago</span>
@@ -75,7 +77,7 @@ const homePage = () => {
         </div>
         <div class="video-content">
           <video class="video">
-            <source src="https://player.vimeo.com/external/178514767.sd.mp4?s=c9ff180a74d64f3325af2e114be163d1cadb8e85&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+            <source src="https://player.vimeo.com/external/331083783.sd.mp4?s=d817f766244c10a344e39045edf595366cb72979&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
           </video>
           <div class="about-video">
             <img src="https://images.pexels.com/photos/4724071/pexels-photo-4724071.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"

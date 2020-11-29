@@ -36,14 +36,22 @@
   cursor: pointer;
 }
 
-.channel-nav > nav > a {
+.channel-nav > nav a {
   font-weight: 600;
   padding: 1em 1.5em;
   text-decoration: none;
   color: #000;
 }
 
-.channel-nav > nav > a:hover {
+.channel-nav > nav a:nth-child(4) {
+  display: none;
+}
+
+.channel-nav > nav > nav {
+  display: inline;
+}
+
+.channel-nav > nav a:hover {
   background-color: #F1F1F1;
   border-bottom: 3px solid #606060;
 }
@@ -77,8 +85,4 @@
 .homepage span {
   color: #606060;
   font-size: 0.9em;
-}
-
-#showMore {
-  display: none;
 }

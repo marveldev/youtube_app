@@ -29,7 +29,11 @@
   padding: 0 1.5em;
 }
 
-.button-nav > button {
+.button-nav > nav {
+  display: inline;
+}
+
+.button-nav button {
   margin: 1.2em 0.5em;
   width: auto;
   height: 2.5em;
@@ -46,11 +50,6 @@
   padding: 1.5em 1em;
   gap: 1.2em;
 }
-
-/* .video-widescreen {
-  padding: 1.5em 1.8em;
-  font-size: 1.12em;
-} */
 
 .video-gallery > div {
   height: 17em;

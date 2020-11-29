@@ -25,6 +25,10 @@
     display: none;
   }
 
+  .button-nav > nav {
+    display: none;
+  }
+
   .grid-container {
     grid-template-columns: 0 1fr;
   }

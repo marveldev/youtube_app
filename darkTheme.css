@@ -63,7 +63,7 @@
   border-bottom: 1px solid #383838;
 }
 
-.dark .button-nav > button {
+.dark .button-nav button {
   background-color: #373737;
   color: #fff;
   border: 1px solid #ffffff44;
@@ -203,11 +203,11 @@
   color: #000;
 }
 
-.dark .channel-nav > nav > a {
+.dark .channel-nav > nav a {
   color: #ffffffa8;
 }
 
-.dark .channel-nav > nav > a:hover {
+.dark .channel-nav > nav a:hover {
   background-color: transparent;
   border-bottom: 3px solid #aaa;
   color: #fff;

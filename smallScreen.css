@@ -178,7 +178,7 @@
     margin: 2em auto;
   }
 
-  .channel-nav > nav a:nth-child(4) {
+  .channel-nav > nav > a:nth-child(4) {
     display: inline;
     vertical-align: middle;
   }

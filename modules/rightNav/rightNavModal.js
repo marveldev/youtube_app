@@ -16,7 +16,7 @@ const rightNavModal = () => {
         <a href="#" id="theme"><i class="material-icons">&#xe8bd;</i>
           Appearance : <span class="theme-name">Light</span><i class="material-icons">&#xe315;</i>
         </a>
-        <a href="#"><i class="material-icons">&#xe8b8;</i>Settings</a>
+        <a href="#" class="settings-button"><i class="material-icons">&#xe8b8;</i>Settings</a>
         <a href="#"><i class='fas fa-question-circle'></i>Help</a>
         <a href="#"><i class="material-icons">&#xe87f;</i>Send feedback</a>
       </nav>

@@ -1,4 +1,4 @@
-@media screen and (max-width: 425px) and (min-width: 325px) {
+@media only screen and (max-width: 425px) {
   .burger-icon {
     display: none;
   }
@@ -96,6 +96,21 @@
   /* rightnav */
   #rightNav {
     top: 0em;
+    right: 0em;
+    width: 100%;
+  }
+
+  .rightNav-modal {
+    padding: 1em 0;
+    width: 100%;
+  }
+
+  #theme > i:nth-child(3) {
+    margin: 0 0 0 6.5em;
+  }
+
+  #themeModal {
+    width: 100%;
   }
 
   /* trending */
@@ -107,12 +122,12 @@
   .trending-nav img {
     height: 3.5em;
   }
-  
+
   .trending-nav a {
     width: 5em;
     margin: 0.5em;
   }
-  
+
   .trending-nav span {
     font-size: 0.7em;
   }
@@ -186,5 +201,50 @@
   .channel-nav > nav > a:hover {
     background-color: transparent;
     border-bottom: 3px solid #FF0000;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  /* topnav */
+  #profilePhoto {
+    margin-left: 1.5em;
+  }
+
+ /* trending */
+  .video-info {
+    width: 22em;
+    padding: 0 1em;
+  }
+
+  .trending-nav {
+    grid-template-columns: 5em 5em 5em 5em;
+  }
+
+  .trending-nav a {
+    margin: 0.5em 0;
+  }
+
+  /* home */
+  .button-nav {
+    padding: 0 0.5em;
+  }
+
+  /* rightnav */
+  #theme > i:nth-child(3) {
+    margin: 0 0 0 4.5em;
+  }
+
+  /* channel */
+  .channel-nav > nav > a {
+    padding: 1em 1em;
+  }
+
+  .channel-nav > nav {
+    padding-left: 0.5em;
+  }
+
+  /* leftnav */
+  #leftSideNav > a {
+    width: auto;
   }
 }

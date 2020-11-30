@@ -4,6 +4,7 @@ const topNavEvents = () => {
   const rightNavModal = document.querySelector('.rightNav-modal');
   const theme = document.querySelector('#theme');
   const themeModal = document.querySelector('#themeModal');
+  const closeModalButton = document.querySelector('#closeModalButton');
   const arrowLeft = document.querySelector('#arrowLeft');
   const root = document.querySelector('#root');
 
@@ -22,8 +23,11 @@ const topNavEvents = () => {
   }
 
   profilePhoto.addEventListener('click', () => {
-    rightNavModal.style.display === 'block' ? displayRightModal('none', 'none', 'none', 'auto')
-    : displayRightModal('block', 'none', 'block', 'hidden');
+    if (rightNavModal.style.display === 'block') {
+      displayRightModal('none', 'none', 'none', 'auto')
+    } else {
+      displayRightModal('block', 'none', 'block', 'hidden')
+    }
   })
 
   theme.addEventListener('click', () => {
@@ -37,6 +41,10 @@ const topNavEvents = () => {
   })
 
   overlay.addEventListener('click', () => {
+    displayRightModal('none', 'none', 'none', 'auto');
+  })
+
+  closeModalButton.addEventListener('click', () => {
     displayRightModal('none', 'none', 'none', 'auto');
   })
 

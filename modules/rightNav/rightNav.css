@@ -48,12 +48,16 @@
 
 .rightNav-modal > div {
   display: grid;
-  grid-template-columns: 0.5fr 2.5fr;
+  grid-template-columns: 0.5fr 1.5fr 0.2fr;
   margin: 0.5em 1em 1em;
 }
 
+.rightNav-modal img {
+  font-size: 1.2em;
+}
+
 #userName {
-  line-height: 2em;
+  line-height: 2.5em;
 }
 
 #theme > i:nth-child(3) {
@@ -92,4 +96,16 @@
 
 #darkTheme > i {
   opacity: 0;
+}
+
+#closeModalButton {
+  border: unset;
+  width: 2em;
+  height: 2em;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+#closeModalButton:active {
+  transform: translateY(4px);
 }

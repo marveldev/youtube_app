@@ -248,3 +248,43 @@
     width: auto;
   }
 }
+
+@media only screen and (max-width: 320px) {
+ /* topnav */
+  .tertiary-topNav {
+    margin-left: 0em;
+  }
+
+   /* trending */
+    .video-info {
+    width: 19em;
+  }
+
+  .trending-nav {
+    padding: 0.5em 0;
+  }
+
+   /* leftnav */
+  #leftSideNav > a {
+    width: auto;
+    font-size: 0.85em;
+  }
+
+  #leftSideNav > a:nth-child(2) {
+    padding-top: 0.8em;
+  }
+
+   /* rightnav */
+  #theme > i:nth-child(3) {
+    margin: 0 0 0 2.4em;
+  }
+
+  /* channel */
+  .channel-nav > nav > a {
+    padding: 1em 0.5em;
+  }
+
+  .homepage {
+    padding-bottom: 4em;
+  }
+}

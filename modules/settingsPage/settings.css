@@ -1,0 +1,25 @@
+.settings-container {
+  position: relative;
+  top: 4em;
+  display: grid;
+  grid-template-columns: 15em 2fr;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+
+.settings {
+  background-color: #F1F1F1;
+}
+
+.settings-nav {
+  position: fixed;
+  width: 15em;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.settings a {
+  padding: 0 1em;
+  width: 100%;
+}

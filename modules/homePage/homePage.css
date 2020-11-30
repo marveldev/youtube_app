@@ -1,7 +1,7 @@
-.grid-container {
+.home-container {
   position: relative;
   top: 4em;
-  display: grid;
+  display: none;
   grid-template-columns: 15em 2fr;
   width: 100%;
   height: auto;

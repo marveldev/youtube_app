@@ -6,22 +6,28 @@ import leftNavEventListeners from './modules/leftNav/events.js';
 import rightNavModal from './modules/rightNav/rightNavModal.js';
 import{ topNavEvents } from './modules/topNav/events.js';
 import togglePages from './modules/activePage/events.js';
-import settings from './modules/settingsPage/settings.js';
+import settingsNav from './modules/settingsPage/settingsNav.js';
+import accountPage from './modules/settingsPage/accountPage.js';
 
 const app = () => {
   const currentPage = localStorage.getItem('activePage');
 
   return `
     ${topNav()}
-    <section class="home-container">
-      ${leftSideNav()}
-      <section id="activePage">
-        ${currentPage ? currentPage : homePage()}
+    <section class="current-page">
+      <section class="home-container">
+        ${leftSideNav()}
+        <section id="activePage">
+          ${currentPage ? currentPage : homePage()}
+        </section>
       </section>
     </section>
     ${rightNavModal()}
     <section class="settings-container">
-      ${settings()}
+      ${settingsNav()}
+      <section>
+        ${accountPage()}
+      </section>
     </section>
   `
 }

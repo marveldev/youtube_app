@@ -1,8 +1,7 @@
 import homePage from '../homePage/homePage.js';
 import trendingPage from '../trendingPage/trending.js';
 import watchHistoryPage from '../watchHisoryPage/watchHistory.js';
-import channelPage from '../channelPage/channel.js';
-import settings from '../settingsPage/settings.js';
+import channelPage from '../homePage/channelPage/channel.js.js';
 
 const togglePages = () => {
   const activePage = document.querySelector('#activePage');
@@ -29,16 +28,29 @@ const togglePages = () => {
   displayPage(document.querySelector('#history'), `${watchHistoryPage()}`)
   displayPage(document.querySelector('#channel'), `${channelPage()}`)
 
-  function openSettings() {
-    document.querySelector('.home-container').style.display = 'none';
-    document.querySelector('.settings-container').style.display = 'grid';
+  function openSettings(selectors, homeValue, settingsValue) {
+    if (selectors.length > 1) {
+      for (let index = 0; index < selectors.length; index++) {
+        const selector = selectors[index];
+        selector.addEventListener('click', () => {
+          console.log('sok');
+          document.querySelector('.home-container').style.display = homeValue;
+          document.querySelector('.settings-container').style.display = settingsValue;
+        })
+      }
+    } else {
+      selectors.addEventListener('click', () => {
+        console.log('lok');
+        document.querySelector('.home-container').style.display = homeValue;
+        document.querySelector('.settings-container').style.display = settingsValue;
+      })
+    }
+    document.querySelector('.home-container').style.display = homeValue;
+    document.querySelector('.settings-container').style.display = settingsValue;
   }
 
-  const settingsButtons = document.querySelectorAll('.settings-button');
-  for (let index = 0; index < settingsButtons.length; index++) {
-    const settingsButton = settingsButtons[index];
-    settingsButton.addEventListener('click', openSettings);
-  }
+  openSettings(document.querySelectorAll('.settings-button'), 'none', 'grid')
+  openSettings(document.querySelector('.logo'), 'grid', 'none')
 }
 
 export default togglePages;

@@ -1,5 +1,5 @@
-import settingsNav from '../settingsPage/leftNav/settingsNav.js';
-import accountPage from '../settingsPage/content/accountPage/accountPage.js';
+import settingsNav from './leftNav/settingsNav.js';
+import accountPage from './content/accountPage/accountPage.js';
 
 const settingsContent = () => {
   return `

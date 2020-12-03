@@ -4,24 +4,25 @@ import rightNavModal from './modules/rightNav/rightNavModal.js';
 import { videoEventListeners } from './modules/defaultPage/homePage/events.js';
 import leftNavEventListeners from './modules/defaultPage/leftNav/events.js';
 import{ topNavEvents } from './modules/topNav/events.js';
+import leftSideNav from './modules/defaultPage/leftNav/leftNav.js';
+import homePage from './modules/defaultPage/homePage/homePage.js';
 // import togglePages from './modules/activePage/events.js';
 import { settingsContent, settingEventListeners } from './modules/settingsPage/settingsContent.js'
 
 const app = () => {
-  const currentPage = localStorage.getItem('currentPage');
   return `
     ${topNav()}
     <section class="current-page">
-      ${currentPage ? currentPage : homeContent()}
+      ${homeContent()}
     </section>
-    ${rightNavModal()}
-    <section class="pages">
+    <section id="page">
       ${settingsContent()}
     </section>
+    ${rightNavModal()}
   `
 }
-
 document.querySelector('#root').innerHTML = app();
+console.log(document.querySelector('#root'));
 videoEventListeners();
 leftNavEventListeners();
 topNavEvents();

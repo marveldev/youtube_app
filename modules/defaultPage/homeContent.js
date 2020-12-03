@@ -1,5 +1,5 @@
 import leftSideNav from './leftNav/leftNav.js';
-import homePage from './content/homePage/homePage.js';
+import homePage from './homePage/homePage.js';
 
 const homeContent = () => {
   const activePage = localStorage.getItem('activePage');

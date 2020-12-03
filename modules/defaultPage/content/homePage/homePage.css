@@ -10,7 +10,6 @@
 
 .wide {
   top: 3.7em;
-  display: grid;
   grid-template-columns: 5em 2fr;
   font-size: 1.1em;
 }

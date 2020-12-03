@@ -3,14 +3,14 @@ const leftNavEventListeners = () => {
   const leftNav = document.querySelector('.leftside-nav');
 
   burgerIcon.addEventListener('click', () => {
-    if (leftNav.style.display === 'none') {
+    if (leftNav.style.display === 'none') { 
       leftNav.style.display = 'block';
       document.querySelector('#leftSideNav').style.display = 'none';
-      document.querySelector('.grid-container').classList.remove('wide');
+      document.querySelector('.home-container').classList.remove('wide');
     } else {
       leftNav.style.display = 'none';
       document.querySelector('#leftSideNav').style.display = 'block';
-      document.querySelector('.grid-container').classList.add('wide');
+      document.querySelector('.home-container').classList.add('wide');
     }
   })
 }

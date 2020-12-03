@@ -96,3 +96,7 @@
 .tertiary {
   border-bottom: none;
 }
+
+.pages {
+  display: none;
+}

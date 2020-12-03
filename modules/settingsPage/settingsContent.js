@@ -5,7 +5,7 @@ const settingsContent = () => {
   return `
     <section class="settings-container">
       ${settingsNav()}
-      <section>
+      <section class="active-page">
         ${accountPage()}
       </section>
     </section>

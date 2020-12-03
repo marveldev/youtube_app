@@ -3,8 +3,8 @@ const settingsNav = () => {
     <div>
       <nav class="settings-nav">
         <p>SETTTINGS</p>
-        <a href="#">Account</a>
-        <a href="#">Notification</a>
+        <a href="#" class="account">Account</a>
+        <a href="#" class="notification">Notification</a>
         <a href="#">Playback and performance</a>
         <a href="#">Privacy</a>
         <a href="#">Connected apps</a>

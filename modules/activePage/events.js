@@ -3,18 +3,19 @@ import trendingPage from '../defaultPage/content/trendingPage/trending.js';
 import watchHistoryPage from '../defaultPage/content/watchHisoryPage/watchHistory.js';
 import channelPage from '../defaultPage/content/channelPage/channel.js';
 import settingsContent from '../settingsPage/settingsContent.js';
-import homeContent from '../defaultPage/content/homeContent.js';
+import homeContent from '../defaultPage/homeContent.js';
+import userNotification from '../settingsPage/content/notificationPage/notification.js';
 
 const togglePages = () => {
   const activePage = document.querySelector('#activePage');
 
-  function displayPage(selectors, value) {
+  function displayActivePage(selectors, value) {
     if (selectors.length > 1) {
       for (let index = 0; index < selectors.length; index++) {
         const selector = selectors[index];
         selector.addEventListener('click', () => {
           activePage.innerHTML = value;
-          localStorage.setItem('activePage', value) 
+          localStorage.setItem('activePage', value)
         })
       }
     } else {
@@ -25,31 +26,34 @@ const togglePages = () => {
     }
   }
 
-  displayPage(document.querySelectorAll('.home'), `${homePage()}`)
-  displayPage(document.querySelectorAll('.trending'), `${trendingPage()}`)
-  displayPage(document.querySelector('#history'), `${watchHistoryPage()}`)
-  displayPage(document.querySelector('#channel'), `${channelPage()}`)
+  displayActivePage(document.querySelectorAll('.home'), `${homePage()}`)
+  displayActivePage(document.querySelectorAll('.trending'), `${trendingPage()}`)
+  displayActivePage(document.querySelector('#history'), `${watchHistoryPage()}`)
+  displayActivePage(document.querySelector('#channel'), `${channelPage()}`)
 
-  function openSettings(selectors, value) {
-    if (selectors.length > 1) {
-      for (let index = 0; index < selectors.length; index++) {
-        const selector = selectors[index];
-        selector.addEventListener('click', () => {
-          console.log('sok');
-          console.log(selectors);
-          document.querySelector('.current-page').innerHTML = value;
-        })
-      }
-    } else {
-      selectors.addEventListener('click', () => {
-        console.log('lok');
-        document.querySelector('.current-page').innerHTML = value;
-      })
-    }
+  function displayCurrentPage(selector, value) {
+    const currentPage = document.querySelector('.current-page');
+    selector.addEventListener('click', () => {
+      currentPage.innerHTML = value;
+      localStorage.setItem('currentPage', value);
+    })
   }
 
-  openSettings(document.querySelectorAll('.settings-button'), `${settingsContent()}`)
-  openSettings(document.querySelector('.logo'), `${homeContent()}`)
+  displayCurrentPage(document.querySelector('.settings-button'), `${settingsContent()}`)
+  displayCurrentPage(document.querySelector('.logo'), `${homeContent()}`)
+
+  function displayPage(selector, value) {
+    const activePage = document.querySelector('.active-page');
+    console.log(selector);
+    selector.addEventListener('click', () => {
+      console.log('ok');
+      activePage.innerHTML = value;
+      localStorage.setItem('settingsActivePage', value);
+    })
+  }
+
+  displayPage(document.querySelector('.notification'), `${userNotification()}`);
+  displayPage(document.querySelector('.account'), `${userNotification()}`);
 }
 
 export default togglePages;

@@ -3,26 +3,43 @@ import homePage from './homePage/homePage.js';
 import trendingPage from './trendingPage/trending.js';
 import watchHistoryPage from './watchHisoryPage/watchHistory.js';
 import channelPage from './channelPage/channel.js';
+import settingsNav from '../settingsPage/leftNav/settingsNav.js';
+import accountPage from '../settingsPage/content/accountPage/accountPage.js';
 import{ settingsContent } from '../settingsPage/settingsContent.js';
 
+const homeContent = () => {
+  return `
+    <section class="home-container">
+      <div id="navContent">
+        ${leftSideNav()}
+      </div>
+      <section id="activePage">
+        ${homePage()}
+      </section>
+    </section>
+  `
+}
+
 const homeEventListeners = () => {
-  function displayCurrentPage(selector, value) {
-    const currentPage = document.querySelector('.current-page');
+  function displayCurrentPage(selector, value1, value2) {
+    const currentPage = document.querySelector('#page');
+    const previousPage = document.querySelector('.current-page');
     selector.addEventListener('click', () => {
-      currentPage.innerHTML = value;
-      localStorage.setItem('currentPage', value);
+      currentPage.style.display = value1;
+      previousPage.style.display = value2;
+      // console.log(value);
+      // currentPage.appendChild(value)
+      // currentPage.innerHTML = value;
     })
   }
 
-  displayCurrentPage(document.querySelector('.settings-button'), `${settingsContent()}`)
-  displayCurrentPage(document.querySelector('.logo'), `${homeContent()}`)
+  displayCurrentPage(document.querySelector('.settings-button'),'block', 'none')
+  displayCurrentPage(document.querySelector('.logo'), 'none', 'block')
 
   function displayActivePage(selector, value) {
     const activePage = document.querySelector('#activePage');
     selector.addEventListener('click', () => {
       activePage.innerHTML = value;
-      localStorage.setItem('activePage', value);
-      console.log(activePage);
     })
   }
 
@@ -30,18 +47,6 @@ const homeEventListeners = () => {
   displayActivePage(document.querySelector('.trending'), `${trendingPage()}`)
   displayActivePage(document.querySelector('#history'), `${watchHistoryPage()}`)
   displayActivePage(document.querySelector('#channel'), `${channelPage()}`)
-}
-
-const homeContent = () => {
-  const activePage = localStorage.getItem('activePage');
-  return `
-    <section class="home-container">
-      ${leftSideNav()}
-      <section id="activePage">
-        ${activePage ? activePage : homePage()}
-      </section>
-    </section>
-  `
 }
 
 export { homeContent, homeEventListeners };

@@ -2,10 +2,10 @@
 @import "./modules/topNav/topNav.css";
 @import "./modules/defaultPage/leftNav/leftNav.css";
 @import "./modules/rightNav/rightNav.css";
-@import "./modules/defaultPage/content/homePage/homePage.css";
-@import "./modules/defaultPage/content/trendingPage/trending.css";
-@import "./modules/defaultPage/content/watchHisoryPage/watchHistory.css";
-@import "./modules/defaultPage/content/channelPage/channel.css";
+@import "./modules/defaultPage/homePage/homePage.css";
+@import "./modules/defaultPage/trendingPage/trending.css";
+@import "./modules/defaultPage/watchHisoryPage/watchHistory.css";
+@import "./modules/defaultPage/channelPage/channel.css";
 @import "./modules/settingsPage/settings.css";
 @import "./smallScreen.css";
 @import "./darkTheme.css";

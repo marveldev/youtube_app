@@ -1,5 +1,18 @@
 import settingsNav from './leftNav/settingsNav.js';
 import accountPage from './content/accountPage/accountPage.js';
+import userNotification from './content/notificationPage/notification.js';
+
+const settingEventListeners = () => {
+  function displayActivePage(selector, value) {
+    const activePage = document.querySelector('.active-page');
+    selector.addEventListener('click', () => {
+      console.log('ok');
+      activePage.innerHTML = value;
+    })
+  }
+
+  displayActivePage(document.querySelector('.notification'), `${userNotification()}`)
+}
 
 const settingsContent = () => {
   return `
@@ -12,4 +25,4 @@ const settingsContent = () => {
   `
 }
 
-export default settingsContent;
+export { settingsContent, settingEventListeners };

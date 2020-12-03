@@ -6,7 +6,6 @@ const settingEventListeners = () => {
   function displayActivePage(selector, value) {
     const activePage = document.querySelector('.active-page');
     selector.addEventListener('click', () => {
-      console.log('ok');
       activePage.innerHTML = value;
     })
   }

@@ -18,11 +18,9 @@ const leftNavEventListeners = () => {
 
   const trendingPage = document.querySelector('.trending');
   const historyPage = document.querySelector('#history');
-  const channelPage = document.querySelector('#channel');
 
-  trendingPage.addEventListener('click',switchCurrentPage(constants.TRENDINGPAGE))
-  historyPage.addEventListener('click', switchCurrentPage(constants.WATCHHISTORYPAGE))
-  channelPage.addEventListener('click', switchCurrentPage('channel'))
+  trendingPage.addEventListener('click', switchCurrentPage(constants.TRENDINGPAGE))
+  historyPage.addEventListener('click', () => switchCurrentPage(constants.WATCHHISTORYPAGE))
 }
 
 export default leftNavEventListeners;

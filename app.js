@@ -7,7 +7,8 @@ import{ topNavEvents } from './modules/topNav/events.js';
 import leftSideNav from './modules/defaultPage/leftNav/leftNav.js';
 import homePage from './modules/defaultPage/homePage/homePage.js';
 // import togglePages from './modules/activePage/events.js';
-import { settingsContent, settingEventListeners } from './modules/settingsPage/settingsContent.js'
+import { settingsContent, settingEventListeners } from './modules/settingsPage/settingsContent.js';
+import { switchCurrentPage } from './modules/helpers.js';
 
 const app = () => {
   return `
@@ -16,7 +17,6 @@ const app = () => {
       ${leftSideNav()}
     </section>
     <section class="current-page">
-      ${homePage()}
     </section>
     <section id="page">
       ${settingsContent()}
@@ -26,9 +26,12 @@ const app = () => {
 }
 
 document.querySelector('#root').innerHTML = app();
-console.log(document.querySelector('#root'));
-videoEventListeners();
+
 leftNavEventListeners();
+const currentPage = localStorage.getItem('currentPage');
+switchCurrentPage(currentPage || 'homePage');
+
+// videoEventListeners();
 // topNavEvents();
 // homeEventListeners();
 // settingEventListeners();

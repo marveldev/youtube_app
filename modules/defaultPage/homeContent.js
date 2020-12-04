@@ -1,4 +1,3 @@
-import { switchActivePage } from '../helpers.js';
 import leftSideNav from './leftNav/leftNav.js';
 import homePage from './homePage/homePage.js';
 import trendingPage from './trendingPage/trending.js';
@@ -23,15 +22,15 @@ const homeContent = () => {
 
 const homeEventListeners = () => {
   function displayCurrentPage(selector, value1, value2) {
-    const currentPage = document.querySelector('#page');
-    const previousPage = document.querySelector('.current-page');
-    selector.addEventListener('click', () => {
-      currentPage.style.display = value1;
-      previousPage.style.display = value2;
-      // console.log(value);
-      // currentPage.appendChild(value)
-      // currentPage.innerHTML = value;
-    })
+    // const currentPage = document.querySelector('#page');
+    // const previousPage = document.querySelector('.current-page');
+    // selector.addEventListener('click', () => {
+    //   currentPage.style.display = value1;
+    //   previousPage.style.display = value2;
+    //   // console.log(value);
+    //   // currentPage.appendChild(value)
+    //   // currentPage.innerHTML = value;
+    // })
   }
 
   displayCurrentPage(document.querySelector('.settings-button'),'block', 'none')

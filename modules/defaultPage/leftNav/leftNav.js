@@ -9,7 +9,7 @@ const leftSideNav = () => {
         </div>
         <div>
           <a href="#"><i class="material-icons">&#xe04a;</i><strong>Library</strong></a>
-          <a href="#" class="icon" id="history"><i class="fa fa-history"></i><strong>History</strong></a>
+          <a href="#" class="icon history"><i class="fa fa-history"></i><strong>History</strong></a>
           <a href="#"><i class="material-icons">&#xe54d;</i><strong>Your movies</strong></a>
           <a href="#"><i class="material-icons">&#xe8b8;</i>Settings</a>
           <a href="#" class="icon"><i class='fas fa-clock'></i><strong>Watch later</strong></a>

@@ -1,12 +1,10 @@
+import homeLeftNav from './defaultPage/leftNav/leftNav.js';
 import homePage from './defaultPage/homePage/homePage.js';
 import channelPage from './defaultPage/channelPage/channel.js';
-import homeLeftNav from './defaultPage/leftNav/leftNav.js';
 import trendingPage from './defaultPage/trendingPage/trending.js';
 import watchHistoryPage from './defaultPage/watchHisoryPage/watchHistory.js';
-import rightNav from './rightNav/rightNavModal.js';
-import topNav from './topNav/topNav.js';
 import settingsNav from './settingsPage/leftNav/settingsNav.js';
-import accountPage from './settingsPage/content/accountPage/accountPage.js';
+import accountPage from './settingsPage/accountPage/accountPage.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
@@ -22,31 +20,29 @@ const constants = {
 
 const switchCurrentPage = page => {
   const currentPage = document.querySelector('.current-page');
+  const currentNav = document.querySelector('.side-nav');
   switch(page) {
     case 'homePage':
       currentPage.innerHTML = homePage();
+      localStorage.setItem('currentPage', constants.HOMEPAGE)
       break;
     case 'channelPage':
       currentPage.innerHTML = channelPage();
+      localStorage.setItem('currentPage', constants.CHANNELPAGE)
       break;
     case 'homeLeftNav':
       currentPage.innerHTML = homeLeftNav();
       break;
     case 'trendingPage':
       currentPage.innerHTML = trendingPage();
+      localStorage.setItem('currentPage', constants.TRENDINGPAGE)
       break;
     case 'watchHistoryPage':
       currentPage.innerHTML = watchHistoryPage()
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
       break;
-    case 'rightNav':
-      currentPage.innerHTML = rightNav();
-      break;
-    case 'topNav':
-      currentPage.innerHTML = topNav();
-      break;
     case 'settingsNav':
-      currentPage.innerHTML = settingsNav();
+      currentNav.innerHTML = settingsNav();
       break;
     case 'accountPage':
       currentPage.innerHTML = accountPage();

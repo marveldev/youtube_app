@@ -16,11 +16,13 @@ const leftNavEventListeners = () => {
     }
   })
 
+  const homePage = document.querySelector('.home');
   const trendingPage = document.querySelector('.trending');
-  const historyPage = document.querySelector('#history');
+  const historyPage = document.querySelector('.history');
 
-  trendingPage.addEventListener('click', switchCurrentPage(constants.TRENDINGPAGE))
-  historyPage.addEventListener('click', () => switchCurrentPage(constants.WATCHHISTORYPAGE))
+  homePage.addEventListener('click', () => switchCurrentPage(constants.HOMEPAGE));
+  trendingPage.addEventListener('click', () => switchCurrentPage(constants.TRENDINGPAGE));
+  historyPage.addEventListener('click', () => switchCurrentPage(constants.WATCHHISTORYPAGE));
 }
 
 export default leftNavEventListeners;

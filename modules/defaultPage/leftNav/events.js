@@ -19,10 +19,14 @@ const leftNavEventListeners = () => {
   const homePage = document.querySelector('.home');
   const trendingPage = document.querySelector('.trending');
   const historyPage = document.querySelector('.history');
+  const settingsNav = document.querySelector('.setting');
+  const logo = document.querySelector('.logo');
 
   homePage.addEventListener('click', () => switchCurrentPage(constants.HOMEPAGE));
   trendingPage.addEventListener('click', () => switchCurrentPage(constants.TRENDINGPAGE));
   historyPage.addEventListener('click', () => switchCurrentPage(constants.WATCHHISTORYPAGE));
+  settingsNav.addEventListener('click', () => switchCurrentPage(constants.SETTINGSPAGE));
+  logo.addEventListener('click', () => switchCurrentPage(constants.SETTINGSPAGE));
 }
 
 export default leftNavEventListeners;

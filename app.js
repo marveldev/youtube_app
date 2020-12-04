@@ -12,8 +12,11 @@ import { settingsContent, settingEventListeners } from './modules/settingsPage/s
 const app = () => {
   return `
     ${topNav()}
+    <section class="left-side-nav">
+      ${leftSideNav()}
+    </section>
     <section class="current-page">
-      ${homeContent()}
+      ${homePage()}
     </section>
     <section id="page">
       ${settingsContent()}
@@ -21,10 +24,11 @@ const app = () => {
     ${rightNavModal()}
   `
 }
+
 document.querySelector('#root').innerHTML = app();
 console.log(document.querySelector('#root'));
 videoEventListeners();
 leftNavEventListeners();
-topNavEvents();
-homeEventListeners();
-settingEventListeners();
+// topNavEvents();
+// homeEventListeners();
+// settingEventListeners();

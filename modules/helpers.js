@@ -8,7 +8,48 @@ import topNav from './topNav/topNav.js';
 import settingsNav from './settingsPage/leftNav/settingsNav.js';
 import accountPage from './settingsPage/content/accountPage.js';
 
-
-const switchActivePage = (page) => {
-
+const switchCurrentPage = page => {
+  const currentPage = document.querySelector('.current-page');
+  switch(page) {
+    case 'homepage':
+      currentPage.innerHTML = homePage;
+      break;
+    case 'channelPage':
+      currentPage.innerHTML = channelPage;
+      break;
+    case 'homeLeftNav':
+      currentPage.innerHTML = homeLeftNav;
+    case 'trendingPage':
+      currentPage.innerHTML = trendingPage;
+      break;
+    case 'watchHistoryPage':
+      currentPage.innerHTML = watchHistoryPage;
+      break;
+    case 'rightNav':
+      currentPage.innerHTML = rightNav;
+      break;
+    case 'topNav':
+      currentPage.innerHTML = topNav;
+      break;
+    case 'settingsNav':
+      currentPage.innerHTML = settingsNav;
+      break;
+    case 'accountPage':
+      currentPage.innerHTML = accountPage;
+      break;
+  }
 }
+
+const constants = {
+  HOMEPAGE: 'homePage',
+  CHANNELPAGE: 'channelPage',
+  HOMELEFTNAV: 'homeLeftNav',
+  TRENDINGPAGE: 'trendingPage',
+  WATCHHISTORYPAGE: 'watchHistoryPage',
+  RIGHTNAV: 'rightNav',
+  TOPNAV: 'topNav',
+  SETTINGSNAV: 'settingsNav',
+  ACCOUNTPAGE: 'accountPage'
+}
+
+export { switchCurrentPage, constants }

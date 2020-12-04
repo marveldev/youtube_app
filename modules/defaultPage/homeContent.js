@@ -1,3 +1,4 @@
+import { switchActivePage } from '../helpers.js';
 import leftSideNav from './leftNav/leftNav.js';
 import homePage from './homePage/homePage.js';
 import trendingPage from './trendingPage/trending.js';

@@ -14,7 +14,7 @@ const constants = {
   WATCHHISTORYPAGE: 'watchHistoryPage',
   RIGHTNAV: 'rightNav',
   TOPNAV: 'topNav',
-  SETTINGSNAV: 'settingsNav',
+  SETTINGSPAGE: 'settingsPage',
   ACCOUNTPAGE: 'accountPage'
 }
 
@@ -23,6 +23,7 @@ const switchCurrentPage = page => {
   const currentNav = document.querySelector('.side-nav');
   switch(page) {
     case 'homePage':
+      currentNav.innerHTML = settingsNav();
       currentPage.innerHTML = homePage();
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       break;
@@ -41,8 +42,9 @@ const switchCurrentPage = page => {
       currentPage.innerHTML = watchHistoryPage()
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
       break;
-    case 'settingsNav':
+    case 'settingsPage':
       currentNav.innerHTML = settingsNav();
+      currentPage.innerHTML = accountPage();
       break;
     case 'accountPage':
       currentPage.innerHTML = accountPage();

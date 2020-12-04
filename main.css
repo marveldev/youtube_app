@@ -6,6 +6,7 @@
 @import "./modules/defaultPage/trendingPage/trending.css";
 @import "./modules/defaultPage/watchHisoryPage/watchHistory.css";
 @import "./modules/defaultPage/channelPage/channel.css";
-@import "./modules/settingsPage/settings.css";
+@import "./modules/settingsPage/leftNav/nav.css";
+@import "./modules/settingsPage/accountPage/account.css";
 @import "./smallScreen.css";
 @import "./darkTheme.css";

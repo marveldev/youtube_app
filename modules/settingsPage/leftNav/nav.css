@@ -1,0 +1,25 @@
+.settings-nav {
+  position: fixed;
+  width: 15em;
+  height: 100vh;
+  padding-top: 0.5em;
+  background-color: #F1F1F1;
+}
+
+.settings-nav > a {
+  display: block;
+  text-decoration: none;
+  height: 3em;
+  line-height: 3em;
+  color: #241c1c;
+  padding: 0.2em 1.5em;
+}
+
+.settings-nav > a:hover {
+  background-color: #E5E5E5;
+}
+
+.settings-nav > p {
+  padding: 0.2em 1.5em;
+  font-weight: 550;
+}

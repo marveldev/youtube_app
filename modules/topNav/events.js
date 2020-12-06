@@ -1,44 +1,45 @@
-const topNavEvents = () => {
+import { constants, switchCurrentPage } from "../helpers.js";
+
+const topNavEventListeners = () => {
   const profilePhoto = document.querySelector('#profilePhoto');
   const overlay = document.querySelector('#overlay');
   const rightNavModal = document.querySelector('.rightNav-modal');
-  const theme = document.querySelector('#theme');
+  const themeModalButton = document.querySelector('#themeModalButton');
   const themeModal = document.querySelector('#themeModal');
   const closeModalButton = document.querySelector('#closeModalButton');
   const arrowLeft = document.querySelector('#arrowLeft');
   const root = document.querySelector('#root');
+  const logo = document.querySelector('.logo');
 
-  const themeProperty = JSON.parse(localStorage.getItem('theme'));
-  if (themeProperty) {
-    root.className = themeProperty.theme;
-    document.body.style.backgroundColor = themeProperty.backgroundColor;
-    document.querySelector('.theme-name').innerText = themeProperty.themeName;
+  logo.addEventListener('click', () => switchCurrentPage(constants.HOMEPAGE));
+
+  const themeObject = JSON.parse(localStorage.getItem('theme'));
+  if (themeObject) {
+    root.className = themeObject.theme;
+    document.body.style.backgroundColor = themeObject.backgroundColor;
+    document.querySelector('.theme-name').innerText = themeObject.themeName;
   }
 
   const displayRightModal = ( overlayValue, themeModalValue, rightNavValue, overflowValue ) => {
-    overlay.style.display = overlayValue;
+    if (overlayValue) {
+      overlay.style.display = overlayValue;
+      document.body.style.overflow = overflowValue;
+    }
     themeModal.style.display = themeModalValue;
     rightNavModal.style.display = rightNavValue;
-    document.body.style.overflow = overflowValue;
   }
 
   profilePhoto.addEventListener('click', () => {
     if (rightNavModal.style.display === 'block') {
-      displayRightModal('none', 'none', 'none', 'auto')
+      displayRightModal('none', 'none', 'none', 'auto');
     } else {
-      displayRightModal('block', 'none', 'block', 'hidden')
+      displayRightModal('block', 'none', 'block', 'hidden');
     }
   })
 
-  theme.addEventListener('click', () => {
-    themeModal.style.display = 'block';
-    rightNavModal.style.display = 'none';
-  })
+  themeModalButton.addEventListener('click', () => displayRightModal(null, 'block', 'none'))
 
-  arrowLeft.addEventListener('click', () => {
-    rightNavModal.style.display = 'block';
-    themeModal.style.display = 'none';
-  })
+  arrowLeft.addEventListener('click', () => displayRightModal(null, 'none', ''))
 
   overlay.addEventListener('click', () => {
     displayRightModal('none', 'none', 'none', 'auto');
@@ -55,13 +56,13 @@ const topNavEvents = () => {
       document.querySelector('.theme-name').innerText = themeName;
       displayRightModal('none', 'none', 'none', 'auto');
 
-      const themeProperty = { theme: theme, backgroundColor: backgroundColor, themeName: themeName };
-      localStorage.setItem('theme', JSON.stringify(themeProperty));
+      const themeObject = { theme: theme, backgroundColor: backgroundColor, themeName: themeName };
+      localStorage.setItem('theme', JSON.stringify(themeObject));
     })
   }
 
-  toggleTheme(document.querySelector('#darkTheme'), 'dark', '#181818', 'Dark');
-  toggleTheme(document.querySelector('#lightTheme'), 'default', '#f9f9f9', 'Light');
+  toggleTheme(document.querySelector('#darkThemeButton'), 'dark', '#181818', 'Dark');
+  toggleTheme(document.querySelector('#lightThemeButton'), 'default', '#f9f9f9', 'Light');
 }
 
-export { topNavEvents };
+export { topNavEventListeners };

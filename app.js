@@ -8,7 +8,9 @@ import settingsNavEventListeners from './modules/settingsPage/leftNav/events.js'
 
 const app = () => {
   return `
-    ${topNav()}
+    <section class="top-nav-content">
+      ${topNav()}
+    </section>
     <section class="grid-container">
       <section class="side-nav">
         ${leftSideNav()}
@@ -24,10 +26,10 @@ document.querySelector('#root').innerHTML = app();
 
 const currentPage = localStorage.getItem('currentPage');
 switchCurrentPage(currentPage || 'homePage');
-topNavEventListeners();
 
 if (currentPage === constants.SETTINGSPAGE) {
   settingsNavEventListeners();
 } else {
+  topNavEventListeners();
   leftNavEventListeners();
 }

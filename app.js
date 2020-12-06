@@ -2,8 +2,9 @@ import topNav from './modules/topNav/topNav.js';
 import rightNavModal from './modules/rightNav/rightNavModal.js';
 import leftNavEventListeners from './modules/defaultPage/leftNav/events.js';
 import leftSideNav from './modules/defaultPage/leftNav/leftNav.js';
-import { switchCurrentPage } from './modules/helpers.js';
-import { topNavEvents } from './modules/topNav/events.js';
+import { constants, switchCurrentPage } from './modules/helpers.js';
+import { topNavEventListeners } from './modules/topNav/events.js';
+import settingsNavEventListeners from './modules/settingsPage/leftNav/events.js';
 
 const app = () => {
   return `
@@ -21,7 +22,12 @@ const app = () => {
 
 document.querySelector('#root').innerHTML = app();
 
-leftNavEventListeners();
-topNavEvents();
 const currentPage = localStorage.getItem('currentPage');
 switchCurrentPage(currentPage || 'homePage');
+topNavEventListeners();
+
+if (currentPage === constants.SETTINGSPAGE) {
+  settingsNavEventListeners();
+} else {
+  leftNavEventListeners();
+}

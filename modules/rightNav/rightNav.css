@@ -90,11 +90,11 @@
   cursor: pointer;
 }
 
-#darkTheme {
+#darkThemeButton {
   border-top: 1px solid #CCCCCC;
 }
 
-#darkTheme > i {
+#darkThemeButton > i {
   opacity: 0;
 }
 

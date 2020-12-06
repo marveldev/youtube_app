@@ -121,15 +121,15 @@
   color: #ffffffca;
 }
 
-.dark #darkTheme {
+.dark #darkThemeButton {
   border-top: 1px solid #383838;
 }
 
-.dark #darkTheme > i {
+.dark #darkThemeButton > i {
   opacity: 1;
 }
 
-.dark #lightTheme > i {
+.dark #lightThemeButton > i {
   opacity: 0;
 }
 

@@ -13,7 +13,7 @@ const rightNavModal = () => {
         <a href="#"><i class='fas fa-dollar-sign'></i>Purchases and memberships</a>
         <a href="#"><i class='fas fa-users-cog'></i>Switch account</a>
         <a href="#"><i class='fas fa-sign-out-alt'></i>Sign out</a>
-        <a href="#" id="theme"><i class="material-icons">&#xe8bd;</i>
+        <a href="#" id="themeModalButton"><i class="material-icons">&#xe8bd;</i>
           Appearance : <span class="theme-name">Light</span><i class="material-icons">&#xe315;</i>
         </a>
         <a href="#" class="settings-button"><i class="material-icons">&#xe8b8;</i>Settings</a>
@@ -22,8 +22,8 @@ const rightNavModal = () => {
       </nav>
       <div id="themeModal">
         <p><i id="arrowLeft" class='fas fa-arrow-left'></i>Appearance</p>
-        <a href="#" id="darkTheme"><i id="checkmark" class='fas fa-check'></i>Dark theme</a>
-        <a href="#" id="lightTheme"><i class='fas fa-check'></i>Light theme</a>
+        <a href="#" id="darkThemeButton"><i id="checkmark" class='fas fa-check'></i>Dark theme</a>
+        <a href="#" id="lightThemeButton"><i class='fas fa-check'></i>Light theme</a>
       </div>
     </div>
   `

@@ -6,6 +6,8 @@ import watchHistoryPage from './defaultPage/watchHisoryPage/watchHistory.js';
 import settingsNav from './settingsPage/leftNav/settingsNav.js';
 import accountPage from './settingsPage/accountPage/accountPage.js';
 import leftNavEventListeners from './defaultPage/leftNav/events.js';
+import { topNavEventListeners } from './topNav/events.js';
+import topNav from './topNav/topNav.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
@@ -14,18 +16,17 @@ const constants = {
   TRENDINGPAGE: 'trendingPage',
   WATCHHISTORYPAGE: 'watchHistoryPage',
   RIGHTNAV: 'rightNav',
-  TOPNAV: 'topNav',
+  LOGOPAGE: 'logoPage',
   SETTINGSPAGE: 'settingsPage',
   ACCOUNTPAGE: 'accountPage'
 }
 
 const switchCurrentPage = page => {
+  const topHomeNav = document.querySelector('.top-nav-content');
   const currentPage = document.querySelector('.current-page');
   const currentSideNav = document.querySelector('.side-nav');
   switch(page) {
     case 'homePage':
-      currentSideNav.innerHTML = homeLeftNav();
-      leftNavEventListeners();
       currentPage.innerHTML = homePage();
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       break;
@@ -38,8 +39,16 @@ const switchCurrentPage = page => {
       localStorage.setItem('currentPage', constants.TRENDINGPAGE)
       break;
     case 'watchHistoryPage':
-      currentPage.innerHTML = watchHistoryPage()
+      currentPage.innerHTML = watchHistoryPage();
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
+      break;
+    case 'logoPage':
+      currentSideNav.innerHTML = homeLeftNav();
+      leftNavEventListeners();
+      topHomeNav.innerHTML = topNav();
+      topNavEventListeners();
+      currentPage.innerHTML = homePage();
+      localStorage.setItem('currentPage', constants.HOMEPAGE)
       break;
     case 'settingsPage':
       currentSideNav.innerHTML = settingsNav();

@@ -11,7 +11,22 @@ const topNavEventListeners = () => {
   const root = document.querySelector('#root');
   const logo = document.querySelector('.logo');
 
-  logo.addEventListener('click', () => switchCurrentPage(constants.HOMEPAGE));
+  logo.addEventListener('click', () => switchCurrentPage(constants.LOGOPAGE));
+
+  const burgerIcon = document.querySelector('.burger-icon');
+  const leftNav = document.querySelector('.leftside-nav');
+
+  burgerIcon.addEventListener('click', () => {
+    if (leftNav.style.display === 'none') {
+      leftNav.style.display = 'block';
+      document.querySelector('#leftSideNav').style.display = 'none';
+      document.querySelector('.grid-container').classList.remove('wide');
+    } else {
+      leftNav.style.display = 'none';
+      document.querySelector('#leftSideNav').style.display = 'block';
+      document.querySelector('.grid-container').classList.add('wide');
+    }
+  })
 
   const themeObject = JSON.parse(localStorage.getItem('theme'));
   if (themeObject) {
@@ -39,7 +54,7 @@ const topNavEventListeners = () => {
 
   themeModalButton.addEventListener('click', () => displayRightModal(null, 'block', 'none'))
 
-  arrowLeft.addEventListener('click', () => displayRightModal(null, 'none', ''))
+  arrowLeft.addEventListener('click', () => displayRightModal(null, 'none', 'block'))
 
   overlay.addEventListener('click', () => {
     displayRightModal('none', 'none', 'none', 'auto');

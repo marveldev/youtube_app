@@ -1,0 +1,44 @@
+.modal-left-nav {
+  position: fixed;
+  top: 0;
+  width: 15em;
+  height: 100vh;
+  z-index: 1;
+  display: none;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.modal-left-nav:hover {
+  overflow-y: scroll;
+}
+
+.modal-left-nav > div a {
+  display: block;
+  text-decoration: none;
+  height: 3em;
+  line-height: 3em;
+  color: #5A5A5A;
+  font-weight: 700;
+}
+
+.modal-left-nav > span > a {
+  width: 10em;
+  background-color: lawngreen;
+  font-size: 1em;
+}
+
+.modal-left-nav a:hover {
+  background-color: #E5E5E5;
+}
+
+.modal-left-nav > div {
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.modal-left-nav i {
+  color: #606060;
+  margin: 0 1.2em;
+  vertical-align: sub;
+}

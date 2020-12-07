@@ -10,23 +10,29 @@ const topNavEventListeners = () => {
   const arrowLeft = document.querySelector('#arrowLeft');
   const root = document.querySelector('#root');
   const logo = document.querySelector('.logo');
-
-  logo.addEventListener('click', () => switchCurrentPage(constants.LOGOPAGE));
-
   const burgerIcon = document.querySelector('.burger-icon');
   const leftNav = document.querySelector('.leftside-nav');
 
   burgerIcon.addEventListener('click', () => {
-    if (leftNav.style.display === 'none') {
-      leftNav.style.display = 'block';
-      document.querySelector('#leftSideNav').style.display = 'none';
-      document.querySelector('.grid-container').classList.remove('wide');
+    const currentPage = localStorage.getItem('currentPage');
+
+    if (currentPage !== constants.SETTINGSPAGE) {
+      if (leftNav.style.display === 'none') {
+        leftNav.style.display = 'block';
+        document.querySelector('#leftSideNav').style.display = 'none';
+        document.querySelector('.grid-container').classList.remove('wide');
+      } else {
+        leftNav.style.display = 'none';
+        document.querySelector('#leftSideNav').style.display = 'block';
+        document.querySelector('.grid-container').classList.add('wide');
+      }
     } else {
-      leftNav.style.display = 'none';
-      document.querySelector('#leftSideNav').style.display = 'block';
-      document.querySelector('.grid-container').classList.add('wide');
+      overlay.style.display = 'block';
+      document.querySelector('.modal-left-nav').style.display = 'block';
     }
   })
+
+  logo.addEventListener('click', () => switchCurrentPage(constants.LOGOPAGE));
 
   const themeObject = JSON.parse(localStorage.getItem('theme'));
   if (themeObject) {

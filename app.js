@@ -5,6 +5,8 @@ import leftSideNav from './modules/defaultPage/leftNav/leftNav.js';
 import { constants, switchCurrentPage } from './modules/helpers.js';
 import { topNavEventListeners } from './modules/topNav/events.js';
 import settingsNavEventListeners from './modules/settingsPage/leftNav/events.js';
+import rightNavEventListeners from './modules/rightNav/events.js';
+import modalLeftNav from './modules/settingsPage/modalLeftNav/modalLeftNav.js';
 
 const app = () => {
   return `
@@ -19,6 +21,7 @@ const app = () => {
       </section>
     </section>
     ${rightNavModal()}
+    ${modalLeftNav()}
   `
 }
 
@@ -32,4 +35,5 @@ if (currentPage === constants.SETTINGSPAGE) {
 } else {
   topNavEventListeners();
   leftNavEventListeners();
+  rightNavEventListeners();
 }

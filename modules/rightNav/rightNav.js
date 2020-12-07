@@ -1,4 +1,4 @@
-const rightNavModal = () => {
+const rightNav = () => {
   return `
     <div id="overlay"></div>
     <div id="rightNav">
@@ -29,4 +29,4 @@ const rightNavModal = () => {
   `
 }
 
-export default rightNavModal;
+export default rightNav;

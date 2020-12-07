@@ -1,4 +1,4 @@
-const leftSideNav = () => {
+const defaultLeftNav = () => {
   return `
     <div id="leftNav">
       <nav class="leftside-nav">
@@ -65,4 +65,4 @@ const leftSideNav = () => {
   `
 }
 
-export default leftSideNav;
+export default defaultLeftNav;

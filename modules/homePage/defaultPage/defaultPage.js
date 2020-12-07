@@ -1,4 +1,4 @@
-const homePage = () => {
+const defaultPage = () => {
   return `
     <section class="home-page">
       <nav class="button-nav">
@@ -110,4 +110,4 @@ const homePage = () => {
   `
 }
 
-export default homePage;
+export default defaultPage;

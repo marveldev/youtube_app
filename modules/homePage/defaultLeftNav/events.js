@@ -1,6 +1,6 @@
 import { switchCurrentPage, constants } from '../../helpers.js';
 
-const leftNavEventListeners = () => {
+const defaultNavEventListeners = () => {
   const switchPages = (selectors, constant) => {
     for (let index = 0; index < selectors.length; index++) {
       const selector = selectors[index];
@@ -15,4 +15,4 @@ const leftNavEventListeners = () => {
   switchPages(document.querySelectorAll('.setting'), constants.SETTINGSPAGE);
 }
 
-export default leftNavEventListeners;
+export default defaultNavEventListeners;

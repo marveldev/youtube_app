@@ -1,13 +1,13 @@
-import homeLeftNav from './defaultPage/homeLeftNav/homeLeftNav.js';
-import homePage from './defaultPage/defaultPage/homePage.js';
-import channelPage from './defaultPage/channelPage/channelPage.js';
-import trendingPage from './defaultPage/trendingPage/trendingPage.js';
-import watchHistoryPage from './defaultPage/watchHisoryPage/watchHistoryPage.js';
+import topNav from './topNav/topNav.js';
+import defaultLeftNav from './homePage/defaultLeftNav/defaultLeftNav.js';
+import defaultPage from './homePage/defaultPage/defaultPage.js';
+import channelPage from './homePage/channelPage/channelPage.js';
+import trendingPage from './homePage/trendingPage/trendingPage.js';
+import watchHistoryPage from './homePage/watchHisoryPage/watchHistoryPage.js';
 import settingsNav from './settingsPage/settingsLeftNav/settingsNav.js';
 import accountPage from './settingsPage/accountPage/accountPage.js';
-import leftNavEventListeners from './defaultPage/homeLeftNav/events.js';
 import { topNavEventListeners } from './topNav/events.js';
-import topNav from './topNav/topNav.js';
+import defaultNavEventListeners from './homePage/defaultLeftNav/events.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
@@ -27,7 +27,7 @@ const switchCurrentPage = page => {
   const currentSideNav = document.querySelector('.side-nav');
   switch(page) {
     case 'homePage':
-      currentPage.innerHTML = homePage();
+      currentPage.innerHTML = defaultPage();
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       break;
     case 'channelPage':
@@ -43,11 +43,11 @@ const switchCurrentPage = page => {
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
       break;
     case 'logoPage':
-      currentSideNav.innerHTML = homeLeftNav();
-      leftNavEventListeners();
+      currentSideNav.innerHTML = defaultLeftNav();
+      defaultNavEventListeners();
       topHomeNav.innerHTML = topNav();
       topNavEventListeners();
-      currentPage.innerHTML = homePage();
+      currentPage.innerHTML = defaultPage();
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       break;
     case 'settingsPage':
@@ -60,7 +60,7 @@ const switchCurrentPage = page => {
       currentPage.innerHTML = accountPage();
       break;
     default:
-      currentPage.innerHTML = homePage();
+      currentPage.innerHTML = defaultPage();
   }
 }
 

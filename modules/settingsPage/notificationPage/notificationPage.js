@@ -1,4 +1,4 @@
-const userNotification = () => {
+const notificationPage = () => {
   return `
     <section>
       <h1>hello</h1>
@@ -6,4 +6,4 @@ const userNotification = () => {
   `
 }
 
-export default userNotification;
+export default notificationPage;

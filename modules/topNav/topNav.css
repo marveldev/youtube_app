@@ -69,11 +69,21 @@ body {
 }
 
 .tertiary-topNav {
-  margin-left: 3em;
+  margin-left: 1.5em;
 }
 
-.tertiary-topNav > a {
-  margin: 0.8em;
+button {
+  border: unset;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  
+}
+
+.tertiary-topNav > button {
+  margin: 0 0.5em;
   color: black;
   vertical-align: middle;
 }

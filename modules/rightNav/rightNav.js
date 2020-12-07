@@ -9,21 +9,21 @@ const rightNav = () => {
           <strong id="userName">Jane Doe</strong>
           <button id="closeModalButton">X</button>
         </div>
-        <a href="#" class="channel"><i class="fa fa-user-circle"></i>Your channel</a>
-        <a href="#"><i class='fas fa-dollar-sign'></i>Purchases and memberships</a>
-        <a href="#"><i class='fas fa-users-cog'></i>Switch account</a>
-        <a href="#"><i class='fas fa-sign-out-alt'></i>Sign out</a>
-        <a href="#" id="themeModalButton"><i class="material-icons">&#xe8bd;</i>
+        <button class="channel"><i class="fa fa-user-circle"></i>Your channel</button>
+        <button><i class='fas fa-dollar-sign'></i>Purchases and memberships</button>
+        <button><i class='fas fa-users-cog'></i>Switch account</button>
+        <button><i class='fas fa-sign-out-alt'></i>Sign out</button>
+        <button id="themeModalButton"><i class="material-icons">&#xe8bd;</i>
           Appearance : <span class="theme-name">Light</span><i class="material-icons">&#xe315;</i>
-        </a>
-        <a href="#" class="setting"><i class="material-icons">&#xe8b8;</i>Settings</a>
-        <a href="#"><i class='fas fa-question-circle'></i>Help</a>
-        <a href="#"><i class="material-icons">&#xe87f;</i>Send feedback</a>
+        </button>
+        <button class="setting"><i class="material-icons">&#xe8b8;</i>Settings</button>
+        <button><i class='fas fa-question-circle'></i>Help</button>
+        <button><i class="material-icons">&#xe87f;</i>Send feedback</button>
       </nav>
       <div id="themeModal">
         <p><i id="arrowLeft" class='fas fa-arrow-left'></i>Appearance</p>
-        <a href="#" id="darkThemeButton"><i id="checkmark" class='fas fa-check'></i>Dark theme</a>
-        <a href="#" id="lightThemeButton"><i class='fas fa-check'></i>Light theme</a>
+        <button id="darkThemeButton"><i id="checkmark" class='fas fa-check'></i>Dark theme</button>
+        <button id="lightThemeButton"><i class='fas fa-check'></i>Light theme</button>
       </div>
     </div>
   `

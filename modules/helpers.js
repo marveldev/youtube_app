@@ -53,6 +53,7 @@ const switchCurrentPage = page => {
     case 'settingsPage':
       currentSideNav.innerHTML = settingsNav();
       currentPage.innerHTML = accountPage();
+      topNavEventListeners();
       localStorage.setItem('currentPage', constants.SETTINGSPAGE)
       break;
     case 'accountPage':

@@ -1,11 +1,11 @@
-import homeLeftNav from './defaultPage/leftNav/leftNav.js';
-import homePage from './defaultPage/homePage/homePage.js';
-import channelPage from './defaultPage/channelPage/channel.js';
-import trendingPage from './defaultPage/trendingPage/trending.js';
-import watchHistoryPage from './defaultPage/watchHisoryPage/watchHistory.js';
-import settingsNav from './settingsPage/leftNav/settingsNav.js';
+import homeLeftNav from './defaultPage/homeLeftNav/homeLeftNav.js';
+import homePage from './defaultPage/defaultPage/homePage.js';
+import channelPage from './defaultPage/channelPage/channelPage.js';
+import trendingPage from './defaultPage/trendingPage/trendingPage.js';
+import watchHistoryPage from './defaultPage/watchHisoryPage/watchHistoryPage.js';
+import settingsNav from './settingsPage/settingsLeftNav/settingsNav.js';
 import accountPage from './settingsPage/accountPage/accountPage.js';
-import leftNavEventListeners from './defaultPage/leftNav/events.js';
+import leftNavEventListeners from './defaultPage/homeLeftNav/events.js';
 import { topNavEventListeners } from './topNav/events.js';
 import topNav from './topNav/topNav.js';
 

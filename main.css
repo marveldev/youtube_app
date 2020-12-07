@@ -8,5 +8,6 @@
 @import "./modules/defaultPage/channelPage/channel.css";
 @import "./modules/settingsPage/leftNav/nav.css";
 @import "./modules/settingsPage/accountPage/account.css";
+@import "./modules/settingsPage/modalLeftNav/modalLeftNav.css";
 @import "./smallScreen.css";
 @import "./darkTheme.css";

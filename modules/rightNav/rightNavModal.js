@@ -9,14 +9,14 @@ const rightNavModal = () => {
           <strong id="userName">Jane Doe</strong>
           <button id="closeModalButton">X</button>
         </div>
-        <a href="#" id="channel"><i class="fa fa-user-circle"></i>Your channel</a>
+        <a href="#" class="channel"><i class="fa fa-user-circle"></i>Your channel</a>
         <a href="#"><i class='fas fa-dollar-sign'></i>Purchases and memberships</a>
         <a href="#"><i class='fas fa-users-cog'></i>Switch account</a>
         <a href="#"><i class='fas fa-sign-out-alt'></i>Sign out</a>
         <a href="#" id="themeModalButton"><i class="material-icons">&#xe8bd;</i>
           Appearance : <span class="theme-name">Light</span><i class="material-icons">&#xe315;</i>
         </a>
-        <a href="#" class="settings-button"><i class="material-icons">&#xe8b8;</i>Settings</a>
+        <a href="#" class="setting"><i class="material-icons">&#xe8b8;</i>Settings</a>
         <a href="#"><i class='fas fa-question-circle'></i>Help</a>
         <a href="#"><i class="material-icons">&#xe87f;</i>Send feedback</a>
       </nav>

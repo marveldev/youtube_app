@@ -78,10 +78,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  
-}
-
 .tertiary-topNav > button {
   margin: 0 0.5em;
   color: black;

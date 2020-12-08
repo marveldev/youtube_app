@@ -13,22 +13,37 @@
   overflow-y: scroll;
 }
 
-.modal-left-nav > div a {
-  display: block;
-  text-decoration: none;
+.modal-left-nav > div button {
   height: 3em;
-  line-height: 3em;
+  text-align: left;
+  width: 100%;
+  font-size: 1em;
   color: #5A5A5A;
   font-weight: 700;
 }
 
-.modal-left-nav > span > a {
-  width: 10em;
-  background-color: lawngreen;
-  font-size: 1em;
+.modal-left-nav > section {
+  height: 4em;
+  line-height: 4em;
+  border-bottom: 1px solid #ccc;
 }
 
-.modal-left-nav a:hover {
+.modal-left-nav > section > button:nth-child(2) {
+  font-size: 1.2em;
+}
+
+.modal-left-nav > section > button:nth-child(2) i {
+  vertical-align: baseline;
+  margin: 0;
+  color: red;
+}
+
+#burgerIcon {
+  font-size: 1.2em;
+  padding: 0 0 0 1em;
+}
+
+.modal-left-nav > div button:hover {
   background-color: #E5E5E5;
 }
 
@@ -41,4 +56,17 @@
   color: #606060;
   margin: 0 1.2em;
   vertical-align: sub;
+}
+
+.icon > i {
+  margin: 0 2em;
+  vertical-align: middle;
+}
+
+.modal-left-nav::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-left-nav::-webkit-scrollbar-thumb {
+  background: #BCC0C4;
 }

@@ -7,6 +7,7 @@ import rightNavEventListeners from './modules/rightNav/events.js';
 import modalLeftNav from './modules/settingsPage/modalLeftNav/modalLeftNav.js';
 import defaultNavEventListeners from './modules/homePage/defaultLeftNav/events.js';
 import defaultLeftNav from './modules/homePage/defaultLeftNav/defaultLeftNav.js';
+import modalLeftNavEventListeners from './modules/settingsPage/modalLeftNav/events.js';
 
 const app = () => {
   return `
@@ -28,12 +29,17 @@ const app = () => {
 document.querySelector('#root').innerHTML = app();
 
 const currentPage = localStorage.getItem('currentPage');
-switchCurrentPage(currentPage || 'homePage');
+const currentNav = localStorage.getItem('currentNav');
 
-if (currentPage === constants.SETTINGSPAGE) {
+if (currentNav === constants.SETTINGSNAV) {
+  switchCurrentPage(currentNav);
+  switchCurrentPage(currentPage);
   settingsNavEventListeners();
-} else {
-  topNavEventListeners();
-  defaultNavEventListeners();
-  rightNavEventListeners();
 }
+
+switchCurrentPage(currentNav || 'defaultNav');
+switchCurrentPage(currentPage || 'homePage');
+modalLeftNavEventListeners();
+topNavEventListeners();
+rightNavEventListeners();
+defaultNavEventListeners();

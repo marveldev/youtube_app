@@ -8,6 +8,8 @@ import settingsNav from './settingsPage/settingsLeftNav/settingsNav.js';
 import accountPage from './settingsPage/accountPage/accountPage.js';
 import { topNavEventListeners } from './topNav/events.js';
 import defaultNavEventListeners from './homePage/defaultLeftNav/events.js';
+import notificationPage from './settingsPage/notificationPage/notificationPage.js';
+import settingsNavEventListeners from './settingsPage/settingsLeftNav/events.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
@@ -16,9 +18,11 @@ const constants = {
   TRENDINGPAGE: 'trendingPage',
   WATCHHISTORYPAGE: 'watchHistoryPage',
   RIGHTNAV: 'rightNav',
-  LOGOPAGE: 'logoPage',
+  DEFAULTNAV: 'defaultNav',
+  SETTINGSNAV : 'settingsNav',
   SETTINGSPAGE: 'settingsPage',
-  ACCOUNTPAGE: 'accountPage'
+  ACCOUNTPAGE: 'accountPage',
+  NOTIFICATIONPAGE: 'notificationPage'
 }
 
 const switchCurrentPage = page => {
@@ -29,6 +33,13 @@ const switchCurrentPage = page => {
     case 'homePage':
       currentPage.innerHTML = defaultPage();
       localStorage.setItem('currentPage', constants.HOMEPAGE)
+      break;
+    case 'settingsNav':
+      currentSideNav.innerHTML = settingsNav();
+      currentPage.innerHTML = accountPage();
+      settingsNavEventListeners();
+      localStorage.setItem('currentNav', constants.SETTINGSNAV)
+      localStorage.setItem('currentPage', constants.ACCOUNTPAGE)
       break;
     case 'channelPage':
       currentPage.innerHTML = channelPage();
@@ -42,22 +53,19 @@ const switchCurrentPage = page => {
       currentPage.innerHTML = watchHistoryPage();
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
       break;
-    case 'logoPage':
+    case 'defaultNav':
       currentSideNav.innerHTML = defaultLeftNav();
-      defaultNavEventListeners();
-      topHomeNav.innerHTML = topNav();
-      topNavEventListeners();
       currentPage.innerHTML = defaultPage();
+      localStorage.setItem('currentNav', constants.DEFAULTNAV)
       localStorage.setItem('currentPage', constants.HOMEPAGE)
-      break;
-    case 'settingsPage':
-      currentSideNav.innerHTML = settingsNav();
-      currentPage.innerHTML = accountPage();
-      topNavEventListeners();
-      localStorage.setItem('currentPage', constants.SETTINGSPAGE)
       break;
     case 'accountPage':
       currentPage.innerHTML = accountPage();
+      localStorage.setItem('currentPage', constants.ACCOUNTPAGE)
+      break;
+    case 'notificationPage':
+      currentPage.innerHTML = notificationPage();
+      localStorage.setItem('currentPage', constants.NOTIFICATIONPAGE)
       break;
     default:
       currentPage.innerHTML = defaultPage();

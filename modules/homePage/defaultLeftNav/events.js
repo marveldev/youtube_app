@@ -12,7 +12,7 @@ const defaultNavEventListeners = () => {
   switchPages(document.querySelectorAll('.home'), constants.HOMEPAGE);
   switchPages(document.querySelectorAll('.trending'), constants.TRENDINGPAGE);
   switchPages(document.querySelectorAll('.history'), constants.WATCHHISTORYPAGE);
-  switchPages(document.querySelectorAll('.setting'), constants.SETTINGSPAGE);
+  switchPages(document.querySelectorAll('.setting'), constants.SETTINGSNAV);
 }
 
 export default defaultNavEventListeners;

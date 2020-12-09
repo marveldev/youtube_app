@@ -14,9 +14,9 @@ const topNavEventListeners = () => {
   const leftNav = document.querySelector('.leftside-nav');
 
   burgerIcon.addEventListener('click', () => {
-    const currentPage = localStorage.getItem('currentPage');
+    const currentNav = localStorage.getItem('currentNav');
 
-    if (currentPage !== constants.SETTINGSPAGE) {
+    if (currentNav !== constants.SETTINGSNAV) {
       if (leftNav.style.display === 'none') {
         leftNav.style.display = 'block';
         document.querySelector('#leftSideNav').style.display = 'none';
@@ -32,7 +32,7 @@ const topNavEventListeners = () => {
     }
   })
 
-  logo.addEventListener('click', () => switchCurrentPage(constants.LOGOPAGE));
+  logo.addEventListener('click', () => switchCurrentPage(constants.DEFAULTNAV));
 
   const themeObject = JSON.parse(localStorage.getItem('theme'));
   if (themeObject) {

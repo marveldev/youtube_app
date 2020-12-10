@@ -1,0 +1,79 @@
+.performance-page {
+  padding: 0 3em 2em 3em;
+}
+
+.performance-page p {
+  font-weight: 550;
+}
+
+.performance-page small {
+  color: #796079;
+}
+
+.input-options {
+  display: block;
+  position: relative;
+  padding-left: 2em;
+  margin: 1em 0 1.5em 0;
+}
+
+.input-options input {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.2em;
+  width: 1.2em;
+  border: 1.5px solid #909090;
+}
+
+.radio > .checkmark {
+  border-radius: 50%;
+}
+
+.checkbox input:checked ~ .checkmark {
+  border: unset;
+  background-color: #065FD4;
+}
+
+.radio input:checked ~ .checkmark {
+  border: 2px solid #065FD4;
+}
+
+.input-options input:checked ~ .checkmark:after {
+  display: block;
+}
+
+input:hover ~ .checkmark {
+  background-color: #ccc;
+}
+
+.radio .checkmark:after {
+  top: 0.2em;
+  left: 0.2em;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background: blue;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox .checkmark:after {
+  left: 0.3em;
+  bottom: 0.2em;
+  width: 0.4em;
+  height: 0.8em;
+  border: solid white;
+  border-width: 0 0.2em 0.2em 0;
+  transform: rotate(45deg);
+}

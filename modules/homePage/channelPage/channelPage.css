@@ -4,7 +4,8 @@
 }
 
 .channel-nav {
-  padding: 1em 7em;
+  height: 8.5em;
+  padding: 1.5em 7em 1em 7em;
 }
 
 .channel-nav > div {
@@ -24,7 +25,7 @@
   margin: auto 0;
 }
 
-.channel-page button {
+.channel-nav > div > button {
   height: 3em;
   background-color: #065FD4;
   color: #fff;
@@ -36,14 +37,14 @@
   cursor: pointer;
 }
 
-.channel-nav > nav a {
+.channel-nav > nav button {
   font-weight: 600;
-  padding: 1em 1.5em;
-  text-decoration: none;
-  color: #000;
+  padding: 1em 2em;
+  font-size: 1em;
+  color: #585757;
 }
 
-.channel-nav > nav a:nth-child(4) {
+.channel-nav > nav button:nth-child(4) {
   display: none;
 }
 
@@ -51,9 +52,10 @@
   display: inline;
 }
 
-.channel-nav > nav a:hover {
+.channel-nav > nav button:hover {
   background-color: #F1F1F1;
   border-bottom: 3px solid #606060;
+  color: #000;
 }
 
 .homepage {
@@ -74,6 +76,14 @@
 
 .homepage > button {
   display: block;
+  height: 3em;
+  background-color: #065FD4;
+  color: #fff;
+  border: unset;
+  font-weight: 700;
+  width: fit-content;
+  padding: 0 1.5em;
+  cursor: pointer;
   margin: 2em auto;
 }
 

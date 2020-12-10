@@ -35,7 +35,7 @@
 }
 
 .search-history > input {
-  width: 80%;
+  width: 100%;
   border: none;
   border-bottom: 1px solid #D8D8D8;
   height: 3em;
@@ -45,21 +45,23 @@
 
 .search-history > i {
   position: relative;
-  left: 1.3em;
-  float: left;
+  left: 0.5em;
+  bottom: 2.5em;
   line-height: 2.5em;
   color: #606060;
-  clear: both;
 }
 
 .search-inputs > p {
   padding: 1em;
+  margin: 0;
   border-bottom: 1px solid #D8D8D8;
 }
 
-.search-inputs input {
-  float: right;
-  clear: both;
+.search-inputs > div {
+  display: grid;
+  height: 3.2em;
+  grid-template-columns: 1fr 0.1fr;
+  border-bottom: 1px solid #D8D8D8;
 }
 
 .search-history i {

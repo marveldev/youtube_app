@@ -77,25 +77,31 @@ const notificationPage = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div class="user-options">
             <strong>Your preferences</strong>
             <div>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-              <strong>General product updates</strong>
-              <small>Announcements and recommendations</small>
-            </div>
-            <div>
-              <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-              </label>
-              <strong>Creator updates and announcements</strong>
-              <small>Product announcements, creator events, and personalized tips
-                to grow your YouTube channel
-              </small>
+              <div class="option">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <div>
+                  <p>General product updates</p>
+                  <small>Announcements and recommendations</small>
+                </div>
+              </div>
+              <div class="option">
+                <label class="switch">
+                  <input type="checkbox">
+                  <span class="slider round"></span>
+                </label>
+                <div>
+                  <p>Creator updates and announcements</p>
+                  <small>Product announcements, creator events, and personalized tips
+                    to grow your YouTube channel
+                  </small>
+                </div>
+              </div>
             </div>
           </div>
         </div>

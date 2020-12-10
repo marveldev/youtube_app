@@ -5,7 +5,7 @@ const settingsNav = () => {
         <p>SETTTINGS</p>
         <a href="#" class="account">Account</a>
         <a href="#" class="notification">Notification</a>
-        <a href="#">Playback and performance</a>
+        <a href="#" class="performance">Playback and performance</a>
         <a href="#">Privacy</a>
         <a href="#">Connected apps</a>
         <a href="#">Billings and payments</a>

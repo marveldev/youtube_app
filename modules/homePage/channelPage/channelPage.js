@@ -10,15 +10,15 @@ const channelPage = () => {
           <button>MANAGE VIDEOS</button>
         </div>
         <nav>
-          <a href="#">HOME</a>
-          <a href="#">VIDEOS</a>
-          <a href="#">PLAYLISTS</a>
-          <a href="#"><i class="material-icons">&#xe313;</i></a>
+          <button>HOME</button>
+          <button>VIDEOS</button>
+          <button>PLAYLISTS</button>
+          <button><i class="material-icons">&#xe313;</i></button>
           <nav>
-            <a href="#">CHANNEL</a>
-            <a href="#">DISCUSSION</a>
-            <a href="#">ABOUT</a>
-            <a href="#"><i class="fa fa-search"></i></a>
+            <button>CHANNEL</button>
+            <button>DISCUSSION</button>
+            <button>ABOUT</button>
+            <button><i class="fa fa-search"></i></button>
           </nav>
         </nav>
       </div>

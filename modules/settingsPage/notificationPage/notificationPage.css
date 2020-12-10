@@ -10,12 +10,8 @@
   color: #796079;
 }
 
-.notification-page > div {
+.general-notification {
   border-bottom: 1px solid #E0E0E0;
-}
-
-.notification-page > div:last-child {
-  border: none;
 }
 
 .switch {
@@ -70,13 +66,8 @@ input:checked + .slider:before {
 .user-options {
   display: grid;
   grid-template-columns: 0.4fr 1fr;
+  margin-top: 2em;
 }
-
-/* .user-options > div > div {
-  display: grid;
-  grid-template-columns: 0.11fr 1fr;
-  margin: 1em 0 2em 0;
-} */
 
 .option {
   display: grid;
@@ -86,14 +77,4 @@ input:checked + .slider:before {
 
 .user-options p {
   margin: 0;
-}
-
-.user-option {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.email-notification {
-  border-bottom: none;
-  padding-bottom: 2em;
 }

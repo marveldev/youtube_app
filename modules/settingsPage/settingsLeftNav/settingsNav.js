@@ -3,13 +3,13 @@ const settingsNav = () => {
     <div>
       <nav class="settings-nav">
         <p>SETTTINGS</p>
-        <a href="#" class="account">Account</a>
-        <a href="#" class="notification">Notification</a>
-        <a href="#" class="performance">Playback and performance</a>
-        <a href="#">Privacy</a>
-        <a href="#">Connected apps</a>
-        <a href="#">Billings and payments</a>
-        <a href="#">Advanced settings</a>
+        <button class="account">Account</button>
+        <button class="notification">Notification</button>
+        <button class="performance">Playback and performance</button>
+        <button>Privacy</button>
+        <button>Connected apps</button>
+        <button>Billings and payments</button>
+        <button>Advanced settings</button>
       </nav>
     </div>
   `

@@ -6,16 +6,17 @@
   background-color: #F1F1F1;
 }
 
-.settings-nav > a {
+.settings-nav > button {
   display: block;
-  text-decoration: none;
   height: 3em;
-  line-height: 3em;
   color: #241c1c;
   padding: 0.2em 1.5em;
+  font-size: 1em;
+  width: 100%;
+  text-align: left;
 }
 
-.settings-nav > a:hover {
+.settings-nav > button:hover {
   background-color: #E5E5E5;
 }
 

@@ -56,9 +56,27 @@ const watchHistoryPage = () => {
           <i class="fa fa-search"></i>
           <div class="search-inputs">
             <p>History type</p>
-            <p><span>Watch history</span><input type="radio" name="radio"></p>
-            <p><span>Community</span><input type="radio" name="radio"></p>
-            <p><span>Live chat</span><input type="radio" name="radio"></p>
+            <div>
+              <p>Watch history</p>
+              <label class="radio input-options">
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div>
+              <p>Community</p>
+              <label class="radio input-options">
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div>
+              <p>Live chat</p>
+              <label class="radio input-options">
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+              </label>
+            </div>
           </div>
           <p><i class="material-icons">&#xe872;</i>CLEAR ALL WATCH HISTORY</p>
           <p><i class="material-icons">&#xe036;</i>PAUSE WATCH HISTORY</p>

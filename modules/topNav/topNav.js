@@ -10,7 +10,7 @@ const topNav = () => {
       <span>
         <form class="search-form">
           <input type="text" class="topNav-input" placeholder="Search.." name="search">
-          <button type="submit" class="topNav-button button"><i class="fa fa-search"></i></button>
+          <button type="submit" class="topNav-button"><i class="fa fa-search"></i></button>
         </form>
       </span>
       <span class="tertiary-topNav">

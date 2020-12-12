@@ -237,3 +237,32 @@
   background-color: #3EA6FF;
   color: #000;
 }
+
+.dark .settings-nav {
+  background-color: #0F0F0F;
+  color: #fff;
+}
+
+.dark .settings-nav > button {
+  color: #fff;
+}
+
+.dark .settings-nav > button:hover {
+  background-color: #383838;
+}
+
+.dark .settings-account {
+  color: #fff;
+}
+
+.dark .secondary a {
+  color: #3EA6FF;
+}
+
+.dark .settings-account small {
+  color: #ffffffa8;
+}
+
+.dark .primary, .dark .secondary {
+  border-bottom: 1px solid #303030;
+}

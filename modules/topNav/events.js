@@ -11,10 +11,10 @@ const topNavEventListeners = () => {
   const root = document.querySelector('#root');
   const logo = document.querySelector('.logo');
   const burgerIcon = document.querySelector('.burger-icon');
-  const leftNav = document.querySelector('.leftside-nav');
-
+  
   burgerIcon.addEventListener('click', () => {
     const currentNav = localStorage.getItem('currentNav');
+    const leftNav = document.querySelector('.leftside-nav');
     if (currentNav !== constants.SETTINGSNAV) {
       if (leftNav.style.display === 'none') {
         leftNav.style.display = 'block';
@@ -34,7 +34,6 @@ const topNavEventListeners = () => {
   logo.addEventListener('click', () => {
     const currentNav = localStorage.getItem('currentNav');
     if (currentNav === constants.SETTINGSNAV) {
-      console.log('ok');
       switchCurrentPage(constants.DEFAULTNAV)
     } else {
       switchCurrentPage(constants.HOMEPAGE)

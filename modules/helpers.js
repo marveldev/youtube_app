@@ -8,6 +8,9 @@ import accountPage from './settingsPage/accountPage/accountPage.js';
 import notificationPage from './settingsPage/notificationPage/notificationPage.js';
 import settingsNavEventListeners from './settingsPage/settingsLeftNav/events.js';
 import performancePage from './settingsPage/performancePage/performancePage.js';
+import defaultNavEventListeners from './homePage/defaultLeftNav/events.js';
+import { topNavEventListeners } from './topNav/events.js';
+import topNav from './topNav/topNav.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
@@ -18,12 +21,14 @@ const constants = {
   SETTINGSNAV : 'settingsNav',
   ACCOUNTPAGE: 'accountPage',
   NOTIFICATIONPAGE: 'notificationPage',
-  PERFORMANCEPAGE: 'performancePage'
+  PERFORMANCEPAGE: 'performancePage',
+  DEFAULTCHANNELPAGE: 'defaultChannelPage'
 }
 
 const switchCurrentPage = page => {
   const currentPage = document.querySelector('.current-page');
   const currentSideNav = document.querySelector('.side-nav');
+  const topNavPage = document.querySelector('.top-nav-page')
   switch(page) {
     case 'homePage':
       currentPage.innerHTML = defaultPage();
@@ -51,6 +56,7 @@ const switchCurrentPage = page => {
     case 'defaultNav':
       currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = defaultPage();
+      defaultNavEventListeners();
       localStorage.setItem('currentNav', constants.DEFAULTNAV)
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       break;
@@ -65,6 +71,13 @@ const switchCurrentPage = page => {
     case 'performancePage':
       currentPage.innerHTML = performancePage();
       localStorage.setItem('currentPage', constants.PERFORMANCEPAGE)
+      break;
+    case 'defaultChannelPage':
+      currentSideNav.innerHTML = defaultLeftNav();
+      currentPage.innerHTML = channelPage();
+      defaultNavEventListeners();
+      localStorage.setItem('currentNav', constants.DEFAULTCHANNELPAGE)
+      localStorage.setItem('currentPage', constants.CHANNELPAGE)
       break;
     default:
       currentPage.innerHTML = defaultPage();

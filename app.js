@@ -11,7 +11,7 @@ import modalLeftNavEventListeners from './modules/settingsPage/modalLeftNav/even
 
 const app = () => {
   return `
-    <section class="top-nav-content">
+    <section class="top-nav-page">
       ${topNav()}
     </section>
     <section class="grid-container">

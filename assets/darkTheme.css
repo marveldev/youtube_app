@@ -286,3 +286,24 @@
 .dark .slider::before {
   background-color: #3EA6FF;
 }
+
+.dark .performance-page {
+  color: #fff;
+}
+
+.dark .performance-page small {
+  color: #ffffffa8;
+}
+
+.dark .checkbox input:checked ~ .checkmark {
+  background-color: #3EA6FF;
+}
+
+.dark .radio .checkmark:after {
+  background-color: #3EA6FF;
+}
+
+.dark .checkbox .checkmark:after {
+  border: solid black;
+  border-width: 0 0.2em 0.2em 0;
+}

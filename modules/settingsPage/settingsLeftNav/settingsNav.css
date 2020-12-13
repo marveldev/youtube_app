@@ -24,3 +24,10 @@
   padding: 0.2em 1.5em;
   font-weight: 550;
 }
+
+#previousPageButton {
+  float: right;
+  clear: both;
+  cursor: pointer;
+  font-size: 1.1em;
+}

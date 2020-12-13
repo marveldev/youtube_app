@@ -76,14 +76,8 @@ const topNavEventListeners = () => {
   arrowLeft.addEventListener('click', () => displayRightModal(null, 'none', 'block'))
 
   overlay.addEventListener('click', () => {
-    const currentLeftNav = localStorage.getItem('currentleftNav');
-    if (currentLeftNav === 'settingsNav') {
-      overlay.style.display = 'none';
-      document.querySelector('.left-nav-modal').style.display = 'none';
-      switchCurrentPage(constants.DEFAULTPAGE);
-    }
-
     displayRightModal('none', 'none', 'none', 'auto');
+    document.querySelector('.left-nav-modal').style.display = 'none';
   })
 
   closeModalButton.addEventListener('click', () => {

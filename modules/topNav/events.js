@@ -1,5 +1,4 @@
 import { constants, switchCurrentPage } from "../helpers.js";
-import defaultLeftNav from "../homePage/defaultLeftNav/defaultLeftNav.js";
 
 const topNavEventListeners = () => {
   const profilePhoto = document.querySelector('#profilePhoto');
@@ -14,9 +13,10 @@ const topNavEventListeners = () => {
   const burgerIcon = document.querySelector('.burger-icon');
   
   burgerIcon.addEventListener('click', () => {
-    const currentPage = localStorage.getItem('currentPage');
+    const currentLeftNav = localStorage.getItem('currentleftNav');
     const leftNav = document.querySelector('.leftside-nav');
-    if (currentPage !== constants.SETTINGSPAGE) {
+    const leftNavModal = document.querySelector('.left-nav-modal');
+    if (currentLeftNav !== 'settingsNav') {
       if (leftNav.style.display === 'none') {
         leftNav.style.display = 'block';
         document.querySelector('#leftSideNav').style.display = 'none';
@@ -26,18 +26,24 @@ const topNavEventListeners = () => {
         document.querySelector('#leftSideNav').style.display = 'block';
         document.querySelector('.grid-container').classList.add('wide');
       }
-    } else {
-      overlay.style.display = 'block';
-      document.querySelector('.left-nav-modal').style.display = 'block';
+    }
+    else {
+      if (leftNavModal.style.display === 'block') {
+        overlay.style.display = 'none';
+        leftNavModal.style.display = 'none';
+      } else {
+        overlay.style.display = 'block';
+        leftNavModal.style.display = 'block';
+      }
     }
   })
 
   logo.addEventListener('click', () => {
-    const currentSideNav = document.querySelector('.side-nav');
-    if (currentSideNav.innerHTML !== defaultLeftNav) {
-      switchCurrentPage(constants.DEFAULTPAGE)
-    } else {
+    const currentLeftNav = localStorage.getItem('currentleftNav');
+    if (currentLeftNav !== 'settingsNav') {
       switchCurrentPage(constants.HOMEPAGE)
+    } else {
+      switchCurrentPage(constants.DEFAULTPAGE)
     }
   });
 
@@ -70,11 +76,11 @@ const topNavEventListeners = () => {
   arrowLeft.addEventListener('click', () => displayRightModal(null, 'none', 'block'))
 
   overlay.addEventListener('click', () => {
-    const currentSideNav = document.querySelector('.side-nav');
-    if (currentSideNav.innerHTML !== defaultLeftNav) {
-      switchCurrentPage(constants.DEFAULTPAGE);
+    const currentLeftNav = localStorage.getItem('currentleftNav');
+    if (currentLeftNav === 'settingsNav') {
       overlay.style.display = 'none';
       document.querySelector('.left-nav-modal').style.display = 'none';
+      switchCurrentPage(constants.DEFAULTPAGE);
     }
 
     displayRightModal('none', 'none', 'none', 'auto');

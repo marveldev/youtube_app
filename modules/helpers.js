@@ -20,7 +20,6 @@ const constants = {
   ACCOUNTPAGE: 'accountPage',
   NOTIFICATIONPAGE: 'notificationPage',
   PERFORMANCEPAGE: 'performancePage',
-  DEFAULTCHANNELPAGE: 'defaultChannelPage'
 }
 
 const switchCurrentPage = page => {
@@ -29,7 +28,9 @@ const switchCurrentPage = page => {
   switch(page) {
     case 'homePage':
       currentPage.innerHTML = defaultPage();
+      defaultNavEventListeners();
       localStorage.setItem('currentPage', constants.HOMEPAGE)
+      localStorage.setItem('previousPage', constants.HOMEPAGE)
       break;
     case 'settingsPage':
       currentSideNav.innerHTML = settingsNav();
@@ -39,16 +40,23 @@ const switchCurrentPage = page => {
       localStorage.setItem('currentleftNav', 'settingsNav')
       break;
     case 'channelPage':
+      currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = channelPage();
+      defaultNavEventListeners();
       localStorage.setItem('currentPage', constants.CHANNELPAGE)
+      localStorage.setItem('currentleftNav', 'defaultNav')
       break;
     case 'trendingPage':
       currentPage.innerHTML = trendingPage();
+      defaultNavEventListeners();
       localStorage.setItem('currentPage', constants.TRENDINGPAGE)
+      localStorage.setItem('previousPage', constants.TRENDINGPAGE)
       break;
     case 'watchHistoryPage':
       currentPage.innerHTML = watchHistoryPage();
+      defaultNavEventListeners();
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
+      localStorage.setItem('previousPage', constants.WATCHHISTORYPAGE)
       break;
     case 'defaultPage':
       currentSideNav.innerHTML = defaultLeftNav();

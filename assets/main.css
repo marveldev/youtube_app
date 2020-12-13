@@ -10,6 +10,5 @@
 @import "../modules/settingsPage/notificationPage/notificationPage.css";
 @import "../modules/settingsPage/performancePage/performancePage.css";
 @import "../modules/settingsPage/settingsLeftNav/settingsNav.css";
-@import "../modules/settingsPage/modalLeftNav/modalLeftNav.css";
 @import "../smallScreen.css";
 @import "./darkTheme.css";

@@ -11,6 +11,7 @@
   position: fixed;
   width: 15em;
   height: 100vh;
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -100,4 +101,11 @@
 
 #leftSideNav > button:hover {
   background-color: #f5f5f5;
+}
+
+.left-nav-modal {
+  display: none;
+  position: absolute;
+  top: 4em;
+  z-index: 1;
 }

@@ -2,7 +2,7 @@ const settingsNav = () => {
   return `
     <div>
       <nav class="settings-nav">
-        <p>SETTTINGS</p>
+        <p>SETTTINGS<i id="previousPageButton" class='fas fa-arrow-left'></i></p>
         <button class="account">Account</button>
         <button class="notification">Notification</button>
         <button class="performance">Playback and performance</button>

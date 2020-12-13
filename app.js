@@ -4,16 +4,13 @@ import { constants, switchCurrentPage } from './modules/helpers.js';
 import { topNavEventListeners } from './modules/topNav/events.js';
 import settingsNavEventListeners from './modules/settingsPage/settingsLeftNav/events.js';
 import rightNavEventListeners from './modules/rightNav/events.js';
-import modalLeftNav from './modules/settingsPage/modalLeftNav/modalLeftNav.js';
 import defaultNavEventListeners from './modules/homePage/defaultLeftNav/events.js';
 import defaultLeftNav from './modules/homePage/defaultLeftNav/defaultLeftNav.js';
-import modalLeftNavEventListeners from './modules/settingsPage/modalLeftNav/events.js';
+import { videoEventListeners } from './modules/homePage/defaultPage/events.js';
 
 const app = () => {
   return `
-    <section class="top-nav-page">
-      ${topNav()}
-    </section>
+    ${topNav()}
     <section class="grid-container">
       <section class="side-nav">
         ${defaultLeftNav()}
@@ -22,24 +19,23 @@ const app = () => {
       </section>
     </section>
     ${rightNavModal()}
-    ${modalLeftNav()}
+    <section class="left-nav-modal">
+      ${defaultLeftNav()}
+    </section>
   `
 }
 
 document.querySelector('#root').innerHTML = app();
 
 const currentPage = localStorage.getItem('currentPage');
-const currentNav = localStorage.getItem('currentNav');
 
-if (currentNav === constants.SETTINGSNAV) {
-  switchCurrentPage(currentNav);
+if (currentPage === constants.SETTINGSPAGE) {
   switchCurrentPage(currentPage);
   settingsNavEventListeners();
 }
 
-switchCurrentPage(currentNav || 'defaultNav');
-switchCurrentPage(currentPage || 'homePage');
-modalLeftNavEventListeners();
+switchCurrentPage(currentPage || 'defaultPage');
 topNavEventListeners();
 rightNavEventListeners();
 defaultNavEventListeners();
+videoEventListeners();

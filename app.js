@@ -6,7 +6,8 @@ import settingsNavEventListeners from './modules/settingsPage/settingsLeftNav/ev
 import rightNavEventListeners from './modules/rightNav/events.js';
 import defaultNavEventListeners from './modules/homePage/defaultLeftNav/events.js';
 import defaultLeftNav from './modules/homePage/defaultLeftNav/defaultLeftNav.js';
-import { videoEventListeners } from './modules/homePage/defaultPage/events.js';
+import { homeEventListeners } from './modules/homePage/defaultPage/events.js';
+import videoPageEventListeners from './modules/videosPage/videoPage.js';
 
 const app = () => {
   return `
@@ -21,6 +22,9 @@ const app = () => {
     ${rightNavModal()}
     <section class="left-nav-modal">
       ${defaultLeftNav()}
+    </section>
+    <section class="video-page">
+      ${videoPageEventListeners()}
     </section>
   `
 }
@@ -38,4 +42,4 @@ switchCurrentPage(currentPage || 'defaultPage');
 topNavEventListeners();
 rightNavEventListeners();
 defaultNavEventListeners();
-videoEventListeners();
+homeEventListeners();

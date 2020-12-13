@@ -1,4 +1,5 @@
 import { constants, switchCurrentPage } from "../helpers.js";
+import defaultLeftNav from "../homePage/defaultLeftNav/defaultLeftNav.js";
 
 const topNavEventListeners = () => {
   const profilePhoto = document.querySelector('#profilePhoto');
@@ -13,9 +14,9 @@ const topNavEventListeners = () => {
   const burgerIcon = document.querySelector('.burger-icon');
   
   burgerIcon.addEventListener('click', () => {
-    const currentNav = localStorage.getItem('currentNav');
+    const currentPage = localStorage.getItem('currentPage');
     const leftNav = document.querySelector('.leftside-nav');
-    if (currentNav !== constants.SETTINGSNAV) {
+    if (currentPage !== constants.SETTINGSPAGE) {
       if (leftNav.style.display === 'none') {
         leftNav.style.display = 'block';
         document.querySelector('#leftSideNav').style.display = 'none';
@@ -27,14 +28,14 @@ const topNavEventListeners = () => {
       }
     } else {
       overlay.style.display = 'block';
-      document.querySelector('.modal-left-nav').style.display = 'block';
+      document.querySelector('.left-nav-modal').style.display = 'block';
     }
   })
 
   logo.addEventListener('click', () => {
-    const currentNav = localStorage.getItem('currentNav');
-    if (currentNav === constants.SETTINGSNAV) {
-      switchCurrentPage(constants.DEFAULTNAV)
+    const currentSideNav = document.querySelector('.side-nav');
+    if (currentSideNav.innerHTML !== defaultLeftNav) {
+      switchCurrentPage(constants.DEFAULTPAGE)
     } else {
       switchCurrentPage(constants.HOMEPAGE)
     }
@@ -69,6 +70,13 @@ const topNavEventListeners = () => {
   arrowLeft.addEventListener('click', () => displayRightModal(null, 'none', 'block'))
 
   overlay.addEventListener('click', () => {
+    const currentSideNav = document.querySelector('.side-nav');
+    if (currentSideNav.innerHTML !== defaultLeftNav) {
+      switchCurrentPage(constants.DEFAULTPAGE);
+      overlay.style.display = 'none';
+      document.querySelector('.left-nav-modal').style.display = 'none';
+    }
+
     displayRightModal('none', 'none', 'none', 'auto');
   })
 

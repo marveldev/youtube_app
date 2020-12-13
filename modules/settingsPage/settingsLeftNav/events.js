@@ -1,6 +1,5 @@
 import { switchCurrentPage, constants } from '../../helpers.js';
 import defaultLeftNav from '../../homePage/defaultLeftNav/defaultLeftNav.js';
-import defaultNavEventListeners from '../../homePage/defaultLeftNav/events.js';
 
 const settingsNavEventListeners = () => {
   const addSwitchPageEvent = (selector, constant) => {
@@ -16,11 +15,10 @@ const settingsNavEventListeners = () => {
   previousPageButton.addEventListener('click', () => {
     const currentSideNav = document.querySelector('.side-nav');
     currentSideNav.innerHTML = defaultLeftNav();
-    console.log('ok');
     const previousPage = localStorage.getItem('previousPage')
     switchCurrentPage(previousPage)
+    localStorage.setItem('currentleftNav', 'defaultNav')
   })
-
 }
 
 export default settingsNavEventListeners;

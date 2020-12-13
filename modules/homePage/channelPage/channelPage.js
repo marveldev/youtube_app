@@ -4,7 +4,7 @@ const channelPage = () => {
       <div class="channel-nav">
         <div>
           <img src='https://history.ucr.edu/sites/g/files/rcwecm1916/files/styles/form_preview/public/blank-profile-picture-png.png?itok=MQ-iPuNG'
-          class="image" alt="photo">
+            class="image" alt="photo">
           <span>Jane Doe</span>
           <button>CUSTOMIZE CHANNEL</button>
           <button>MANAGE VIDEOS</button>

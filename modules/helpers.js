@@ -9,16 +9,14 @@ import notificationPage from './settingsPage/notificationPage/notificationPage.j
 import settingsNavEventListeners from './settingsPage/settingsLeftNav/events.js';
 import performancePage from './settingsPage/performancePage/performancePage.js';
 import defaultNavEventListeners from './homePage/defaultLeftNav/events.js';
-import { topNavEventListeners } from './topNav/events.js';
-import topNav from './topNav/topNav.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
   CHANNELPAGE: 'channelPage',
   TRENDINGPAGE: 'trendingPage',
   WATCHHISTORYPAGE: 'watchHistoryPage',
-  DEFAULTNAV: 'defaultNav',
-  SETTINGSNAV : 'settingsNav',
+  DEFAULTPAGE: 'defaultPage',
+  SETTINGSPAGE : 'settingsPage',
   ACCOUNTPAGE: 'accountPage',
   NOTIFICATIONPAGE: 'notificationPage',
   PERFORMANCEPAGE: 'performancePage',
@@ -28,18 +26,16 @@ const constants = {
 const switchCurrentPage = page => {
   const currentPage = document.querySelector('.current-page');
   const currentSideNav = document.querySelector('.side-nav');
-  const topNavPage = document.querySelector('.top-nav-page')
   switch(page) {
     case 'homePage':
       currentPage.innerHTML = defaultPage();
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       break;
-    case 'settingsNav':
+    case 'settingsPage':
       currentSideNav.innerHTML = settingsNav();
       currentPage.innerHTML = accountPage();
       settingsNavEventListeners();
-      localStorage.setItem('currentNav', constants.SETTINGSNAV)
-      localStorage.setItem('currentPage', constants.ACCOUNTPAGE)
+      localStorage.setItem('currentPage', constants.SETTINGSPAGE)
       break;
     case 'channelPage':
       currentPage.innerHTML = channelPage();
@@ -53,12 +49,11 @@ const switchCurrentPage = page => {
       currentPage.innerHTML = watchHistoryPage();
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
       break;
-    case 'defaultNav':
+    case 'defaultPage':
       currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = defaultPage();
       defaultNavEventListeners();
-      localStorage.setItem('currentNav', constants.DEFAULTNAV)
-      localStorage.setItem('currentPage', constants.HOMEPAGE)
+      localStorage.setItem('currentPage', constants.DEFAULTPAGE)
       break;
     case 'accountPage':
       currentPage.innerHTML = accountPage();
@@ -71,13 +66,6 @@ const switchCurrentPage = page => {
     case 'performancePage':
       currentPage.innerHTML = performancePage();
       localStorage.setItem('currentPage', constants.PERFORMANCEPAGE)
-      break;
-    case 'defaultChannelPage':
-      currentSideNav.innerHTML = defaultLeftNav();
-      currentPage.innerHTML = channelPage();
-      defaultNavEventListeners();
-      localStorage.setItem('currentNav', constants.DEFAULTCHANNELPAGE)
-      localStorage.setItem('currentPage', constants.CHANNELPAGE)
       break;
     default:
       currentPage.innerHTML = defaultPage();

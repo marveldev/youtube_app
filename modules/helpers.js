@@ -36,6 +36,7 @@ const switchCurrentPage = page => {
       currentPage.innerHTML = accountPage();
       settingsNavEventListeners();
       localStorage.setItem('currentPage', constants.SETTINGSPAGE)
+      localStorage.setItem('currentleftNav', 'settingsNav')
       break;
     case 'channelPage':
       currentPage.innerHTML = channelPage();
@@ -54,6 +55,7 @@ const switchCurrentPage = page => {
       currentPage.innerHTML = defaultPage();
       defaultNavEventListeners();
       localStorage.setItem('currentPage', constants.DEFAULTPAGE)
+      localStorage.setItem('currentleftNav', 'defaultNav')
       break;
     case 'accountPage':
       currentPage.innerHTML = accountPage();

@@ -1,3 +1,53 @@
 .video-page {
   display: none;
 }
+
+.video-page-container {
+  position: relative;
+  top: 5.5em;
+  left: 2.5em;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 0 1.5em;
+  width: 95%;
+  height: auto;
+}
+
+#videoWide {
+  width: 100%;
+  background-color: turquoise;
+}
+
+.video-wide {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+#videoWatchOptions {
+  background-color: violet;
+}
+
+#videoContent {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  margin-bottom: 0.5em;
+}
+
+#videoContent > video {
+  width: 12em;
+  height: 7em;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+#videoContent p {
+  font-size: 0.9em;
+  color: #606091;
+  margin: 0.5em 0 0.2em;
+}
+
+#videoContent span {
+  font-size: 0.9em;
+  color: #606091;
+}

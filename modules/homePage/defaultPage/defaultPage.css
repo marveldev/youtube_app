@@ -2,7 +2,7 @@
   position: relative;
   top: 4em;
   display: grid;
-  grid-template-columns: 15em 2fr;
+  grid-template-columns: 1fr 2fr;
   width: 100%;
   height: auto;
   overflow-x: hidden;

@@ -20,11 +20,13 @@ const constants = {
   ACCOUNTPAGE: 'accountPage',
   NOTIFICATIONPAGE: 'notificationPage',
   PERFORMANCEPAGE: 'performancePage',
+  VIDEOPAGE: 'videoPage'
 }
 
 const switchCurrentPage = page => {
   const currentPage = document.querySelector('.current-page');
   const currentSideNav = document.querySelector('.side-nav');
+  const videoPage = document.querySelector('.video-page');
   switch(page) {
     case 'homePage':
       currentPage.innerHTML = defaultPage();
@@ -76,6 +78,11 @@ const switchCurrentPage = page => {
     case 'performancePage':
       currentPage.innerHTML = performancePage();
       localStorage.setItem('currentPage', constants.PERFORMANCEPAGE)
+      break;
+    case 'videoPage':
+      videoPage.style.display = 'block';
+      document.querySelector('.grid-container').style.display = 'none';
+      localStorage.setItem('currentPage', constants.VIDEOPAGE)
       break;
     default:
       currentPage.innerHTML = defaultPage();

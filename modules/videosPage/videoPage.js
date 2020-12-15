@@ -1,13 +1,31 @@
 const videoWatchPage = () => {
   return `
     <section class="video-page-container">
-      <div id="videoWide">
+      <div>
         <video class="video-wide" src="https://player.vimeo.com/external/362720873.sd.mp4?s=0bd51a6eac8fbcb012d1a01d78f036d97f68081c&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
         </video>
-        <div class="about-video">
+        <div id="aboutVideo">
+          <div>
+            <strong>The Chinese Culture(Official Video)</strong>
+            <div>
+              <span>Dec 15, 2020</span>
+              <span>28k views</span>
+              <span>
+                <span><i class="material-icons">&#xe8dc;</i> 3.9k</span>
+                <span><i class="material-icons">&#xe8db;</i> 26</span>
+                <span><i class="fa fa-share"></i>SHARE</span>
+                <span><i class="material-icons">&#xe03b;</i>SAVE</span>
+              </span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <p></p>
+            </div>
+          </div>
         </div>
       </div>
-      <div id="videoWatchOptions">
+      <div>
         <div id="videoContent">
           <video>
             <source src="https://player.vimeo.com/external/350245348.sd.mp4?s=5a4dafd828188844cef2274dd0bc8babb7d06687&profile_id=139&oauth2_token_id=57447761" type="video/mp4">

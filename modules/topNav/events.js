@@ -1,4 +1,5 @@
 import { constants, switchCurrentPage } from "../helpers.js";
+import defaultLeftNav from "../homePage/defaultLeftNav/defaultLeftNav.js";
 
 const topNavEventListeners = () => {
   const profilePhoto = document.querySelector('#profilePhoto');
@@ -11,14 +12,13 @@ const topNavEventListeners = () => {
   const root = document.querySelector('#root');
   const logo = document.querySelector('.logo');
   const burgerIcon = document.querySelector('.burger-icon');
-  
+
   burgerIcon.addEventListener('click', () => {
-    const currentLeftNav = localStorage.getItem('currentleftNav');
+    const modalLeftNav = localStorage.getItem('modalLeftNav');
     const leftNav = document.querySelector('.leftside-nav');
     const leftNavModal = document.querySelector('.left-nav-modal');
-    const currentPage = localStorage.getItem('currentPage');
-    switch (currentLeftNav) {
-      case 'settingsNav':
+    switch (modalLeftNav) {
+      case 'true':
         if (leftNavModal.style.display === 'block') {
           overlay.style.display = 'none';
           leftNavModal.style.display = 'none';
@@ -42,12 +42,7 @@ const topNavEventListeners = () => {
   })
 
   logo.addEventListener('click', () => {
-    const currentLeftNav = localStorage.getItem('currentleftNav');
-    if (currentLeftNav !== 'settingsNav') {
-      switchCurrentPage(constants.HOMEPAGE)
-    } else {
-      switchCurrentPage(constants.DEFAULTPAGE)
-    }
+    switchCurrentPage(constants.HOMEPAGE)
   });
 
   const themeObject = JSON.parse(localStorage.getItem('theme'));

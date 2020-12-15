@@ -13,11 +13,7 @@ const defaultNavEventListeners = () => {
   addSwitchPageEvent(document.querySelectorAll('.home'), constants.HOMEPAGE);
   addSwitchPageEvent(document.querySelectorAll('.trending'), constants.TRENDINGPAGE);
   addSwitchPageEvent(document.querySelectorAll('.setting'), constants.SETTINGSPAGE);
-  
-  const watchHisoryPage = document.querySelector('.history');
-  watchHisoryPage.addEventListener('click', () => {
-    switchCurrentPage(constants.WATCHHISTORYPAGE);
-  })
+  addSwitchPageEvent(document.querySelectorAll('.history'),constants.WATCHHISTORYPAGE);
 }
 
 export default defaultNavEventListeners;

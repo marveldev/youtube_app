@@ -6,7 +6,7 @@ import settingsNavEventListeners from './modules/settingsPage/settingsLeftNav/ev
 import rightNavEventListeners from './modules/rightNav/events.js';
 import defaultNavEventListeners from './modules/homePage/defaultLeftNav/events.js';
 import defaultLeftNav from './modules/homePage/defaultLeftNav/defaultLeftNav.js';
-import { homeEventListeners } from './modules/homePage/defaultPage/events.js';
+import homeEventListeners from './modules/homePage/defaultPage/events.js';
 import videoPageEventListeners from './modules/videosPage/videoPage.js';
 
 const app = () => {

@@ -28,54 +28,55 @@ const constants = {
 const switchCurrentPage = page => {
   const currentPage = document.querySelector('.current-page');
   const currentSideNav = document.querySelector('.side-nav');
+  const overlay = document.querySelector('#overlay');
   switch(page) {
     case 'homePage':
       currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = defaultPage();
       defaultNavEventListeners();
       defaultPageEventListeners();
+      document.querySelector('#main').className = 'grid-container';
+      document.querySelector('.left-nav-modal').style.display = 'none'
+      overlay.style.display = 'none';
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       localStorage.setItem('previousPage', constants.HOMEPAGE)
-      localStorage.setItem('currentleftNav', 'defaultNav')
+      localStorage.setItem('modalLeftNav', 'false')
       break;
     case 'settingsPage':
       currentSideNav.innerHTML = settingsNav();
       currentPage.innerHTML = accountPage();
       settingsNavEventListeners();
       localStorage.setItem('currentPage', constants.SETTINGSPAGE)
-      localStorage.setItem('currentleftNav', 'settingsNav')
+      localStorage.setItem('modalLeftNav', 'true')
       break;
     case 'channelPage':
       currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = channelPage();
       defaultNavEventListeners();
+      overlay.style.display = 'none';
+      document.querySelector('.left-nav-modal').style.display = 'none'
       localStorage.setItem('currentPage', constants.CHANNELPAGE)
-      localStorage.setItem('currentleftNav', 'defaultNav')
+      localStorage.setItem('previousPage', constants.CHANNELPAGE)
       break;
     case 'trendingPage':
       currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = trendingPage();
       defaultNavEventListeners();
+      overlay.style.display = 'none';
+      document.querySelector('#main').className = 'grid-container';
+      document.querySelector('.left-nav-modal').style.display = 'none'
       localStorage.setItem('currentPage', constants.TRENDINGPAGE)
       localStorage.setItem('previousPage', constants.TRENDINGPAGE)
-      localStorage.setItem('currentleftNav', 'defaultNav')
       break;
     case 'watchHistoryPage':
       currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = watchHistoryPage();
       defaultNavEventListeners();
+      overlay.style.display = 'none';
+      document.querySelector('#main').className = 'grid-container';
+      document.querySelector('.left-nav-modal').style.display = 'none'
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
       localStorage.setItem('previousPage', constants.WATCHHISTORYPAGE)
-      localStorage.setItem('currentleftNav', 'defaultNav')
-      break;
-    case 'defaultPage':
-      currentSideNav.innerHTML = defaultLeftNav();
-      currentPage.innerHTML = defaultPage();
-      defaultNavEventListeners();
-      defaultPageEventListeners();
-      document.querySelector('#main').className = 'grid-container';
-      localStorage.setItem('currentPage', constants.DEFAULTPAGE)
-      localStorage.setItem('currentleftNav', 'defaultNav')
       break;
     case 'accountPage':
       currentPage.innerHTML = accountPage();
@@ -94,7 +95,7 @@ const switchCurrentPage = page => {
       currentPage.innerHTML = videoWatchPage();
       document.querySelector('#main').className = '';
       localStorage.setItem('currentPage', constants.VIDEOPAGE)
-      localStorage.setItem('currentleftNav', 'settingsNav')
+      localStorage.setItem('modalLeftNav', 'true')
       break;
     default:
       currentPage.innerHTML = defaultPage();

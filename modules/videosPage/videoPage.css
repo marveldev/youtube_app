@@ -9,19 +9,10 @@
   height: auto;
 }
 
-#videoWide {
-  width: 100%;
-  background-color: turquoise;
-}
-
 .video-wide {
   width: 100%;
   object-fit: cover;
   cursor: pointer;
-}
-
-#videoWatchOptions {
-  background-color: violet;
 }
 
 #videoContent {
@@ -37,13 +28,25 @@
   cursor: pointer;
 }
 
-#videoContent p {
+.video-page-container p {
   font-size: 0.9em;
   color: #606091;
   margin: 0.5em 0 0.2em;
 }
 
-#videoContent span {
+.video-page-container span {
+  font-size: 0.9em;
+  color: #606091;
+}
+
+.about-video p {
+  margin: 0.8em 0 0 0;
+  line-height: 1.5em;
+  font-size: 0.9em;
+  color: #606091;
+}
+
+.about-video span {
   font-size: 0.9em;
   color: #606091;
 }

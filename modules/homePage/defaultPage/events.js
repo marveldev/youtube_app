@@ -10,4 +10,4 @@ const homeEventListeners = () => {
   }
 }
 
-export { homeEventListeners };
+export default homeEventListeners;

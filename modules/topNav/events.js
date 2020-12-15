@@ -17,35 +17,27 @@ const topNavEventListeners = () => {
     const leftNav = document.querySelector('.leftside-nav');
     const leftNavModal = document.querySelector('.left-nav-modal');
     const currentPage = localStorage.getItem('currentPage');
-    if (currentLeftNav !== 'settingsNav') {
-      if (leftNav.style.display === 'none') {
-        leftNav.style.display = 'block';
-        document.querySelector('#leftSideNav').style.display = 'none';
-        document.querySelector('.grid-container').classList.remove('wide');
-      } else {
-        leftNav.style.display = 'none';
-        document.querySelector('#leftSideNav').style.display = 'block';
-        document.querySelector('.grid-container').classList.add('wide');
-      }
-    }
-    else {
-      if (leftNavModal.style.display === 'block') {
-        overlay.style.display = 'none';
-        leftNavModal.style.display = 'none';
-      } else {
-        overlay.style.display = 'block';
-        leftNavModal.style.display = 'block';
-      }
-    }
-
-    if (currentPage === 'videoPage') {
-      if (leftNavModal.style.display === 'block') {
-        overlay.style.display = 'none';
-        leftNavModal.style.display = 'none';
-      } else {
-        overlay.style.display = 'block';
-        leftNavModal.style.display = 'block';
-      }
+    switch (currentLeftNav) {
+      case 'settingsNav':
+        if (leftNavModal.style.display === 'block') {
+          overlay.style.display = 'none';
+          leftNavModal.style.display = 'none';
+        } else {
+          overlay.style.display = 'block';
+          leftNavModal.style.display = 'block';
+        }
+        break;
+      default:
+        if (leftNav.style.display === 'none') {
+          leftNav.style.display = 'block';
+          document.querySelector('#leftSideNav').style.display = 'none';
+          document.querySelector('.grid-container').classList.remove('wide');
+        } else {
+          leftNav.style.display = 'none';
+          document.querySelector('#leftSideNav').style.display = 'block';
+          document.querySelector('.grid-container').classList.add('wide');
+        }
+        break;
     }
   })
 

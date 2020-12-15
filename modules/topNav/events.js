@@ -16,6 +16,7 @@ const topNavEventListeners = () => {
     const currentLeftNav = localStorage.getItem('currentleftNav');
     const leftNav = document.querySelector('.leftside-nav');
     const leftNavModal = document.querySelector('.left-nav-modal');
+    const currentPage = localStorage.getItem('currentPage');
     if (currentLeftNav !== 'settingsNav') {
       if (leftNav.style.display === 'none') {
         leftNav.style.display = 'block';
@@ -28,6 +29,16 @@ const topNavEventListeners = () => {
       }
     }
     else {
+      if (leftNavModal.style.display === 'block') {
+        overlay.style.display = 'none';
+        leftNavModal.style.display = 'none';
+      } else {
+        overlay.style.display = 'block';
+        leftNavModal.style.display = 'block';
+      }
+    }
+
+    if (currentPage === 'videoPage') {
       if (leftNavModal.style.display === 'block') {
         overlay.style.display = 'none';
         leftNavModal.style.display = 'none';

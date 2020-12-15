@@ -6,13 +6,12 @@ import settingsNavEventListeners from './modules/settingsPage/settingsLeftNav/ev
 import rightNavEventListeners from './modules/rightNav/events.js';
 import defaultNavEventListeners from './modules/homePage/defaultLeftNav/events.js';
 import defaultLeftNav from './modules/homePage/defaultLeftNav/defaultLeftNav.js';
-import homeEventListeners from './modules/homePage/defaultPage/events.js';
-import videoPageEventListeners from './modules/videosPage/videoPage.js';
+import defaultPageEventListeners from './modules/homePage/defaultPage/events.js';
 
 const app = () => {
   return `
     ${topNav()}
-    <section class="grid-container">
+    <section id="main" class="grid-container">
       <section class="side-nav">
         ${defaultLeftNav()}
       </section>
@@ -22,9 +21,6 @@ const app = () => {
     ${rightNavModal()}
     <section class="left-nav-modal">
       ${defaultLeftNav()}
-    </section>
-    <section class="video-page">
-      ${videoPageEventListeners()}
     </section>
   `
 }
@@ -40,6 +36,6 @@ if (currentPage === constants.SETTINGSPAGE) {
 
 switchCurrentPage(currentPage || 'defaultPage');
 topNavEventListeners();
-rightNavEventListeners();
 defaultNavEventListeners();
-homeEventListeners();
+defaultPageEventListeners();
+rightNavEventListeners();

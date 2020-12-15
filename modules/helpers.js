@@ -9,7 +9,8 @@ import notificationPage from './settingsPage/notificationPage/notificationPage.j
 import settingsNavEventListeners from './settingsPage/settingsLeftNav/events.js';
 import performancePage from './settingsPage/performancePage/performancePage.js';
 import defaultNavEventListeners from './homePage/defaultLeftNav/events.js';
-import homeEventListeners from './homePage/defaultPage/events.js';
+import defaultPageEventListeners from './homePage/defaultPage/events.js';
+import videoWatchPage from './videosPage/videoPage.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
@@ -27,16 +28,15 @@ const constants = {
 const switchCurrentPage = page => {
   const currentPage = document.querySelector('.current-page');
   const currentSideNav = document.querySelector('.side-nav');
-  const videoPage = document.querySelector('.video-page');
   switch(page) {
     case 'homePage':
+      currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = defaultPage();
-      document.querySelector('.grid-container').style.display = 'grid';
-      videoPage.style.display = 'none';
       defaultNavEventListeners();
-      homeEventListeners();
+      defaultPageEventListeners();
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       localStorage.setItem('previousPage', constants.HOMEPAGE)
+      localStorage.setItem('currentleftNav', 'defaultNav')
       break;
     case 'settingsPage':
       currentSideNav.innerHTML = settingsNav();
@@ -53,21 +53,27 @@ const switchCurrentPage = page => {
       localStorage.setItem('currentleftNav', 'defaultNav')
       break;
     case 'trendingPage':
+      currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = trendingPage();
       defaultNavEventListeners();
       localStorage.setItem('currentPage', constants.TRENDINGPAGE)
       localStorage.setItem('previousPage', constants.TRENDINGPAGE)
+      localStorage.setItem('currentleftNav', 'defaultNav')
       break;
     case 'watchHistoryPage':
+      currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = watchHistoryPage();
       defaultNavEventListeners();
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
       localStorage.setItem('previousPage', constants.WATCHHISTORYPAGE)
+      localStorage.setItem('currentleftNav', 'defaultNav')
       break;
     case 'defaultPage':
       currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = defaultPage();
       defaultNavEventListeners();
+      defaultPageEventListeners();
+      document.querySelector('#main').className = 'grid-container';
       localStorage.setItem('currentPage', constants.DEFAULTPAGE)
       localStorage.setItem('currentleftNav', 'defaultNav')
       break;
@@ -84,9 +90,11 @@ const switchCurrentPage = page => {
       localStorage.setItem('currentPage', constants.PERFORMANCEPAGE)
       break;
     case 'videoPage':
-      videoPage.style.display = 'block';
-      document.querySelector('.grid-container').style.display = 'none';
+      currentSideNav.innerHTML = '';
+      currentPage.innerHTML = videoWatchPage();
+      document.querySelector('#main').className = '';
       localStorage.setItem('currentPage', constants.VIDEOPAGE)
+      localStorage.setItem('currentleftNav', 'settingsNav')
       break;
     default:
       currentPage.innerHTML = defaultPage();

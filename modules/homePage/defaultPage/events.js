@@ -1,6 +1,6 @@
 import { constants, switchCurrentPage } from "../../helpers.js";
 
-const homeEventListeners = () => {
+const defaultPageEventListeners = () => {
   const videos = document.querySelectorAll('.video');
   for (let index = 0; index < videos.length; index++) {
     const video = videos[index];
@@ -10,4 +10,4 @@ const homeEventListeners = () => {
   }
 }
 
-export default homeEventListeners;
+export default defaultPageEventListeners;

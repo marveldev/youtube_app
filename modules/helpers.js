@@ -9,6 +9,7 @@ import notificationPage from './settingsPage/notificationPage/notificationPage.j
 import settingsNavEventListeners from './settingsPage/settingsLeftNav/events.js';
 import performancePage from './settingsPage/performancePage/performancePage.js';
 import defaultNavEventListeners from './homePage/defaultLeftNav/events.js';
+import homeEventListeners from './homePage/defaultPage/events.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
@@ -30,7 +31,10 @@ const switchCurrentPage = page => {
   switch(page) {
     case 'homePage':
       currentPage.innerHTML = defaultPage();
+      document.querySelector('.grid-container').style.display = 'grid';
+      videoPage.style.display = 'none';
       defaultNavEventListeners();
+      homeEventListeners();
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       localStorage.setItem('previousPage', constants.HOMEPAGE)
       break;

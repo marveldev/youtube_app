@@ -4,9 +4,9 @@ import { constants, switchCurrentPage } from './modules/helpers.js';
 import { topNavEventListeners } from './modules/topNav/events.js';
 import settingsNavEventListeners from './modules/settingsPage/settingsLeftNav/events.js';
 import rightNavEventListeners from './modules/rightNav/events.js';
-import defaultNavEventListeners from './modules/homePage/defaultLeftNav/events.js';
-import defaultLeftNav from './modules/homePage/defaultLeftNav/defaultLeftNav.js';
-import defaultPageEventListeners from './modules/homePage/defaultPage/events.js';
+import defaultNavEventListeners from './modules/defaultLeftNav/events.js';
+import defaultLeftNav from './modules/defaultLeftNav/defaultLeftNav.js';
+import defaultPageEventListeners from './modules/defaultPage/events.js';
 
 const app = () => {
   return `

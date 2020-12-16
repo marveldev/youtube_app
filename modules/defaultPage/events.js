@@ -1,4 +1,4 @@
-import { constants, switchCurrentPage } from "../../helpers.js";
+import { constants, switchCurrentPage } from "../helpers.js";
 
 const defaultPageEventListeners = () => {
   const videos = document.querySelectorAll('.video');

@@ -1,4 +1,4 @@
-import { switchCurrentPage, constants } from '../../helpers.js';
+import { switchCurrentPage, constants } from '../helpers.js';
 
 const defaultNavEventListeners = () => {
   const addSwitchPageEvent = (selectors, constant) => {

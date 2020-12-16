@@ -1,5 +1,4 @@
 import { constants, switchCurrentPage } from "../helpers.js";
-import defaultLeftNav from "../homePage/defaultLeftNav/defaultLeftNav.js";
 
 const topNavEventListeners = () => {
   const profilePhoto = document.querySelector('#profilePhoto');

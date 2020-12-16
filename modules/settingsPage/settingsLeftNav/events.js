@@ -1,6 +1,4 @@
 import { switchCurrentPage, constants } from '../../helpers.js';
-import defaultLeftNav from '../../homePage/defaultLeftNav/defaultLeftNav.js';
-import defaultPageEventListeners from '../../homePage/defaultPage/events.js';
 
 const settingsNavEventListeners = () => {
   const addSwitchPageEvent = (selector, constant) => {

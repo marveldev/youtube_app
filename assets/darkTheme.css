@@ -19,7 +19,7 @@
   background-color: #ffffffc4;
 }
 
-.dark #leftNav {
+.dark .leftside-nav {
   background-color: #202020;
 }
 
@@ -306,4 +306,25 @@
 .dark .checkbox .checkmark:after {
   border: solid black;
   border-width: 0 0.2em 0.2em 0;
+}
+
+.dark .video-page-container {
+  color: #fff;
+}
+
+.dark .video-page-container p {
+  color: #ffffffa8;
+}
+
+.dark .video-page-container span {
+  color: #ffffffa8;
+}
+
+.dark .video-data {
+  padding: 1.5em 0 1em 0;
+  border-bottom: 1px solid #303030;
+}
+
+.dark #aboutVideo {
+  color: #fff;
 }

@@ -39,12 +39,12 @@
   color: #606091;
 }
 
-.video-info {
+.video-data {
   padding: 1.5em 0 1em 0;
   border-bottom: 1px solid #E0E0E0;
 }
 
-.video-info > div {
+.video-data > div {
   padding: 1em 0 0 0;
 }
 

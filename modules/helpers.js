@@ -93,6 +93,7 @@ const switchCurrentPage = page => {
     case 'videoPage':
       currentSideNav.innerHTML = '';
       currentPage.innerHTML = videoWatchPage();
+      defaultPageEventListeners();
       document.querySelector('#main').className = '';
       localStorage.setItem('currentPage', constants.VIDEOPAGE)
       localStorage.setItem('modalLeftNav', 'true')

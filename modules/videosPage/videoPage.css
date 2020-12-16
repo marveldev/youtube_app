@@ -39,14 +39,50 @@
   color: #606091;
 }
 
-.about-video p {
-  margin: 0.8em 0 0 0;
-  line-height: 1.5em;
-  font-size: 0.9em;
-  color: #606091;
+.video-info {
+  padding: 1.5em 0 1em 0;
+  border-bottom: 1px solid #E0E0E0;
 }
 
-.about-video span {
-  font-size: 0.9em;
-  color: #606091;
+.video-info > div {
+  padding: 1em 0 0 0;
+}
+
+#videoData {
+  float: right;
+  clear: both;
+}
+
+#videoData > span {
+  cursor: pointer;
+  padding: 0 1em;
+  color: #909090;
+  font-weight: 600;
+}
+
+#videoData i {
+  vertical-align: middle;
+}
+
+.video-details {
+  display: grid;
+  grid-template-columns: 0.2fr 2fr 0.2fr;
+  margin: 1em 0 3em;
+}
+
+.video-details > button {
+  background-color: #CC0000;
+  color: #fff;
+  font-weight: 550;
+  width: 8em;
+  height: 2.5em;
+}
+
+.video-details > img {
+  font-size: 1.3em;
+}
+
+#aboutVideo {
+  color: #000;
+  margin-top: 2em;
 }

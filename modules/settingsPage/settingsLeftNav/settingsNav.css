@@ -1,6 +1,5 @@
 .settings-nav {
   position: fixed;
-  width: 15em;
   height: 100vh;
   padding-top: 0.5em;
   background-color: #F1F1F1;
@@ -30,4 +29,8 @@
   clear: both;
   cursor: pointer;
   font-size: 1.1em;
+}
+
+.smallScreen-nav {
+  display: none;
 }

@@ -205,6 +205,78 @@
     background-color: transparent;
     border-bottom: 3px solid #FF0000;
   }
+
+  /* videoPage */
+  .video-page-container {
+    display: block;
+    position: absolute;
+    top: 4em;
+    left: 0;
+  }
+
+  .video-wide {
+    position: fixed;
+    z-index: 1;
+  }
+
+  #videoInfo {
+    position: relative;
+    top: 15em;
+    left: 1em;
+  }
+
+  .video-page-container > div:nth-child(2) {
+    position: relative;
+    left: 1em;
+    top: 15em;
+    height: auto;
+    padding-bottom: 1em;
+  }
+
+  #videoData {
+    float: left;
+    margin-top: 1em;
+  }
+  
+  .video-data {
+    height: 5em;
+  }
+
+  .video-details strong {
+    font-size: 0.9em;
+  }
+
+  .video-details {
+    grid-template-columns: 0.3fr 1.5fr 1fr;
+    border-bottom: 1px solid #E0E0E0;
+    height: 3em;
+    margin-bottom: 1em;
+  }
+
+  .dark .video-details {
+    border-bottom: 1px solid #303030;
+  }
+
+  .video-details > img {
+    font-size: 1em;
+  }
+
+  #aboutVideo {
+    display: none;
+  }
+  
+  #videoData i {
+    margin-right: 0.5em;
+  }
+  
+  .video-data > div {
+    padding: 0.2em;
+  }
+
+  #videoContent {
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
 }
 
 @media only screen and (max-width: 375px) {

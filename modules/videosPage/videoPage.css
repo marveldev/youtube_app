@@ -19,6 +19,7 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   margin-bottom: 0.5em;
+  height: auto;
 }
 
 #videoContent > video {

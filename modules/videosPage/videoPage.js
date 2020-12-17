@@ -4,15 +4,15 @@ const videoWatchPage = () => {
       <div>
         <video class="video-wide" src="https://player.vimeo.com/external/362720873.sd.mp4?s=0bd51a6eac8fbcb012d1a01d78f036d97f68081c&profile_id=139&oauth2_token_id=57447761" type="video/mp4" controls>
         </video>
-        <div>
+        <div id="videoInfo">
           <div class="video-data">
             <strong>The Chinese Culture(Official Video)</strong>
             <div>
               <span>Dec 15, 2020</span>
               <span>28k views</span>
               <span id="videoData">
-                <span><i class="material-icons">&#xe8dc;</i> 3.9k</span>
-                <span><i class="material-icons">&#xe8db;</i> 26</span>
+                <span><i class="material-icons">&#xe8dc;</i>3.9k</span>
+                <span><i class="material-icons">&#xe8db;</i>26</span>
                 <span><i class="fa fa-share"></i>SHARE</span>
                 <span><i class="material-icons">&#xe03b;</i>SAVE</span>
               </span>

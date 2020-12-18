@@ -17,6 +17,7 @@ const rightNav = () => {
           Appearance : <span class="theme-name">Light</span><i class="material-icons">&#xe315;</i>
         </button>
         <button class="setting"><i class="material-icons">&#xe8b8;</i>Settings</button>
+        <button id="settingButton"><i class="material-icons">&#xe8b8;</i>Settings</button>
         <button><i class='fas fa-question-circle'></i>Help</button>
         <button><i class="material-icons">&#xe87f;</i>Send feedback</button>
       </nav>

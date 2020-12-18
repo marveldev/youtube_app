@@ -11,5 +11,6 @@
 @import "../modules/settingsPage/performancePage/performancePage.css";
 @import "../modules/settingsPage/settingsLeftNav/settingsNav.css";
 @import "../modules/videosPage/videoPage.css";
+@import "../modules/mobileSettingsPage/settingsPage.css";
 @import "../smallScreen.css";
 @import "./darkTheme.css";

@@ -1,0 +1,18 @@
+.mobile-settings > div {
+  padding: 1em;
+  border-bottom: 3px solid #B2B2B2;
+  height: auto;
+}
+
+.mobile-settings {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
+
+#accountContent {
+  display: none;
+}

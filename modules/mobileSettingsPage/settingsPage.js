@@ -1,13 +1,17 @@
 const mobileSettingsPage = () => {
   return `
-    <nav class="smallScreen-nav">
+    <div class="mobile-settings">
+      <div>
+        <i id="arrowLeft" class='fas fa-arrow-left'></i>
+        <strong>Settings</strong>
+      </div>
       <div class="account-section">
         <div id="account">
           <strong>Account</strong>
           <i class="material-icons">&#xe313;</i>
           <small>Choose how you appear and what you see on Youtube</small>
         </div>
-        <div>
+        <div id="accountContent">
           <div>
             <strong>Restricted Mode</strong>
             <small>This helps hide potentially mature video. No filter is 100%
@@ -84,7 +88,7 @@ const mobileSettingsPage = () => {
           <strong>Notifications</strong>
         </div>
       </div>
-    </nav>
+    </div>
   `
 }
 

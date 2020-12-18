@@ -7,6 +7,7 @@ import rightNavEventListeners from './modules/rightNav/events.js';
 import defaultNavEventListeners from './modules/defaultLeftNav/events.js';
 import defaultLeftNav from './modules/defaultLeftNav/defaultLeftNav.js';
 import defaultPageEventListeners from './modules/defaultPage/events.js';
+import mobileEventListeners from './modules/mobileSettingsPage/events.js';
 
 const app = () => {
   return `
@@ -39,3 +40,4 @@ topNavEventListeners();
 defaultNavEventListeners();
 defaultPageEventListeners();
 rightNavEventListeners();
+mobileEventListeners();

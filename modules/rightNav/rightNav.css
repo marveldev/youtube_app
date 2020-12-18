@@ -117,3 +117,7 @@
 #closeModalButton:active {
   transform: translateY(4px);
 }
+
+#settingButton {
+  display: none;
+}

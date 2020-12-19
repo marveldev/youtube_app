@@ -1,11 +1,23 @@
 import { switchCurrentPage, constants } from '../helpers.js';
+import defaultLeftNav from './defaultLeftNav.js';
 
 const defaultNavEventListeners = () => {
   const addSwitchPageEvent = (selectors, constant) => {
     for (let index = 0; index < selectors.length; index++) {
       const selector = selectors[index];
       selector.addEventListener('click', () => {
-        switchCurrentPage(constant);
+        const modalLeftNav = localStorage.getItem('modalLeftNav');
+        const currentSideNav = document.querySelector('.side-nav');
+        const overlay = document.querySelector('#overlay');
+        if (modalLeftNav == 'true') {
+          switchCurrentPage(constant);
+          currentSideNav.innerHTML = defaultLeftNav();
+          document.querySelector('#main').className = 'grid-container';
+          document.querySelector('.left-nav-modal').style.display = 'none';
+          overlay.style.display = 'none';
+        } else {
+          switchCurrentPage(constant);
+        }
       })
     }
   }

@@ -12,6 +12,7 @@ const defaultNavEventListeners = () => {
         if (modalLeftNav == 'true') {
           switchCurrentPage(constant);
           currentSideNav.innerHTML = defaultLeftNav();
+          defaultNavEventListeners();
           document.querySelector('#main').className = 'grid-container';
           document.querySelector('.left-nav-modal').style.display = 'none';
           overlay.style.display = 'none';

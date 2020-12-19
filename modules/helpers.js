@@ -23,70 +23,61 @@ const constants = {
   VIDEOPAGE: 'videoPage'
 }
 
-const switchCurrentPage = page => {
-  const currentPage = document.querySelector('.current-page');
-  const currentSideNav = document.querySelector('.side-nav');
+const switchCurrentPage = (page, videoSrc) => {
+  const currentPageDiv = document.querySelector('.current-page');
+  const leftSideNav = document.querySelector('.side-nav');
+  const previousPage = localStorage.getItem('currentPage');
+  localStorage.setItem('currentPage', page)
+
   switch(page) {
     case 'homePage':
-      currentPage.innerHTML = defaultPage();
+      currentPageDiv.innerHTML = defaultPage();
       defaultPageEventListeners();
-      localStorage.setItem('currentPage', constants.HOMEPAGE)
-      localStorage.setItem('previousPage', constants.HOMEPAGE)
       localStorage.setItem('modalLeftNav', 'false')
       break;
     case 'settingsPage':
-      currentSideNav.innerHTML = settingsNav();
-      currentPage.innerHTML = accountPage();
+      leftSideNav.innerHTML = settingsNav();
+      currentPageDiv.innerHTML = accountPage();
       settingsNavEventListeners();
-      localStorage.setItem('currentPage', constants.SETTINGSPAGE)
       localStorage.setItem('modalLeftNav', 'true')
+      localStorage.setItem('previousPage', previousPage)
       break;
     case 'channelPage':
-      currentPage.innerHTML = channelPage();
-      localStorage.setItem('currentPage', constants.CHANNELPAGE)
-      localStorage.setItem('previousPage', constants.CHANNELPAGE)
+      currentPageDiv.innerHTML = channelPage();
       localStorage.setItem('modalLeftNav', 'false')
       break;
     case 'trendingPage':
-      currentPage.innerHTML = trendingPage();
-      localStorage.setItem('currentPage', constants.TRENDINGPAGE)
-      localStorage.setItem('previousPage', constants.TRENDINGPAGE)
+      currentPageDiv.innerHTML = trendingPage();
       localStorage.setItem('modalLeftNav', 'false')
       break;
     case 'watchHistoryPage':
-      currentPage.innerHTML = watchHistoryPage();
-      localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
-      localStorage.setItem('previousPage', constants.WATCHHISTORYPAGE)
+      currentPageDiv.innerHTML = watchHistoryPage();
       localStorage.setItem('modalLeftNav', 'false')
       break;
     case 'accountPage':
-      currentSideNav.innerHTML = settingsNav();
+      leftSideNav.innerHTML = settingsNav();
       settingsNavEventListeners();
-      currentPage.innerHTML = accountPage();
-      localStorage.setItem('currentPage', constants.ACCOUNTPAGE)
+      currentPageDiv.innerHTML = accountPage();
       break;
     case 'notificationPage':
-      currentSideNav.innerHTML = settingsNav();
+      leftSideNav.innerHTML = settingsNav();
       settingsNavEventListeners();
-      currentPage.innerHTML = notificationPage();
-      localStorage.setItem('currentPage', constants.NOTIFICATIONPAGE)
+      currentPageDiv.innerHTML = notificationPage();
       break;
     case 'performancePage':
-      currentSideNav.innerHTML = settingsNav();
+      leftSideNav.innerHTML = settingsNav();
       settingsNavEventListeners();
-      currentPage.innerHTML = performancePage();
-      localStorage.setItem('currentPage', constants.PERFORMANCEPAGE)
+      currentPageDiv.innerHTML = performancePage();
       break;
-    case 'videoPage':
-      currentSideNav.innerHTML = '';
-      currentPage.innerHTML = videoWatchPage();
+    case 'videoPage': // change this to videoWatchPage
+      leftSideNav.innerHTML = '';
+      currentPageDiv.innerHTML = videoWatchPage({ videoSrc });
       defaultPageEventListeners();
       document.querySelector('#main').className = '';
-      localStorage.setItem('currentPage', constants.VIDEOPAGE)
       localStorage.setItem('modalLeftNav', 'true')
       break;
     default:
-      currentPage.innerHTML = defaultPage();
+      currentPageDiv.innerHTML = defaultPage();
   }
 }
 

@@ -12,13 +12,17 @@ const settingsNavEventListeners = () => {
   addSwitchPageEvent(document.querySelector('.notification'), constants.NOTIFICATIONPAGE);
   addSwitchPageEvent(document.querySelector('.performance'), constants.PERFORMANCEPAGE);
 
-  document.querySelector('#previousPageButton').addEventListener('click', () => {
-    document.querySelector('.side-nav').innerHTML = defaultLeftNav();
-    defaultNavEventListeners();
-    const previousPage = localStorage.getItem('previousPage')
-    switchCurrentPage(previousPage)
-    localStorage.setItem('modalLeftNav', 'false')
-  })
+  const previousButtons = document.querySelectorAll('.previous-button');
+  for (let index = 0; index < previousButtons.length; index++) {
+    const previousButton = previousButtons[index];
+    previousButton.addEventListener('click', () => {
+      document.querySelector('.side-nav').innerHTML = defaultLeftNav();
+      defaultNavEventListeners();
+      const previousPage = localStorage.getItem('previousPage')
+      switchCurrentPage(previousPage)
+      localStorage.setItem('modalLeftNav', 'false')
+    })
+  }
 
   const settingButtons = document.querySelectorAll('.setting-button');
   for (let index = 0; index < settingButtons.length; index++) {

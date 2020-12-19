@@ -13,7 +13,6 @@ const channelPage = () => {
           <button>HOME</button>
           <button>VIDEOS</button>
           <button>PLAYLISTS</button>
-          <button><i class="material-icons">&#xe313;</i></button>
           <nav>
             <button>CHANNEL</button>
             <button>DISCUSSION</button>

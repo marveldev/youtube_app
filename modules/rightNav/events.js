@@ -7,7 +7,6 @@ const rightNavEventListeners = () => {
     const modalLeftNav = localStorage.getItem('modalLeftNav');
     const currentSideNav = document.querySelector('.side-nav');
     const overlay = document.querySelector('#overlay');
-
     if (modalLeftNav === 'true') {
       switchCurrentPage(constants.CHANNELPAGE);
       currentSideNav.innerHTML = defaultLeftNav();
@@ -15,16 +14,21 @@ const rightNavEventListeners = () => {
       document.querySelector('#main').className = 'grid-container';
       document.querySelector('.rightNav-modal').style.display = 'none';
       overlay.style.display = 'none';
+      document.body.style.overflow = 'auto';
     } else {
       switchCurrentPage(constants.CHANNELPAGE);
+      document.querySelector('.rightNav-modal').style.display = 'none';
+      overlay.style.display = 'none';
+      document.body.style.overflow = 'auto';
     }
   })
 
-  // document.querySelector('#settingButton').addEventListener('click', () => {
-  //   switchCurrentPage(constants.MOBILESETTINGSPAGE)
-  //   overlay.style.display = 'none';
-  //   document.querySelector('.rightNav-modal').style.display = 'none';
-  // })
+  document.querySelector('#setting').addEventListener('click', () => {
+    switchCurrentPage(constants.SETTINGSPAGE);
+    document.querySelector('.rightNav-modal').style.display = 'none';
+    document.querySelector('#overlay').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  })
 }
 
 export default rightNavEventListeners;

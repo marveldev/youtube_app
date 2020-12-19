@@ -1,4 +1,6 @@
 import { constants, switchCurrentPage } from "../helpers.js";
+import defaultLeftNav from '../defaultLeftNav/defaultLeftNav.js';
+import defaultNavEventListeners from "../defaultLeftNav/events.js";
 
 const topNavEventListeners = () => {
   const profilePhoto = document.querySelector('#profilePhoto');
@@ -41,7 +43,19 @@ const topNavEventListeners = () => {
   })
 
   logo.addEventListener('click', () => {
-    switchCurrentPage(constants.HOMEPAGE)
+    const modalLeftNav = localStorage.getItem('modalLeftNav');
+    const currentSideNav = document.querySelector('.side-nav');
+    const overlay = document.querySelector('#overlay');
+    if (modalLeftNav == 'true') {
+      switchCurrentPage(constants.HOMEPAGE);
+      currentSideNav.innerHTML = defaultLeftNav();
+      defaultNavEventListeners();
+      document.querySelector('#main').className = 'grid-container';
+      document.querySelector('.left-nav-modal').style.display = 'none';
+      overlay.style.display = 'none';
+    } else {
+      switchCurrentPage(constants.HOMEPAGE)
+    }
   });
 
   const themeObject = JSON.parse(localStorage.getItem('theme'));

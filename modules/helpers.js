@@ -9,7 +9,6 @@ import settingsNavEventListeners from './settingsPage/settingsLeftNav/events.js'
 import performancePage from './settingsPage/performancePage/performancePage.js';
 import defaultPageEventListeners from './defaultPage/events.js';
 import videoWatchPage from './videosPage/videoPage.js';
-import mobileSettingsPage from './mobileSettingsPage/settingsPage.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
@@ -21,8 +20,7 @@ const constants = {
   ACCOUNTPAGE: 'accountPage',
   NOTIFICATIONPAGE: 'notificationPage',
   PERFORMANCEPAGE: 'performancePage',
-  VIDEOPAGE: 'videoPage',
-  MOBILESETTINGSPAGE: 'mobileSettingsPage'
+  VIDEOPAGE: 'videoPage'
 }
 
 const switchCurrentPage = page => {
@@ -86,10 +84,6 @@ const switchCurrentPage = page => {
       document.querySelector('#main').className = '';
       localStorage.setItem('currentPage', constants.VIDEOPAGE)
       localStorage.setItem('modalLeftNav', 'true')
-      break;
-    case 'mobileSettingsPage':
-      currentPage.innerHTML = mobileSettingsPage();
-      localStorage.setItem('currentPage', constants.MOBILESETTINGSPAGE)
       break;
     default:
       currentPage.innerHTML = defaultPage();

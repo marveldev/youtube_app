@@ -96,3 +96,14 @@
     padding: 0 1em;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .video-info {
+    width: 22em;
+    padding: 0 1em;
+  }
+
+  .trending-nav {
+    grid-template-columns: 5em 5em 5em 5em;
+  }
+}

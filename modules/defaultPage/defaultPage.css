@@ -110,3 +110,9 @@
     padding-bottom: 10em;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .button-nav {
+    padding: 0 0.5em;
+  }
+}

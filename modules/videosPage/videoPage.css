@@ -136,8 +136,8 @@
   }
 
   .dark .video-details {
-      border-bottom: 1px solid #303030;
-    }
+    border-bottom: 1px solid #303030;
+  }
 
   .video-details > img {
     font-size: 1em;
@@ -158,5 +158,19 @@
   #videoContent {
     gap: 0.5em;
     margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #videoInfo {
+    top: 13em;
+  }
+
+  .video-page-container > div:nth-child(2) {
+    top: 13em;
+  }
+
+  #videoData {
+    font-size: 0.8em;
   }
 }

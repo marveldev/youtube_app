@@ -152,3 +152,9 @@
     font-size: 0.8em;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  #leftSideNav > button {
+    width: 6em;
+  }
+}

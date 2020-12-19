@@ -123,3 +123,13 @@
     padding: 0 1em;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .channel-nav > nav > button {
+    padding: 1em 1em;
+  }
+
+  .channel-nav > nav {
+    text-align: center;
+  }
+}

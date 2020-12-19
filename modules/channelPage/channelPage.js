@@ -17,7 +17,6 @@ const channelPage = () => {
             <button>CHANNEL</button>
             <button>DISCUSSION</button>
             <button>ABOUT</button>
-            <button><i class="fa fa-search"></i></button>
           </nav>
         </nav>
       </div>

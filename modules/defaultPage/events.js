@@ -5,8 +5,8 @@ const defaultPageEventListeners = () => {
   for (let index = 0; index < videos.length; index++) {
     const video = videos[index];
     video.addEventListener('click', () => {
-      switchCurrentPage(constants.VIDEOPAGE);
-      document.querySelector('.video-wide').src = video.src
+      switchCurrentPage(constants.VIDEOPAGE, video.src);
+      localStorage.setItem('videoSrc', video.src)
     })
   }
 }

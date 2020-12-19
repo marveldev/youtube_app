@@ -118,6 +118,31 @@
   transform: translateY(4px);
 }
 
-#settingButton {
-  display: none;
+@media only screen and (max-width: 425px) {
+  #rightNav {
+    position: fixed;
+    top: 0em;
+    right: 0em;
+    width: 100%;
+  }
+  
+  .rightNav-modal {
+    padding: 1em 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #theme > i:nth-child(3) {
+    margin: 0 0 0 6.5em;
+  }
+
+  #themeModal {
+    width: 100%;
+    height: 100vh;
+  }
+
+  #themeModalButton i:nth-child(3) {
+    float: right;
+    clear: both;
+  }
 }

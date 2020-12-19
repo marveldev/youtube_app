@@ -18,9 +18,9 @@ const settingsNavEventListeners = () => {
     previousButton.addEventListener('click', () => {
       document.querySelector('.side-nav').innerHTML = defaultLeftNav();
       defaultNavEventListeners();
-      const previousPage = localStorage.getItem('previousPage')
-      switchCurrentPage(previousPage)
-      localStorage.setItem('modalLeftNav', 'false')
+      const previousPage = localStorage.getItem('previousPage');
+      switchCurrentPage(previousPage);
+      localStorage.setItem('modalLeftNav', 'false');
     })
   }
 

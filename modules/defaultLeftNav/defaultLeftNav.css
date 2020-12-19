@@ -109,3 +109,46 @@
   top: 4em;
   z-index: 1;
 }
+
+@media only screen and (max-width: 425px) {
+  .leftside-nav {
+    display: none;
+  }
+
+  .button-nav > nav {
+    display: none;
+  }
+
+  #leftSideNav {
+    display: inline;
+    bottom: 0em;
+    background-color: #fff;
+    box-shadow: 0px 0px 2px 0px #00000033; 
+    z-index: 1;
+    width: 100%;
+    height: 4em;
+  }
+
+  #leftSideNav > button {
+    display: inline;
+    width: 7em;
+    height: 3em;
+    vertical-align: middle;
+    margin: 0.5em 0.5em;
+    padding: 0 2em;
+  }
+
+  #leftSideNav > button:nth-child(2) {
+    width: 4em;
+    line-height: 1.5em;
+    padding-top: 0.5em;
+  }
+
+  #leftSideNav i {
+    margin: 0;
+  }
+
+  #leftSideNav small {
+    font-size: 0.8em;
+  }
+}

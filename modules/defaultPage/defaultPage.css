@@ -80,3 +80,33 @@
   font-size: 0.9em;
   color: #606091;
 }
+
+@media only screen and (max-width: 425px) {
+  .grid-container {
+    grid-template-columns: 0 1fr;
+  }
+
+  .video-gallery {
+    grid-template-columns: 1fr;
+    padding: 0;
+    row-gap: 4em;
+  }
+
+  .video {
+    width: 28em;
+    height: 15em;
+  }
+
+  .video-content {
+    height: auto;
+  }
+
+  .about-video {
+    grid-template-columns: 3em 2fr;
+    margin: 0.5em 0 0 1em;
+  }
+
+  .home-page {
+    padding-bottom: 10em;
+  }
+}

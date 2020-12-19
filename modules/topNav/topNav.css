@@ -91,3 +91,21 @@ button {
   object-fit: cover;
   background-color: #000000d7;
 }
+
+@media only screen and (max-width: 425px) { 
+  .burger-icon {
+    display: none;
+  }
+
+  #profilePhoto {
+    margin-left: 3.5em;
+  }
+
+  .search-form {
+    display: none;
+  }
+
+  .tertiary-topNav i {
+    display: none;
+  }
+}

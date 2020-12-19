@@ -56,3 +56,43 @@
 .video-info h3 {
   margin: 0 0 0.3em 0;
 }
+
+@media only screen and (max-width: 425px) {
+  .trending-nav {
+    grid-template-columns: 6em 6em 6em 6em;
+    border-bottom: none;
+  }
+
+  .trending-nav img {
+    height: 3.5em;
+  }
+
+  .trending-nav a {
+    width: 5em;
+    margin: 0.5em;
+  }
+
+  .trending-nav span {
+    font-size: 0.7em;
+  }
+
+  #trends {
+    margin: 0;
+    padding-bottom: 4em;
+  }
+
+  .trending-video {
+    display: block;
+    margin-bottom: 0.2em;
+  }
+
+  .video {
+    width: auto;
+    height: auto;
+  }
+
+  .video-info {
+    width: 25em;
+    padding: 0 1em;
+  }
+}

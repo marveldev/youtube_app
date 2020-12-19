@@ -44,10 +44,6 @@
   color: #585757;
 }
 
-.channel-nav > nav button:nth-child(4) {
-  display: none;
-}
-
 .channel-nav > nav > nav {
   display: inline;
 }
@@ -95,4 +91,35 @@
 .homepage span {
   color: #606060;
   font-size: 0.9em;
+}
+
+@media only screen and (max-width: 425px) {
+  .channel-nav {
+    padding: 1em 0;
+  }
+  
+  .channel-nav > div {
+    padding-left: 2em;
+    grid-template-columns: 3.5em 1fr;
+  }
+  
+  .channel-nav img {
+    font-size: 1.5em;
+  }
+  
+  .channel-nav span {
+    font-weight: 500;
+  }
+  
+  .channel-nav > div > button {
+    display: none;
+  }
+
+  .channel-nav > nav > nav {
+    display: none;
+  }
+
+  .homepage {
+    padding: 0 1em;
+  }
 }

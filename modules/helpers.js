@@ -1,4 +1,3 @@
-import defaultLeftNav from './defaultLeftNav/defaultLeftNav.js';
 import defaultPage from './defaultPage/defaultPage.js';
 import channelPage from './channelPage/channelPage.js';
 import trendingPage from './trendingPage/trendingPage.js';
@@ -8,7 +7,6 @@ import accountPage from './settingsPage/accountPage/accountPage.js';
 import notificationPage from './settingsPage/notificationPage/notificationPage.js';
 import settingsNavEventListeners from './settingsPage/settingsLeftNav/events.js';
 import performancePage from './settingsPage/performancePage/performancePage.js';
-import defaultNavEventListeners from './defaultLeftNav/events.js';
 import defaultPageEventListeners from './defaultPage/events.js';
 import videoWatchPage from './videosPage/videoPage.js';
 import mobileSettingsPage from './mobileSettingsPage/settingsPage.js';
@@ -30,16 +28,10 @@ const constants = {
 const switchCurrentPage = page => {
   const currentPage = document.querySelector('.current-page');
   const currentSideNav = document.querySelector('.side-nav');
-  const overlay = document.querySelector('#overlay');
   switch(page) {
     case 'homePage':
-      currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = defaultPage();
-      defaultNavEventListeners();
       defaultPageEventListeners();
-      document.querySelector('#main').className = 'grid-container';
-      document.querySelector('.left-nav-modal').style.display = 'none'
-      overlay.style.display = 'none';
       localStorage.setItem('currentPage', constants.HOMEPAGE)
       localStorage.setItem('previousPage', constants.HOMEPAGE)
       localStorage.setItem('modalLeftNav', 'false')
@@ -52,43 +44,38 @@ const switchCurrentPage = page => {
       localStorage.setItem('modalLeftNav', 'true')
       break;
     case 'channelPage':
-      currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = channelPage();
-      defaultNavEventListeners();
-      overlay.style.display = 'none';
-      document.querySelector('.left-nav-modal').style.display = 'none'
       localStorage.setItem('currentPage', constants.CHANNELPAGE)
       localStorage.setItem('previousPage', constants.CHANNELPAGE)
+      localStorage.setItem('modalLeftNav', 'false')
       break;
     case 'trendingPage':
-      currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = trendingPage();
-      defaultNavEventListeners();
-      overlay.style.display = 'none';
-      document.querySelector('#main').className = 'grid-container';
-      document.querySelector('.left-nav-modal').style.display = 'none'
       localStorage.setItem('currentPage', constants.TRENDINGPAGE)
       localStorage.setItem('previousPage', constants.TRENDINGPAGE)
+      localStorage.setItem('modalLeftNav', 'false')
       break;
     case 'watchHistoryPage':
-      currentSideNav.innerHTML = defaultLeftNav();
       currentPage.innerHTML = watchHistoryPage();
-      defaultNavEventListeners();
-      overlay.style.display = 'none';
-      document.querySelector('#main').className = 'grid-container';
-      document.querySelector('.left-nav-modal').style.display = 'none'
       localStorage.setItem('currentPage', constants.WATCHHISTORYPAGE)
       localStorage.setItem('previousPage', constants.WATCHHISTORYPAGE)
+      localStorage.setItem('modalLeftNav', 'false')
       break;
     case 'accountPage':
+      currentSideNav.innerHTML = settingsNav();
+      settingsNavEventListeners();
       currentPage.innerHTML = accountPage();
       localStorage.setItem('currentPage', constants.ACCOUNTPAGE)
       break;
     case 'notificationPage':
+      currentSideNav.innerHTML = settingsNav();
+      settingsNavEventListeners();
       currentPage.innerHTML = notificationPage();
       localStorage.setItem('currentPage', constants.NOTIFICATIONPAGE)
       break;
     case 'performancePage':
+      currentSideNav.innerHTML = settingsNav();
+      settingsNavEventListeners();
       currentPage.innerHTML = performancePage();
       localStorage.setItem('currentPage', constants.PERFORMANCEPAGE)
       break;

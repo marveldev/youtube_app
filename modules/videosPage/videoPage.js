@@ -1,8 +1,8 @@
-const videoWatchPage = () => {
+const videoWatchPage = (props) => {
   return `
     <section class="video-page-container">
       <div>
-        <video class="video-wide" src="https://player.vimeo.com/external/362720873.sd.mp4?s=0bd51a6eac8fbcb012d1a01d78f036d97f68081c&profile_id=139&oauth2_token_id=57447761" type="video/mp4" controls>
+        <video class="video-wide" src=${props.videoSrc || localStorage.getItem('videoSrc')} type="video/mp4" controls>
         </video>
         <div id="videoInfo">
           <div class="video-data">

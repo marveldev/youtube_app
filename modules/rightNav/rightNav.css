@@ -1,5 +1,5 @@
 #rightNav {
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 7em;
   z-index: 1;

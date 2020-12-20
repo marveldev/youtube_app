@@ -21,12 +21,12 @@ const settingsNav = () => {
         </div>
         <div id="settingsContent">
           <div>
-            <div class="setting-button">
+            <div class="dropdown">
               <strong>Account</strong>
               <i class="material-icons">&#xe313;</i>
               <small>Choose how you appear and what you see on Youtube</small>
             </div>
-            <div class="dropdown">
+            <div class="dropdown-content">
               <div>
                 <strong>Restricted Mode</strong>
                 <label class="switch">
@@ -48,12 +48,12 @@ const settingsNav = () => {
             </div>
           </div>
           <div>
-            <div class="setting-button">
+            <div class="dropdown">
               <strong>History & privacy </strong>
               <i class="material-icons">&#xe313;</i>
               <small>Manage watch & search history and review Goggle Privacy Policy</small>
             </div>
-            <div class="dropdown">
+            <div class="dropdown-content">
               <div>
                 <strong>Clear watch history</strong>
                 <small>Clear this account watch history from all devices.
@@ -99,12 +99,12 @@ const settingsNav = () => {
             </div>
           </div>
           <div>
-            <div class="setting-button">
+            <div class="dropdown">
               <strong>Notifications</strong>
               <i class="material-icons">&#xe313;</i>
               <small>Select email notifications you'd like to receive</small>
             </div>
-            <div class="dropdown">
+            <div class="dropdown-content">
               <div>
                 <strong>Allow emails</strong>
                 <label class="switch">

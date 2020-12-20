@@ -8,7 +8,7 @@ import notificationPage from './settingsPage/notificationPage/notificationPage.j
 import settingsNavEventListeners from './settingsPage/settingsLeftNav/events.js';
 import performancePage from './settingsPage/performancePage/performancePage.js';
 import defaultPageEventListeners from './defaultPage/events.js';
-import videoWatchPage from './videosPage/videoPage.js';
+import videoWatchPage from './videoWatchPage/videoWatchPage.js';
 
 const constants = {
   HOMEPAGE: 'homePage',
@@ -20,7 +20,7 @@ const constants = {
   ACCOUNTPAGE: 'accountPage',
   NOTIFICATIONPAGE: 'notificationPage',
   PERFORMANCEPAGE: 'performancePage',
-  VIDEOPAGE: 'videoPage'
+  VIDEOWATCHPAGE: 'videoWatchPage'
 }
 
 const switchCurrentPage = (page, videoSrc) => {
@@ -69,7 +69,7 @@ const switchCurrentPage = (page, videoSrc) => {
       settingsNavEventListeners();
       currentPageDiv.innerHTML = performancePage();
       break;
-    case 'videoPage': // change this to videoWatchPage
+    case 'videoWatchPage':
       leftSideNav.innerHTML = '';
       currentPageDiv.innerHTML = videoWatchPage({ videoSrc });
       defaultPageEventListeners();

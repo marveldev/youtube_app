@@ -57,7 +57,7 @@
   height: auto;
 }
 
-.dropdown {
+.dropdown-content {
   display: none;
   padding: 0 1em;
 }
@@ -80,7 +80,7 @@
   color: #796079;
 }
 
-.setting-button {
+.dropdown {
   border-bottom: 1px solid #b2b2b2a1;
   padding: 1em;
 }
@@ -92,7 +92,7 @@
   font-size: 0.9em;
 }
 
-.dropdown > div {
+.dropdown-content > div {
   padding: 1em 0;
 }
 

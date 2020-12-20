@@ -20,7 +20,6 @@ const settingsNavEventListeners = () => {
       defaultNavEventListeners();
       const previousPage = localStorage.getItem('previousPage');
       switchCurrentPage(previousPage);
-      localStorage.setItem('modalLeftNav', 'false');
     })
   }
 

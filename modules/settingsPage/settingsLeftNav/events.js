@@ -23,11 +23,11 @@ const settingsNavEventListeners = () => {
     })
   }
 
-  const settingButtons = document.querySelectorAll('.setting-button');
-  for (let index = 0; index < settingButtons.length; index++) {
-    const settingButton = settingButtons[index];
-    settingButton.addEventListener('click', () => {
-      settingButton.nextElementSibling.classList.toggle('show');
+  const dropdownDivs = document.querySelectorAll('.dropdown');
+  for (let index = 0; index < dropdownDivs.length; index++) {
+    const dropdownDiv = dropdownDivs[index];
+    dropdownDiv.addEventListener('click', () => {
+      dropdownDiv.nextElementSibling.classList.toggle('show');
     })
   }
 }

@@ -25,6 +25,7 @@ const rightNavEventListeners = () => {
 
   document.querySelector('#setting').addEventListener('click', () => {
     switchCurrentPage(constants.SETTINGSPAGE);
+    document.querySelector('#main').className = 'grid-container';
     document.querySelector('.rightNav-modal').style.display = 'none';
     document.querySelector('#overlay').style.display = 'none';
     document.body.style.overflow = 'auto';

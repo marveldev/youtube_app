@@ -14,6 +14,13 @@ const topNavEventListeners = () => {
   const logo = document.querySelector('.logo');
   const burgerIcon = document.querySelector('.burger-icon');
 
+  const themeObject = JSON.parse(localStorage.getItem('themeObject'));
+  if (themeObject) {
+    root.className = themeObject.theme;
+    document.body.style.backgroundColor = themeObject.backgroundColor;
+    document.querySelector('.theme-name').innerText = themeObject.themeName;
+  }
+
   burgerIcon.addEventListener('click', () => {
     const modalLeftNav = localStorage.getItem('modalLeftNav');
     const leftNav = document.querySelector('.leftside-nav');
@@ -58,13 +65,6 @@ const topNavEventListeners = () => {
     }
   });
 
-  const themeObject = JSON.parse(localStorage.getItem('theme'));
-  if (themeObject) {
-    root.className = themeObject.theme;
-    document.body.style.backgroundColor = themeObject.backgroundColor;
-    document.querySelector('.theme-name').innerText = themeObject.themeName;
-  }
-
   const displayRightModal = ( overlayValue, themeModalValue, rightNavValue, overflowValue ) => {
     if (overlayValue) {
       overlay.style.display = overlayValue;
@@ -103,7 +103,7 @@ const topNavEventListeners = () => {
       displayRightModal('none', 'none', 'none', 'auto');
 
       const themeObject = { theme: theme, backgroundColor: backgroundColor, themeName: themeName };
-      localStorage.setItem('theme', JSON.stringify(themeObject));
+      localStorage.setItem('themeObject', JSON.stringify(themeObject));
     })
   }
 
